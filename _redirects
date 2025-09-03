@@ -1,0 +1,19 @@
+# Netlify redirects for Sleep Help Hub static site
+
+# Exact route matches for main pages
+/                           /index.html                200
+/sleep/devices/             /sleep/devices/index.html  200  
+/sleep/supplements/         /sleep/supplements/index.html  200
+
+# Handle trailing slash variations
+/sleep/devices              /sleep/devices/index.html  200
+/sleep/supplements          /sleep/supplements/index.html  200
+
+# Serve static assets
+/assets/*                   /assets/:splat             200
+/data/*                     /data/:splat               200
+/robots.txt                 /robots.txt                200
+/sitemap.xml                /sitemap.xml               200
+
+# Fallback for any unmatched routes - redirect to home
+/*                          /index.html                200
