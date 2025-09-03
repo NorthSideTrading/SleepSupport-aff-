@@ -389,30 +389,14 @@
     </script>
 </head>
 <body>
-    <div class="top-bar">
-        <div class="container">
-            <div class="top-bar-content">
-                <div>
-                    <span data-updated></span> • Editor's Note: Professional comparisons
-                </div>
-                <div>
-                    <strong>Disclosure:</strong> We may earn a commission if you buy through our links. This site provides educational information and is not medical advice.
-                </div>
-            </div>
-        </div>
-    </div>
     
     <header>
         <div class="container">
-            <div class="header-content">
-                <a href="/" class="logo">Sleep Support Guide</a>
-                <nav>
-                    <ul>
-                        <li><a href="/sleep/supplements/">Supplements</a></li>
-                        <li><a href="/sleep/non-pill-solutions/" class="active">Non-Pill Solutions</a></li>
-                    </ul>
-                </nav>
-            </div>
+            <a href="/" class="brand">Sleep Support Guide</a>
+            <nav>
+                <a href="/sleep/supplements/">Supplements</a>
+                <a href="/sleep/non-pill-solutions/" style="border-bottom-color: var(--accent);">Non-Pill Solutions</a>
+            </nav>
         </div>
     </header>
 
@@ -420,12 +404,14 @@
         <!-- Hero -->
         <section class="hero">
             <div class="container">
-                <h1>Best Non-Pill Snoring Solutions (2025)</h1>
-                <p class="hero-description">Compare mouthpieces, nasal aids, and positional solutions that may help reduce snoring for some adults.</p>
-                
-                <div class="disclosure">
-                    <strong>Important:</strong> Non-pill options may help reduce snoring for some adults. They are not a treatment for sleep apnea or other medical conditions.
+                <div>
+                    <h1>Best Non-Pill Snoring Solutions (2025)</h1>
+                    <p class="lead">Compare mouthpieces, nasal aids, and positional solutions that may help reduce snoring for some adults.</p>
+                    <p class="meta-bar" data-updated>
+                        <strong>Disclosure:</strong> We may earn a commission if you buy through our links. Not medical advice.
+                    </p>
                 </div>
+                <div class="img-wrap" aria-hidden="true" style="background-image: url('/assets/img/hero-nonpill.jpg');"></div>
             </div>
         </section>
         
@@ -433,23 +419,21 @@
         <section class="section">
             <div class="container">
                 <h2>Non-Pill Solutions Comparison</h2>
-                <div class="table-wrapper">
-                    <table class="comparison-table" id="nonPillTable">
-                        <thead>
-                            <tr>
-                                <th onclick="sortTable(0)">Solution</th>
-                                <th onclick="sortTable(1)">Type</th>
-                                <th onclick="sortTable(2)">Comfort</th>
-                                <th onclick="sortTable(3)">Care</th>
-                                <th onclick="sortTable(4)">Trial/Returns</th>
-                                <th>Action</th>
-                            </tr>
-                        </thead>
-                        <tbody id="nonPillTableBody">
-                            <!-- Data will be populated by JavaScript -->
-                        </tbody>
-                    </table>
-                </div>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Type</th>
+                            <th>Comfort</th>
+                            <th>Care</th>
+                            <th>Trial/Returns</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="nonpill-table">
+                        <!-- Data will be populated by JavaScript -->
+                    </tbody>
+                </table>
             </div>
         </section>
         

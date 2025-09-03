@@ -1,0 +1,191 @@
+Goal: Keep current site structure and tracking, but visually upgrade to a light, confident, professional theme suitable for age 40+. No rounded corners. Maintain compliance copy and no pricing. Improve legibility, tables, CTAs, and above-the-fold disclosure.
+
+1) Replace the CSS (overwrite /assets/css/style.css)
+
+Use this entire stylesheet:
+
+/* ===== SleepSupportGuide — Light Professional Skin (no rounded corners) ===== */
+:root{
+  --bg:#f7fbff;--surface:#fff;--muted:#eef3f8;--ink:#0f172a;--ink-2:#334155;
+  --divider:#e5e7eb;--accent:#0f766e;--accent-ink:#064e3b;--accent-50:#ecfdf5;
+  --warn-50:#fff8e1;--link:#0ea5a8;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:"Source Sans 3","IBM Plex Sans",system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+  font-size:18px;line-height:1.6;color:var(--ink);
+  background:linear-gradient(180deg,var(--bg),#fff 480px);}
+.container{max-width:1100px;margin:0 auto;padding:24px}
+.section{padding:24px 0;border-top:1px solid var(--divider)}
+.grid{display:grid;gap:24px}.grid-2{grid-template-columns:1.2fr 1fr}.grid-3{grid-template-columns:repeat(3,1fr)}
+@media (max-width:980px){.grid-2,.grid-3{grid-template-columns:1fr}}
+/* Header */
+header{background:#fff;border-bottom:1px solid var(--divider)}
+header .container{display:flex;align-items:center;gap:24px}
+.brand{font-weight:700;letter-spacing:.2px;color:var(--ink);text-decoration:none}
+nav a{color:var(--ink-2);text-decoration:none;padding:14px 8px;border-bottom:2px solid transparent}
+nav a:hover{border-bottom-color:var(--accent)}
+/* Hero */
+.hero{background:linear-gradient(180deg,var(--muted),#fff);border-bottom:1px solid var(--divider)}
+.hero .container{display:grid;gap:24px;grid-template-columns:1.2fr 1fr;align-items:center}
+.hero h1{font-size:36px;line-height:1.25;margin:0 0 8px}
+.hero p.lead{font-size:20px;color:var(--ink-2);margin:0 0 16px}
+.hero .img-wrap{height:260px;background:#fff url("/assets/img/hero-home.jpg") center/cover no-repeat;border:1px solid var(--divider)}
+/* Meta/Disclosure */
+.meta-bar{background:var(--warn-50);border:1px solid #f3e8c8;padding:10px 12px;font-size:15px;color:#5b4a1f;margin:16px 0}
+/* Cards & Tiles */
+.card{background:var(--surface);border:1px solid var(--divider);padding:16px}
+.card h3{margin:0 0 6px;font-size:22px}.card p{margin:0;color:var(--ink-2)}
+.tiles{display:grid;gap:16px;grid-template-columns:repeat(2,1fr)}
+.tile{background:var(--surface);border:1px solid var(--divider);padding:18px;display:flex;justify-content:space-between;align-items:center}
+.tile .txt{max-width:70%}.tile .cta{white-space:nowrap}
+/* Buttons */
+.btn{display:inline-block;text-decoration:none;padding:12px 18px;font-weight:600;border:1px solid transparent}
+.btn-primary{background:var(--accent);color:#fff;border-color:var(--accent)}
+.btn-primary:hover{background:#0b5f58;border-color:#0b5f58}
+.btn-ghost{background:transparent;color:var(--accent);border-color:var(--accent)}
+.btn-ghost:hover{background:var(--accent-50)}
+/* Tables */
+table{width:100%;border-collapse:collapse}
+.table{background:var(--surface);border:1px solid var(--divider)}
+.table thead th{background:var(--muted);color:var(--ink);text-align:left;font-size:16px;letter-spacing:.02em;padding:12px 10px;border-bottom:1px solid var(--divider)}
+.table tbody td{padding:12px 10px;border-top:1px solid var(--divider);vertical-align:top;color:var(--ink-2)}
+.table tbody tr:nth-child(even){background:#fafcff}
+.table .top-pick{background:var(--accent-50)}
+.table .k{color:var(--ink);font-weight:600}
+.badge{display:inline-block;padding:4px 8px;background:var(--accent-50);color:var(--accent-ink);border:1px solid #b6e8d8;text-transform:uppercase;font-size:12px;letter-spacing:.03em}
+/* FAQ & Footer */
+details{border:1px solid var(--divider);padding:12px;margin:12px 0;background:#fff}
+summary{cursor:pointer;font-weight:600}details[open]{background:#fbfeff}
+footer{background:#fff;border-top:1px solid var(--divider);color:var(--ink-2)}footer .container{padding:24px}
+/* Helpers */
+.m0{margin:0}.mt8{margin-top:8px}.mt16{margin-top:16px}.mt24{margin-top:24px}
+.small{font-size:15px;color:var(--ink-2)}a{color:var(--link)}img{max-width:100%;display:block}
+
+2) Update the Home hero (replace the current hero block in /index.html)
+<section class="hero">
+  <div class="container">
+    <div>
+      <h1>Sleep Support Guide: Compare Non-Pill Options & Night-Time Supplements (2025)</h1>
+      <p class="lead">Practical, product-first comparisons—no medical claims.</p>
+      <p class="meta-bar" data-updated>
+        <strong>Disclosure:</strong> We may earn a commission if you buy through our links. Not medical advice.
+      </p>
+      <div class="tiles">
+        <div class="tile">
+          <div class="txt">
+            <h3 class="m0">Reduce Snoring Tonight</h3>
+            <p class="mt8">Compare non-pill solutions designed to help reduce snoring.</p>
+          </div>
+          <a class="btn btn-primary cta" href="/sleep/non-pill-solutions/">View Options</a>
+        </div>
+        <div class="tile">
+          <div class="txt">
+            <h3 class="m0">Wind Down Naturally</h3>
+            <p class="mt8">Explore night-time supplements that may support restful sleep.</p>
+          </div>
+          <a class="btn btn-primary cta" href="/sleep/supplements/">Compare Supplements</a>
+        </div>
+      </div>
+    </div>
+    <div class="img-wrap" aria-hidden="true"></div>
+  </div>
+</section>
+
+3) Add the disclosure/meta bar to both hub pages
+
+At the top (just under the H1) of /sleep/non-pill-solutions/index.html and /sleep/supplements/index.html, add:
+
+<p class="meta-bar" data-updated>
+  <strong>Disclosure:</strong> We may earn a commission if you buy through our links. Not medical advice.
+</p>
+
+4) Table classes + “Top Pick” tint
+
+Ensure your hub tables use class="table" and that the <tbody> has an ID the JS targets (e.g., id="supp-table" and id="nonpill-table").
+
+In the JS hydration (step 5), automatically add top-pick to the first rendered row (highest ranked).
+
+Example table head:
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Product</th><th>Form / Type</th><th>Key Points</th><th>Notes</th><th>Guarantee</th><th>Action</th>
+    </tr>
+  </thead>
+  <tbody id="supp-table"></tbody>
+</table>
+
+5) Patch /assets/js/main.js
+
+Keep your existing tracking. Append/merge this patch:
+
+// === Utilities ===
+function uuid(){return crypto.randomUUID?.() || 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g,c=>{const r=Math.random()*16|0,v=c==='x'?r:(r&0x3|0x8);return v.toString(16);});}
+function params(){const u=new URL(location.href),o={};for(const [k,v] of u.searchParams)o[k]=v;return o;}
+
+// === Auto "Updated:" ===
+document.querySelectorAll('[data-updated]').forEach(el=>{
+  const d=new Date(), m=d.toLocaleString('en-US',{month:'long'}), y=d.getFullYear();
+  el.prepend(`Updated: ${m} ${y} • `);
+});
+
+// === Outbound click tracking (reuse your Keitaro/GA4 endpoint) ===
+document.addEventListener('click', e=>{
+  const a=e.target.closest('a.cta'); if(!a) return;
+  const payload={event:'outbound_click',offer:a.dataset.offer||a.textContent.trim(),page_path:location.pathname,event_id:uuid(),...params()};
+  navigator.sendBeacon?.('https://REPLACE-KEITARO-ENDPOINT', new Blob([JSON.stringify(payload)],{type:'application/json'}));
+  window.gtag && gtag('event','outbound_click', payload);
+}, true);
+
+// === When hydrating tables, flag first row as Top Pick ===
+// Example for supplements:
+function renderSupplements(items){
+  const tbody=document.getElementById('supp-table'); if(!tbody) return;
+  tbody.innerHTML='';
+  items.forEach((it, i)=>{
+    const tr=document.createElement('tr');
+    if(i===0) tr.classList.add('top-pick'); // visual highlight
+    tr.innerHTML=`
+      <td><span class="k">${it.name}</span><br><span class="small">${it.form||''}</span></td>
+      <td>${it.form||''}</td>
+      <td>${(it.key_points||[]).slice(0,3).join('<br>')}</td>
+      <td>${it.notes||''}</td>
+      <td>${it.guarantee||'—'}</td>
+      <td>
+        <a class="btn btn-primary cta" data-offer="${it.slug}" href="${it.cta_url}" target="_blank" rel="nofollow sponsored noopener">Check Price</a>
+        <a class="btn btn-ghost" href="#">Read Review</a>
+      </td>`;
+    tbody.appendChild(tr);
+  });
+}
+
+
+(If your current hydration uses a different function name/IDs, adapt the renderSupplements body—keep the .top-pick logic.)
+
+6) Images
+
+Ensure these files exist (placeholders OK):
+
+/assets/img/hero-home.jpg
+
+/assets/img/hero-nonpill.jpg
+
+/assets/img/hero-supplements.jpg
+
+/assets/img/placeholder-1.jpg, -2.jpg, -3.jpg
+
+7) Acceptance criteria
+
+New light theme live on all pages; no rounded corners anywhere.
+
+Hero with two CTA tiles on Home; disclosure above the fold on all pages; auto “Updated: {Month Year}”.
+
+Tables use the new skin; first row appears with a subtle Top Pick tint.
+
+Outbound click tracking still fires (Keitaro stub + GA4) with a unique event_id.
+
+Mobile Lighthouse: Performance ≥ 90, Accessibility ≥ 90.
+
+Apply these changes now.

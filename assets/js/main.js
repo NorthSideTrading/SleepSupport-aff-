@@ -1,44 +1,18 @@
 /**
  * Sleep Support Guide - Main JavaScript
  * Professional affiliate comparison microsite per specification
- * Age 40+ optimized with comprehensive tracking
+ * Age 40+ optimized with comprehensive tracking and new light theme
  */
+
+// === Utilities ===
+function uuid(){return crypto.randomUUID?.() || 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g,c=>{const r=Math.random()*16|0,v=c==='x'?r:(r&0x3|0x8);return v.toString(16);});}
+function params(){const u=new URL(location.href),o={};for(const [k,v] of u.searchParams)o[k]=v;return o;}
 
 // Product data store - loads from /data/offers.json
 let productData = {
     supplements: [],
     non_pill: []
 };
-
-// UUID generator function - per specification
-function uuid() {
-    return crypto.randomUUID?.() || 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, c => {
-        const r = Math.random() * 16 | 0, v = c === 'x' ? r : (r & 0x3 | 0x8);
-        return v.toString(16);
-    });
-}
-
-// URL parameters helper - per specification
-function params() {
-    const u = new URL(location.href), o = {};
-    for (const [k, v] of u.searchParams) o[k] = v;
-    return o;
-}
-
-// Outbound click tracking - per specification
-function trackOutboundClick(e) {
-    const a = e.target.closest('a.cta');
-    if (!a) return;
-    const payload = {
-        event: 'outbound_click',
-        offer: a.dataset.offer,
-        page_path: location.pathname,
-        event_id: uuid(),
-        ...params()
-    };
-    navigator.sendBeacon?.('https://REPLACE-KEITARO-ENDPOINT', new Blob([JSON.stringify(payload)], { type: 'application/json' }));
-    window.gtag && gtag('event', 'outbound_click', payload);
-}
 
 // DOM Content Loaded
 document.addEventListener('DOMContentLoaded', function() {
@@ -49,20 +23,14 @@ document.addEventListener('DOMContentLoaded', function() {
  * Initialize the application
  */
 function initializeApp() {
-    // Load product data
-    loadProductData();
-    
-    // Setup outbound click tracking
-    document.addEventListener('click', trackOutboundClick, true);
-    
-    // Auto "Updated:" stamps - per specification
-    document.querySelectorAll('[data-updated]').forEach(el => {
-        const d = new Date(), m = d.toLocaleString('en-US', { month: 'long' }), y = d.getFullYear();
-        el.textContent = `Updated: ${m} ${y}`;
+    // === Auto "Updated:" ===
+    document.querySelectorAll('[data-updated]').forEach(el=>{
+        const d=new Date(), m=d.toLocaleString('en-US',{month:'long'}), y=d.getFullYear();
+        el.prepend(`Updated: ${m} ${y} • `);
     });
     
-    // Initialize table functionality
-    initializeTables();
+    // Load product data
+    loadProductData();
     
     // Setup accessibility features
     setupAccessibility();
@@ -70,6 +38,14 @@ function initializeApp() {
     // Setup performance monitoring
     setupPerformanceMonitoring();
 }
+
+// === Outbound click tracking ===
+document.addEventListener('click', e=>{
+    const a=e.target.closest('a.cta'); if(!a) return;
+    const payload={event:'outbound_click',offer:a.dataset.offer||a.textContent.trim(),page_path:location.pathname,event_id:uuid(),...params()};
+    navigator.sendBeacon?.('https://REPLACE-KEITARO-ENDPOINT', new Blob([JSON.stringify(payload)],{type:'application/json'}));
+    window.gtag && gtag('event','outbound_click', payload);
+}, true);
 
 /**
  * Load product data from JSON file
@@ -84,8 +60,10 @@ async function loadProductData() {
         
         // Populate tables if we're on comparison pages
         const currentPage = getCurrentPage();
-        if (currentPage === 'non-pill-solutions' || currentPage === 'supplements') {
-            populateComparisonTable(currentPage);
+        if (currentPage === 'non-pill-solutions') {
+            renderNonPillSolutions(productData.non_pill || []);
+        } else if (currentPage === 'supplements') {
+            renderSupplements(productData.supplements || []);
         }
     } catch (error) {
         console.error('Failed to load product data:', error);
@@ -103,135 +81,48 @@ function getCurrentPage() {
     return 'home';
 }
 
-/**
- * Populate comparison table with data
- */
-function populateComparisonTable(type) {
-    const tableBodyId = type === 'non-pill-solutions' ? 'nonPillTableBody' : 'supplementsTableBody';
-    const tableBody = document.getElementById(tableBodyId);
-    const dataKey = type === 'non-pill-solutions' ? 'non_pill' : 'supplements';
+// === When hydrating tables, flag first row as Top Pick ===
+function renderSupplements(items){
+    const tbody=document.getElementById('supp-table'); if(!tbody) return;
+    tbody.innerHTML='';
+    // Sort by rank_priority (1 = highest payout)
+    const sortedItems = [...items].sort((a, b) => a.rank_priority - b.rank_priority);
     
-    if (!tableBody || !productData[dataKey]) return;
-    
-    tableBody.innerHTML = '';
-    
-    // Sort supplements by rank_priority (1 = highest payout)
-    const data = type === 'supplements' 
-        ? [...productData[dataKey]].sort((a, b) => a.rank_priority - b.rank_priority)
-        : productData[dataKey];
-    
-    data.forEach((product, index) => {
-        const row = createTableRow(product, type, index);
-        tableBody.appendChild(row);
+    sortedItems.forEach((it, i)=>{
+        const tr=document.createElement('tr');
+        if(i===0) tr.classList.add('top-pick'); // visual highlight
+        tr.innerHTML=`
+            <td><span class="k">${it.name}</span><br><span class="small">${it.form||''}</span></td>
+            <td>${it.form||''}</td>
+            <td>${(it.key_points||[]).slice(0,3).join('<br>')}</td>
+            <td>${it.notes||''}</td>
+            <td>${it.guarantee||'—'}</td>
+            <td>
+                <a class="btn btn-primary cta" data-offer="${it.slug}" href="${it.cta_url}" target="_blank" rel="nofollow sponsored noopener">Check Price</a><br>
+                <a class="btn btn-ghost mt8" href="#">Read Review</a>
+            </td>`;
+        tbody.appendChild(tr);
     });
 }
 
-/**
- * Create table row for product
- */
-function createTableRow(product, type, index) {
-    const row = document.createElement('tr');
-    row.className = 'product-row';
-    row.setAttribute('data-product-slug', product.slug);
+function renderNonPillSolutions(items){
+    const tbody=document.getElementById('nonpill-table'); if(!tbody) return;
+    tbody.innerHTML='';
     
-    if (type === 'non-pill-solutions') {
-        row.innerHTML = `
+    items.forEach((it, i)=>{
+        const tr=document.createElement('tr');
+        if(i===0) tr.classList.add('top-pick'); // visual highlight
+        tr.innerHTML=`
+            <td><span class="k">${it.name}</span></td>
+            <td>${it.type||''}</td>
+            <td>${it.comfort||''}</td>
+            <td>${it.care||''}</td>
+            <td>${it.trial||''}</td>
             <td>
-                <div class="product-name">${product.name}</div>
-            </td>
-            <td><span class="text-sm">${product.type}</span></td>
-            <td><span class="text-sm">${product.comfort}</span></td>
-            <td><span class="text-sm">${product.care}</span></td>
-            <td><span class="text-sm">${product.trial}</span></td>
-            <td>
-                <div class="cta-buttons">
-                    <a class="cta" data-offer="${product.slug}" href="${product.cta_url}" target="_blank" rel="nofollow sponsored noopener">Check Price</a>
-                    <a class="ghost" href="#">Read Guide</a>
-                </div>
-            </td>
-        `;
-    } else if (type === 'supplements') {
-        // Per specification - supplements table with rank_priority ordering
-        row.innerHTML = `
-            <td>
-                <div class="product-name">${product.name}</div>
-            </td>
-            <td><span class="text-sm">${product.form}</span></td>
-            <td><span class="text-sm">${product.key_points.join(', ')}</span></td>
-            <td><span class="text-sm">${product.notes}</span></td>
-            <td><span class="text-sm">${product.guarantee}</span></td>
-            <td>
-                <div class="cta-buttons">
-                    <a class="cta" data-offer="${product.slug}" href="${product.cta_url}" target="_blank" rel="nofollow sponsored noopener">Check Price</a>
-                    <a class="ghost" href="#">Read Review</a>
-                </div>
-            </td>
-        `;
-    }
-    
-    return row;
-}
-
-/**
- * Initialize table functionality
- */
-function initializeTables() {
-    // Add global sort table function to window
-    window.sortTable = sortTable;
-}
-
-/**
- * Sort table by column
- */
-function sortTable(columnIndex) {
-    const table = document.querySelector('.comparison-table');
-    if (!table) return;
-    
-    const tbody = table.querySelector('tbody');
-    const rows = Array.from(tbody.rows);
-    
-    // Get current sort direction
-    const currentDirection = table.getAttribute('data-sort-dir') || 'asc';
-    const newDirection = currentDirection === 'asc' ? 'desc' : 'asc';
-    table.setAttribute('data-sort-dir', newDirection);
-    
-    // Sort rows
-    rows.sort((a, b) => {
-        const aText = a.cells[columnIndex].textContent.trim();
-        const bText = b.cells[columnIndex].textContent.trim();
-        
-        // Standard text comparison
-        if (newDirection === 'asc') {
-            return aText.localeCompare(bText, undefined, { numeric: true });
-        } else {
-            return bText.localeCompare(aText, undefined, { numeric: true });
-        }
-    });
-    
-    // Rebuild table body
-    tbody.innerHTML = '';
-    rows.forEach(row => tbody.appendChild(row));
-    
-    // Update sort indicators
-    updateSortIndicators(table, columnIndex, newDirection);
-    
-    // Announce sort to screen readers
-    announceToScreenReader(`Table sorted by column ${columnIndex + 1}, ${newDirection}ending order`);
-}
-
-/**
- * Update sort indicators in table headers
- */
-function updateSortIndicators(table, activeColumn, direction) {
-    const indicators = table.querySelectorAll('.sort-indicator');
-    indicators.forEach((indicator, index) => {
-        if (index === activeColumn) {
-            indicator.textContent = direction === 'asc' ? '↑' : '↓';
-            indicator.setAttribute('aria-label', `Sorted ${direction}ending`);
-        } else {
-            indicator.textContent = '⇅';
-            indicator.setAttribute('aria-label', 'Sortable');
-        }
+                <a class="btn btn-primary cta" data-offer="${it.slug}" href="${it.cta_url}" target="_blank" rel="nofollow sponsored noopener">Check Price</a><br>
+                <a class="btn btn-ghost mt8" href="#">Read Guide</a>
+            </td>`;
+        tbody.appendChild(tr);
     });
 }
 
@@ -253,7 +144,7 @@ function setupAccessibility() {
  * Enhance table accessibility
  */
 function enhanceTableAccessibility() {
-    const tables = document.querySelectorAll('.comparison-table');
+    const tables = document.querySelectorAll('.table');
     tables.forEach(table => {
         // Add table caption if missing
         if (!table.querySelector('caption')) {
@@ -270,23 +161,7 @@ function enhanceTableAccessibility() {
                 header.setAttribute('scope', 'col');
             }
         });
-        
-        // Add keyboard navigation
-        table.addEventListener('keydown', handleTableKeydown);
     });
-}
-
-/**
- * Handle keyboard navigation in tables
- */
-function handleTableKeydown(event) {
-    const target = event.target;
-    if (!target.matches('th[onclick]')) return;
-    
-    if (event.key === 'Enter' || event.key === ' ') {
-        event.preventDefault();
-        target.click();
-    }
 }
 
 /**

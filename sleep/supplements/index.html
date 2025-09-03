@@ -402,30 +402,14 @@
     </script>
 </head>
 <body>
-    <div class="top-bar">
-        <div class="container">
-            <div class="top-bar-content">
-                <div>
-                    <span data-updated></span> • Editor's Note: Professional comparisons
-                </div>
-                <div>
-                    <strong>Disclosure:</strong> We may earn a commission if you buy through our links. This site provides educational information and is not medical advice.
-                </div>
-            </div>
-        </div>
-    </div>
     
     <header>
         <div class="container">
-            <div class="header-content">
-                <a href="/" class="logo">Sleep Support Guide</a>
-                <nav>
-                    <ul>
-                        <li><a href="/sleep/supplements/" class="active">Supplements</a></li>
-                        <li><a href="/sleep/non-pill-solutions/">Non-Pill Solutions</a></li>
-                    </ul>
-                </nav>
-            </div>
+            <a href="/" class="brand">Sleep Support Guide</a>
+            <nav>
+                <a href="/sleep/supplements/" style="border-bottom-color: var(--accent);">Supplements</a>
+                <a href="/sleep/non-pill-solutions/">Non-Pill Solutions</a>
+            </nav>
         </div>
     </header>
 
@@ -433,8 +417,14 @@
         <!-- Hero -->
         <section class="hero">
             <div class="container">
-                <h1>Best Sleep-Support Supplements (2025)</h1>
-                <p class="hero-description">Professional comparison of supplements positioned for sleep support and relaxation. Non-habit-forming options ranked by affiliate performance.</p>
+                <div>
+                    <h1>Best Sleep-Support Supplements (2025)</h1>
+                    <p class="lead">Professional comparison of supplements positioned for sleep support and relaxation. Non-habit-forming options ranked by affiliate performance.</p>
+                    <p class="meta-bar" data-updated>
+                        <strong>Disclosure:</strong> We may earn a commission if you buy through our links. Not medical advice.
+                    </p>
+                </div>
+                <div class="img-wrap" aria-hidden="true" style="background-image: url('/assets/img/hero-supplements.jpg');"></div>
             </div>
         </section>
         
@@ -442,23 +432,21 @@
         <section class="section">
             <div class="container">
                 <h2>Sleep-Support Supplements Comparison</h2>
-                <div class="table-wrapper">
-                    <table class="comparison-table" id="supplementsTable">
-                        <thead>
-                            <tr>
-                                <th onclick="sortTable(0)">Product</th>
-                                <th onclick="sortTable(1)">Form</th>
-                                <th onclick="sortTable(2)">Key Ingredients/Points</th>
-                                <th onclick="sortTable(3)">Notes / Non-habit info</th>
-                                <th onclick="sortTable(4)">Guarantee/Returns</th>
-                                <th>Action</th>
-                            </tr>
-                        </thead>
-                        <tbody id="supplementsTableBody">
-                            <!-- Data will be populated by JavaScript -->
-                        </tbody>
-                    </table>
-                </div>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Form</th>
+                            <th>Key Points</th>
+                            <th>Notes</th>
+                            <th>Guarantee</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="supp-table">
+                        <!-- Data will be populated by JavaScript -->
+                    </tbody>
+                </table>
             </div>
         </section>
         
