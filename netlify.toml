@@ -2,13 +2,13 @@
   publish = "."
 
 [[redirects]]
-  from = "/sleep/devices"
-  to = "/sleep/devices/index.html"
+  from = "/sleep/non-pill-solutions"
+  to = "/sleep/non-pill-solutions/index.html"
   status = 200
 
 [[redirects]]
-  from = "/sleep/devices/"
-  to = "/sleep/devices/index.html"
+  from = "/sleep/non-pill-solutions/"
+  to = "/sleep/non-pill-solutions/index.html"
   status = 200
 
 [[redirects]]

@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sleep Help Hub: Compare Anti-Snore Devices & Sleep-Support Supplements (2025)</title>
-    <meta name="description" content="Conservative, product-first comparisons of anti-snoring devices and sleep-support supplements. Editorial picks with transparent affiliate disclosures.">
+    <title>Sleep Support Guide: Compare Non-Pill Options & Night-Time Supplements (2025)</title>
+    <meta name="description" content="Practical, product-first comparisons—no medical claims. Compare anti-snoring devices and sleep-support supplements for better rest.">
     <link rel="canonical" href="/">
     
     <!-- Preload critical fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Critical CSS inline for performance -->
     <style>
         :root {
-            --background: hsl(210, 20%, 98%);
+            --background: hsl(0, 0%, 100%);
             --foreground: hsl(210, 20%, 15%);
             --card: hsl(0, 0%, 100%);
             --card-foreground: hsl(210, 20%, 15%);
@@ -30,14 +30,18 @@
             --border: hsl(214, 32%, 91%);
         }
         
-        body {
-            font-family: 'IBM Plex Sans', 'Source Sans 3', system-ui, sans-serif;
-            font-size: 18px;
-            line-height: 1.6;
+        * {
             margin: 0;
             padding: 0;
-            background-color: var(--background);
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Source Sans 3', 'IBM Plex Sans', system-ui, sans-serif;
+            font-size: 18px;
+            line-height: 1.6;
             color: var(--foreground);
+            background-color: var(--background);
         }
         
         .container {
@@ -46,387 +50,351 @@
             padding: 0 1rem;
         }
         
-        .header {
-            background-color: var(--card);
-            border-bottom: 1px solid var(--border);
-            position: sticky;
-            top: 0;
-            z-index: 50;
+        /* Typography */
+        h1 {
+            font-size: 36px;
+            font-weight: 600;
+            line-height: 1.2;
+            margin-bottom: 1rem;
         }
         
-        .nav {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+        h2 {
+            font-size: 28px;
+            font-weight: 600;
+            line-height: 1.3;
+            margin-bottom: 1rem;
+        }
+        
+        h3 {
+            font-size: 22px;
+            font-weight: 500;
+            line-height: 1.3;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Header */
+        header {
+            background-color: var(--background);
+            border-bottom: 1px solid var(--border);
             padding: 1rem 0;
         }
         
-        .logo {
-            font-size: 1.25rem;
-            font-weight: 600;
-            color: var(--foreground);
-            text-decoration: none;
-        }
-        
-        .nav-links {
+        .header-content {
             display: flex;
-            gap: 1.5rem;
+            justify-content: space-between;
+            align-items: center;
         }
         
-        .nav-links a {
+        .logo {
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--primary);
+            text-decoration: none;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        nav a {
             color: var(--foreground);
             text-decoration: none;
-            transition: color 0.2s;
+            font-weight: 500;
         }
         
-        .nav-links a:hover {
+        nav a:hover {
             color: var(--primary);
         }
         
+        /* Disclosure */
         .disclosure {
             background-color: var(--muted);
-            padding: 0.5rem 0.75rem;
             border: 1px solid var(--border);
-            font-size: 0.875rem;
-            color: var(--muted-foreground);
+            padding: 1rem;
+            margin: 2rem 0;
+            font-size: 16px;
         }
         
+        /* Hero */
         .hero {
-            background: linear-gradient(to bottom, var(--muted), var(--background));
             padding: 4rem 0;
             text-align: center;
+            background-color: var(--background);
         }
         
         .hero h1 {
-            font-size: clamp(2rem, 5vw, 3rem);
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-            line-height: 1.2;
+            margin-bottom: 1rem;
+            font-size: 38px;
         }
         
-        .hero p {
-            font-size: 1.125rem;
+        .hero-subtitle {
+            font-size: 20px;
             color: var(--muted-foreground);
             margin-bottom: 3rem;
-            max-width: 48rem;
-            margin-left: auto;
-            margin-right: auto;
         }
         
-        .cards-grid {
+        .cta-cards {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
-            max-width: 64rem;
+            max-width: 800px;
             margin: 0 auto;
+        }
+        
+        .cta-card {
+            background-color: var(--card);
+            border: 1px solid var(--border);
+            padding: 2rem;
+            text-decoration: none;
+            color: var(--foreground);
+            transition: all 0.2s ease;
+        }
+        
+        .cta-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-2px);
+        }
+        
+        .cta-card h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        
+        /* Updated stamp */
+        .updated {
+            color: var(--muted-foreground);
+            font-size: 14px;
+            font-weight: 500;
+        }
+        
+        /* Sections */
+        .section {
+            padding: 3rem 0;
+        }
+        
+        .section-alt {
+            background-color: var(--secondary);
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
         }
         
         .card {
             background-color: var(--card);
             border: 1px solid var(--border);
-            padding: 2rem;
-            transition: box-shadow 0.2s;
-            cursor: pointer;
+            padding: 1.5rem;
         }
         
-        .card:hover {
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        /* FAQ */
+        .faq-item {
+            margin-bottom: 2rem;
         }
         
-        .card-icon {
-            width: 3rem;
-            height: 3rem;
-            margin: 0 auto 1rem;
-            color: var(--primary);
-        }
-        
-        .card-icon.accent {
-            color: var(--accent);
-        }
-        
-        .card h2 {
-            font-size: 1.5rem;
+        .faq-question {
             font-weight: 600;
-            margin-bottom: 0.75rem;
-            transition: color 0.2s;
+            margin-bottom: 0.5rem;
         }
         
-        .card:hover h2 {
-            color: var(--primary);
-        }
-        
-        .card:hover h2.accent {
-            color: var(--accent);
-        }
-        
-        .card p {
+        .faq-answer {
             color: var(--muted-foreground);
-            margin-bottom: 1rem;
         }
         
-        .card-cta {
-            font-weight: 500;
-            color: var(--primary);
+        /* Footer */
+        footer {
+            background-color: var(--secondary);
+            border-top: 1px solid var(--border);
+            padding: 2rem 0;
+            text-align: center;
+            font-size: 16px;
+            color: var(--muted-foreground);
         }
         
-        .card-cta.accent {
-            color: var(--accent);
-        }
-        
+        /* Mobile responsive */
         @media (max-width: 768px) {
-            body {
-                font-size: 17px;
+            .hero h1 {
+                font-size: 32px;
             }
             
-            .nav {
-                flex-direction: column;
+            .hero-subtitle {
+                font-size: 18px;
+            }
+            
+            .cta-cards {
+                grid-template-columns: 1fr;
+            }
+            
+            nav ul {
                 gap: 1rem;
-            }
-            
-            .nav-links {
-                display: none;
-            }
-            
-            .disclosure {
-                font-size: 0.75rem;
             }
         }
     </style>
     
-    <!-- Link to external CSS for non-critical styles -->
+    <!-- Load external CSS -->
     <link rel="stylesheet" href="/assets/css/style.css">
     
-    <!-- Google Analytics / GA4 -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'GA_MEASUREMENT_ID');
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How do you compare sleep products?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We evaluate non-pill solutions on fit, comfort, and return policies. For supplements, we focus on ingredient transparency, dosing clarity, and vendor guarantees."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "When should I see a professional?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Consult a healthcare provider if you have sleep apnea symptoms, severe snoring, or daytime fatigue. These products are not medical treatments."
+          }
+        },
+        {
+          "@type": "Question", 
+          "name": "Are these products habit-forming?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The supplements we feature are positioned as non-habit-forming. However, always consult your healthcare provider before starting any new supplement regimen."
+          }
+        }
+      ]
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        }
+      ]
+    }
     </script>
 </head>
 <body>
-    <!-- Site Header -->
-    <header class="header">
+    <header>
         <div class="container">
-            <nav class="nav">
-                <div style="display: flex; align-items: center; gap: 2rem;">
-                    <a href="/" class="logo">Sleep Help Hub</a>
-                    <div class="nav-links">
-                        <a href="/sleep/devices/">Devices</a>
-                        <a href="/sleep/supplements/">Supplements</a>
-                    </div>
-                </div>
-            </nav>
+            <div class="header-content">
+                <a href="/" class="logo">Sleep Support Guide</a>
+                <nav>
+                    <ul>
+                        <li><a href="/sleep/non-pill-solutions/">Non-Pill Solutions</a></li>
+                        <li><a href="/sleep/supplements/">Supplements</a></li>
+                    </ul>
+                </nav>
+            </div>
         </div>
     </header>
 
     <main>
-        <!-- Hero Section -->
+        <!-- Disclosure - Above the fold -->
+        <div class="container">
+            <div class="disclosure">
+                <strong>Disclosure:</strong> We may earn a commission if you buy through our links. This site provides educational information and is not medical advice.
+            </div>
+        </div>
+        
+        <!-- Hero -->
         <section class="hero">
             <div class="container">
-                <h1>Sleep Help Hub: Compare Anti-Snore Devices & Sleep-Support Supplements (2025)</h1>
-                <p>Conservative, product-first comparisons—no medical claims. Find solutions that may help support better sleep quality.</p>
+                <div class="updated" data-updated></div>
+                <h1>Sleep Support Guide: Compare Non-Pill Options & Night-Time Supplements (2025)</h1>
+                <p class="hero-subtitle">Practical, product-first comparisons—no medical claims</p>
                 
-                <!-- Two Primary Navigation Cards -->
-                <div class="cards-grid">
-                    <!-- Devices Card -->
-                    <div class="card" onclick="window.location.href='/sleep/devices/'">
-                        <svg class="card-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                        </svg>
-                        <h2>Reduce Snoring Tonight</h2>
-                        <p>Compare anti-snoring mouthpieces and devices. Professional reviews of MAD and TRD options.</p>
-                        <div class="card-cta">View Devices →</div>
+                <div class="cta-cards">
+                    <a href="/sleep/non-pill-solutions/" class="cta-card">
+                        <h3>Reduce Snoring Tonight</h3>
+                        <p>Non-Pill Solutions</p>
+                        <p>Compare mouthpieces, nasal strips, and positional aids that may help reduce snoring for some adults.</p>
+                    </a>
+                    
+                    <a href="/sleep/supplements/" class="cta-card">
+                        <h3>Wind Down Naturally</h3>
+                        <p>Supplements</p>
+                        <p>Explore non-habit-forming supplements positioned for sleep support and relaxation.</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- How we compare -->
+        <section class="section">
+            <div class="container">
+                <h2>How We Compare</h2>
+                <div class="grid">
+                    <div class="card">
+                        <h3>Non-Pill Solutions</h3>
+                        <p>We evaluate fit and comfort, daily care requirements, and return/trial policies. Focus on practical usability for adults seeking snoring reduction.</p>
                     </div>
-
-                    <!-- Supplements Card -->
-                    <div class="card" onclick="window.location.href='/sleep/supplements/'">
-                        <svg class="card-icon accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
-                        </svg>
-                        <h2 class="accent">Wind Down Naturally</h2>
-                        <p>Compare sleep-support supplements. Non-habit-forming options for relaxation and rest.</p>
-                        <div class="card-cta accent">View Supplements →</div>
+                    <div class="card">
+                        <h3>Supplements</h3>
+                        <p>We examine ingredient transparency, dosing clarity, and vendor return policies. Priority given to products positioned as non-habit-forming.</p>
                     </div>
                 </div>
             </div>
         </section>
-
-        <!-- How We Compare Section -->
-        <section style="padding: 4rem 0; background-color: var(--background);">
+        
+        <!-- When to see a professional -->
+        <section class="section section-alt">
             <div class="container">
-                <h2 style="font-size: 1.875rem; font-weight: 600; margin-bottom: 2rem; text-align: center;">How We Compare Products</h2>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem;">
-                    <div style="background-color: var(--card); border: 1px solid var(--border); padding: 1.5rem;">
-                        <h3 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 1rem;">Anti-Snoring Devices</h3>
-                        <ul style="list-style: none; padding: 0; margin: 0;">
-                            <li style="display: flex; align-items: flex-start; margin-bottom: 0.75rem;">
-                                <span style="color: var(--primary); margin-right: 0.5rem;">•</span>
-                                <span style="color: var(--muted-foreground);">Fit & comfort (boil-and-bite, adjustability, profile height)</span>
-                            </li>
-                            <li style="display: flex; align-items: flex-start; margin-bottom: 0.75rem;">
-                                <span style="color: var(--primary); margin-right: 0.5rem;">•</span>
-                                <span style="color: var(--muted-foreground);">Material quality and breathing holes</span>
-                            </li>
-                            <li style="display: flex; align-items: flex-start; margin-bottom: 0.75rem;">
-                                <span style="color: var(--primary); margin-right: 0.5rem;">•</span>
-                                <span style="color: var(--muted-foreground);">Care requirements and replacement cycles</span>
-                            </li>
-                            <li style="display: flex; align-items: flex-start;">
-                                <span style="color: var(--primary); margin-right: 0.5rem;">•</span>
-                                <span style="color: var(--muted-foreground);">Return policies and trial periods</span>
-                            </li>
-                        </ul>
-                    </div>
-                    
-                    <div style="background-color: var(--card); border: 1px solid var(--border); padding: 1.5rem;">
-                        <h3 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 1rem;">Sleep Supplements</h3>
-                        <ul style="list-style: none; padding: 0; margin: 0;">
-                            <li style="display: flex; align-items: flex-start; margin-bottom: 0.75rem;">
-                                <span style="color: var(--accent); margin-right: 0.5rem;">•</span>
-                                <span style="color: var(--muted-foreground);">Ingredient transparency and dosing clarity</span>
-                            </li>
-                            <li style="display: flex; align-items: flex-start; margin-bottom: 0.75rem;">
-                                <span style="color: var(--accent); margin-right: 0.5rem;">•</span>
-                                <span style="color: var(--muted-foreground);">Non-habit-forming formulations</span>
-                            </li>
-                            <li style="display: flex; align-items: flex-start; margin-bottom: 0.75rem;">
-                                <span style="color: var(--accent); margin-right: 0.5rem;">•</span>
-                                <span style="color: var(--muted-foreground);">Allergen and stimulant considerations</span>
-                            </li>
-                            <li style="display: flex; align-items: flex-start;">
-                                <span style="color: var(--accent); margin-right: 0.5rem;">•</span>
-                                <span style="color: var(--muted-foreground);">Return policies and value per serving</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+                <h2>When to See a Professional</h2>
+                <p>These products are not medical treatments. Consult a healthcare provider if you experience:</p>
+                <ul style="margin: 1rem 0; padding-left: 2rem;">
+                    <li>Sleep apnea symptoms (breathing interruptions during sleep)</li>
+                    <li>Severe or persistent snoring despite trying non-pill solutions</li>
+                    <li>Daytime fatigue that affects daily activities</li>
+                    <li>Jaw pain or dental issues when using oral devices</li>
+                </ul>
+                <p>A sleep study may be recommended to identify underlying conditions requiring professional treatment.</p>
             </div>
         </section>
-
-        <!-- Professional Consultation Box -->
-        <section style="padding: 3rem 0; background-color: var(--muted);">
+        
+        <!-- FAQ -->
+        <section class="section">
             <div class="container">
-                <div style="background-color: var(--card); border: 1px solid var(--border); padding: 2rem; text-align: center;">
-                    <h3 style="font-size: 1.5rem; font-weight: 600; margin-bottom: 1rem;">When to See a Professional</h3>
-                    <p style="color: var(--muted-foreground); margin-bottom: 1rem; max-width: 32rem; margin-left: auto; margin-right: auto;">
-                        Consider consulting a healthcare professional if you experience loud snoring with breathing pauses, daytime fatigue, or morning headaches. These may indicate sleep apnea or other conditions requiring medical evaluation.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- FAQ Section -->
-        <section style="padding: 4rem 0; background-color: var(--background);">
-            <div class="container">
-                <h2 style="font-size: 1.875rem; font-weight: 600; margin-bottom: 2rem; text-align: center;">Frequently Asked Questions</h2>
-                <div style="display: flex; flex-direction: column; gap: 1.5rem;">
-                    <div style="background-color: var(--card); border: 1px solid var(--border); padding: 1.5rem;">
-                        <h3 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 0.75rem;">How do anti-snoring devices work?</h3>
-                        <p style="color: var(--muted-foreground); margin: 0;">Anti-snoring mouthpieces typically work by holding the lower jaw slightly forward (MAD) or keeping the tongue in position (TRD). This helps maintain an open airway during sleep, which may help reduce snoring for some adults.</p>
+                <h2>Frequently Asked Questions</h2>
+                <div class="grid">
+                    <div class="faq-item">
+                        <div class="faq-question">How do you compare sleep products?</div>
+                        <div class="faq-answer">We evaluate non-pill solutions on fit, comfort, and return policies. For supplements, we focus on ingredient transparency, dosing clarity, and vendor guarantees.</div>
                     </div>
                     
-                    <div style="background-color: var(--card); border: 1px solid var(--border); padding: 1.5rem;">
-                        <h3 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 0.75rem;">Are sleep supplements safe to use nightly?</h3>
-                        <p style="color: var(--muted-foreground); margin: 0;">Many sleep-support supplements contain natural ingredients like magnesium and L-theanine that are generally well-tolerated. However, you should consult with a healthcare professional about your specific situation and any potential interactions with medications.</p>
+                    <div class="faq-item">
+                        <div class="faq-question">When should I see a professional?</div>
+                        <div class="faq-answer">Consult a healthcare provider if you have sleep apnea symptoms, severe snoring, or daytime fatigue. These products are not medical treatments.</div>
                     </div>
                     
-                    <div style="background-color: var(--card); border: 1px solid var(--border); padding: 1.5rem;">
-                        <h3 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 0.75rem;">How long does it take to see results?</h3>
-                        <p style="color: var(--muted-foreground); margin: 0;">Results vary by individual and product type. Anti-snoring devices may show immediate effects but can take 3-7 nights for comfortable adjustment. Supplements typically require 1-2 weeks of consistent use to evaluate effectiveness.</p>
+                    <div class="faq-item">
+                        <div class="faq-question">Are these products habit-forming?</div>
+                        <div class="faq-answer">The supplements we feature are positioned as non-habit-forming. However, always consult your healthcare provider before starting any new supplement regimen.</div>
                     </div>
                 </div>
             </div>
         </section>
     </main>
-
-    <!-- Site Footer -->
-    <footer style="background-color: var(--card); border-top: 1px solid var(--border); padding: 3rem 0;">
+    
+    <footer>
         <div class="container">
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 2rem;">
-                <div>
-                    <h3 style="font-size: 1.125rem; font-weight: 600; margin-bottom: 1rem;">Sleep Help Hub</h3>
-                    <p style="color: var(--muted-foreground); font-size: 0.875rem;">
-                        Professional comparisons of sleep products with transparent affiliate relationships and compliance-focused content.
-                    </p>
-                </div>
-                <div>
-                    <h4 style="font-weight: 600; margin-bottom: 1rem;">Quick Links</h4>
-                    <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.875rem;">
-                        <li style="margin-bottom: 0.5rem;"><a href="/sleep/devices/" style="color: var(--muted-foreground); text-decoration: none;">Anti-Snore Devices</a></li>
-                        <li style="margin-bottom: 0.5rem;"><a href="/sleep/supplements/" style="color: var(--muted-foreground); text-decoration: none;">Sleep Supplements</a></li>
-                        <li style="margin-bottom: 0.5rem;"><a href="/privacy/" style="color: var(--muted-foreground); text-decoration: none;">Privacy Policy</a></li>
-                        <li><a href="/terms/" style="color: var(--muted-foreground); text-decoration: none;">Terms of Service</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 style="font-weight: 600; margin-bottom: 1rem;">Disclaimer</h4>
-                    <p style="font-size: 0.875rem; color: var(--muted-foreground);">
-                        Content is for informational purposes only. Not intended as medical advice. Consult healthcare professionals for sleep-related concerns.
-                    </p>
-                </div>
-            </div>
-            <div style="border-top: 1px solid var(--border); padding-top: 2rem; text-align: center; font-size: 0.875rem; color: var(--muted-foreground);">
-                <p>&copy; 2025 Sleep Help Hub. All rights reserved.</p>
-            </div>
+            <p>Sleep Support Guide • Educational information only • Not medical advice</p>
         </div>
     </footer>
-
-    <!-- JavaScript -->
+    
     <script src="/assets/js/main.js"></script>
-
-    <!-- Schema.org structured data -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-            {
-                "@type": "Question",
-                "name": "How do anti-snoring devices work?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Anti-snoring mouthpieces typically work by holding the lower jaw slightly forward (MAD) or keeping the tongue in position (TRD). This helps maintain an open airway during sleep, which may help reduce snoring for some adults."
-                }
-            },
-            {
-                "@type": "Question", 
-                "name": "Are sleep supplements safe to use nightly?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Many sleep-support supplements contain natural ingredients like magnesium and L-theanine that are generally well-tolerated. However, you should consult with a healthcare professional about your specific situation and any potential interactions with medications."
-                }
-            }
-        ]
-    }
-    </script>
-
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-            {
-                "@type": "ListItem",
-                "position": 1,
-                "name": "Home",
-                "item": "/"
-            },
-            {
-                "@type": "ListItem",
-                "position": 2,
-                "name": "Sleep Devices",
-                "item": "/sleep/devices/"
-            },
-            {
-                "@type": "ListItem",
-                "position": 3,
-                "name": "Sleep Supplements", 
-                "item": "/sleep/supplements/"
-            }
-        ]
-    }
-    </script>
 </body>
 </html>

@@ -1,0 +1,306 @@
+Role: Senior front-end dev + content engineer. Ship a 3-page, professional, age-40+ friendly comparison microsite. Design for Google Search traffic. Keep copy conservative and compliant.
+
+Non-negotiables
+
+Professional look: no rounded corners, sober palette, strong type hierarchy (base 18–19px, LH 1.6).
+
+Pages
+
+/ (Home)
+
+/sleep/non-pill-solutions/ (formerly “devices”; placeholders for now)
+
+/sleep/supplements/ (real offers, ranked by payout to us)
+
+No pricing on site.
+
+Affiliate disclosure above the fold on every page.
+
+Claim safety: “helps reduce snoring,” “supports restful sleep,” “may help,” “not a treatment.”
+
+Tracking: outbound CTA → Keitaro (stub) + GA4 mirror with event-ID dedupe.
+
+Schema: ItemList + FAQPage.
+
+Images: tasteful placeholders for hero/section art (I’ll replace later).
+
+Tech & Structure
+
+Static site (no backend).
+
+/index.html
+/sleep/non-pill-solutions/index.html
+/sleep/supplements/index.html
+/assets/css/style.css
+/assets/js/main.js
+/data/offers.json
+/assets/img/hero-home.jpg
+/assets/img/hero-nonpill.jpg
+/assets/img/hero-supplements.jpg
+/assets/img/placeholder-1.jpg
+/assets/img/placeholder-2.jpg
+/assets/img/placeholder-3.jpg
+robots.txt
+sitemap.xml
+
+
+Performance: inline critical CSS; preload font; lazy-load images; no render-blocking JS.
+Accessibility: semantic HTML; visible focus states; alt text everywhere.
+
+Style Guide (40+)
+
+Font: "Source Sans 3", "IBM Plex Sans", system-ui fallback. H1 34–38px; H2 26–28px; H3 21–22px.
+
+Colors: grayscale + muted navy/teal accent. Zero border-radius.
+
+Layout: grid cards, thin 1px dividers, generous spacing. Balanced copy + graphics.
+
+Home /
+
+Hero
+
+H1: Sleep Support Guide: Compare Non-Pill Options & Night-Time Supplements (2025)
+
+Sub: Practical, product-first comparisons—no medical claims.
+
+Two CTA cards (square corners):
+
+Reduce Snoring Tonight (Non-Pill Solutions) → /sleep/non-pill-solutions/
+
+Wind Down Naturally (Supplements) → /sleep/supplements/
+
+Disclosure (above fold): “We may earn a commission if you buy through our links. Not medical advice.”
+
+Auto “Updated” stamp (month + year).
+
+Sections
+
+How we compare (fit/comfort/returns vs ingredients/dosing/returns).
+
+When to see a professional (non-alarmist).
+
+3-item FAQ.
+Schema: FAQPage + BreadcrumbList.
+Hero image: /assets/img/hero-home.jpg (placeholder).
+
+Non-Pill Solutions /sleep/non-pill-solutions/ (placeholders now)
+
+H1: Best Non-Pill Snoring Solutions (2025)
+Top bar: Updated • Editor’s note • Disclosure
+ComparisonTable (sortable) — columns:
+
+Solution • Type (MAD, nasal strip, wedge pillow, etc.) • Comfort • Care • Trial/Returns • CTA (Check Price / Read Guide)
+
+Seed placeholder rows (neutral copy; href="#"):
+
+Adjustable Mouthpiece (MAD)
+
+Nasal Dilator Strips
+
+Wedge Pillow (Head Elevation)
+
+Below fold: how to choose; who shouldn’t use (TMJ / severe symptoms → see a pro); fitting/usage tips; 4-FAQ.
+Schema: ItemList + FAQPage.
+Hero: /assets/img/hero-nonpill.jpg.
+
+Supplements /sleep/supplements/ (REAL offers, ranked by payout)
+
+Traffic: generic non-brand (sleep support supplement, non-habit sleep aid).
+H1: Best Sleep-Support Supplements (2025)
+Top bar: Updated • Editor’s note • Disclosure
+Hero: /assets/img/hero-supplements.jpg.
+
+/data/offers.json
+
+Create and hydrate from this object. Order by rank_priority (1 = highest payout to us). Do not render prices.
+
+{
+  "supplements": [
+    {
+      "slug": "sleeplean",
+      "name": "SleepLean (night-time routine, weight-management angle)",
+      "form": "Capsules",
+      "key_points": [
+        "Night-time routine formula",
+        "Positioned for sleep support + weight-management goals",
+        "Vendor satisfaction guarantee"
+      ],
+      "notes": "Use conservative language; avoid explicit weight-loss promises.",
+      "guarantee": "Vendor guarantee",
+      "rank_priority": 1,
+      "img": "/assets/img/placeholder-1.jpg",
+      "cta_url": "https://REPLACE-SLEEPELAN-AFF"
+    },
+    {
+      "slug": "resurge",
+      "name": "Resurge (night-time support blend)",
+      "form": "Capsules",
+      "key_points": [
+        "Night-time support formula",
+        "Commonly promoted for sleep & recovery",
+        "Vendor money-back guarantee"
+      ],
+      "notes": "Keep claims to relaxation/sleep-support only.",
+      "guarantee": "Vendor guarantee",
+      "rank_priority": 2,
+      "img": "/assets/img/placeholder-2.jpg",
+      "cta_url": "https://REPLACE-RESURGE-AFF"
+    },
+    {
+      "slug": "yu-sleep",
+      "name": "YU SLEEP (liquid drops format)",
+      "form": "Liquid drops",
+      "key_points": [
+        "Dropper format for ease of use",
+        "Positioned for sleep support",
+        "Strong affiliate traction reported on some traffic types"
+      ],
+      "notes": "Consumer copy must avoid efficacy promises.",
+      "guarantee": "Vendor guarantee",
+      "rank_priority": 3,
+      "img": "/assets/img/placeholder-3.jpg",
+      "cta_url": "https://REPLACE-YUSLEEP-AFF"
+    },
+    {
+      "slug": "pitch-black",
+      "name": "Pitch Black (men’s deep-sleep formula)",
+      "form": "Capsules",
+      "key_points": [
+        "Men-focused positioning",
+        "Marketed for deep-sleep support",
+        "Moderate conversion stats in affiliate listings"
+      ],
+      "notes": "Stay general; no hormone/medical claims.",
+      "guarantee": "Vendor guarantee",
+      "rank_priority": 4,
+      "img": "/assets/img/placeholder-1.jpg",
+      "cta_url": "https://REPLACE-PITCHBLACK-AFF"
+    },
+    {
+      "slug": "magnesium-breakthrough",
+      "name": "BiOptimizers Magnesium Breakthrough",
+      "form": "Capsules",
+      "key_points": [
+        "Seven forms of magnesium",
+        "Positioned for relaxation & sleep quality support",
+        "Long 365-day guarantee (vendor)"
+      ],
+      "notes": "Structure/function wording only.",
+      "guarantee": "365-day vendor guarantee",
+      "rank_priority": 5,
+      "img": "/assets/img/placeholder-2.jpg",
+      "cta_url": "https://REPLACE-BIOPTIMIZERS-AFF"
+    }
+  ],
+  "non_pill": [
+    {
+      "slug": "mouthpiece-generic",
+      "name": "Adjustable Mouthpiece (MAD)",
+      "type": "Non-pill • Mouth/Jaw",
+      "comfort": "Breathing port; adjustable",
+      "care": "Rinse daily; periodic re-fit",
+      "trial": "Trial window varies",
+      "img": "/assets/img/placeholder-1.jpg",
+      "cta_url": "#"
+    },
+    {
+      "slug": "nasal-strips",
+      "name": "Nasal Dilator Strips",
+      "type": "Non-pill • Nasal",
+      "comfort": "Low profile; single-use",
+      "care": "Dispose after use",
+      "trial": "—",
+      "img": "/assets/img/placeholder-2.jpg",
+      "cta_url": "#"
+    },
+    {
+      "slug": "wedge-pillow",
+      "name": "Wedge Pillow (Head Elevation)",
+      "type": "Non-pill • Positional",
+      "comfort": "Elevates head to open airway",
+      "care": "Washable cover",
+      "trial": "Typical home-goods returns",
+      "img": "/assets/img/placeholder-3.jpg",
+      "cta_url": "#"
+    }
+  ]
+}
+
+Supplements table (render rules)
+
+Sort by rank_priority.
+
+Columns (no price): Product (image + name) • Form • Key Ingredients/Points • Notes / Non-habit info • Guarantee/Returns • CTA
+
+CTAs:
+
+<a class="cta" data-offer="slug" href="AFF_URL" target="_blank" rel="nofollow sponsored noopener">Check Price</a>
+<a class="ghost" href="#">Read Review</a>
+
+
+Below the fold
+
+How we pick (label transparency, dosing clarity, return policy).
+
+Stacking with non-pill solutions.
+
+FAQ x4: melatonin vs no-melatonin; timing; interactions; how long to test.
+Schema: ItemList + FAQPage.
+
+JS (/assets/js/main.js)
+
+Fetch /data/offers.json, hydrate tables; supplements sorted by rank_priority.
+
+Add click handler:
+
+function uuid(){return crypto.randomUUID?.()||'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g,c=>{const r=Math.random()*16|0,v=c==='x'?r:(r&0x3|0x8);return v.toString(16);});}
+function params(){const u=new URL(location.href),o={};for(const [k,v] of u.searchParams)o[k]=v;return o;}
+function trackOutboundClick(e){
+  const a=e.target.closest('a.cta'); if(!a) return;
+  const payload={event:'outbound_click', offer:a.dataset.offer, page_path:location.pathname, event_id:uuid(), ...params()};
+  navigator.sendBeacon?.('https://REPLACE-KEITARO-ENDPOINT', new Blob([JSON.stringify(payload)],{type:'application/json'}));
+  window.gtag && gtag('event','outbound_click', payload);
+}
+document.addEventListener('click', trackOutboundClick, true);
+// Auto "Updated:" stamps
+document.querySelectorAll('[data-updated]').forEach(el=>{
+  const d=new Date(), m=d.toLocaleString('en-US',{month:'long'}), y=d.getFullYear();
+  el.textContent=`Updated: ${m} ${y}`;
+});
+
+Compliance copy (drop-ins)
+
+Header disclosure (every page):
+“Disclosure: We may earn a commission if you buy through our links. This site provides educational information and is not medical advice.”
+
+Non-Pill Solutions page note:
+“Non-pill options may help reduce snoring for some adults. They are not a treatment for sleep apnea or other medical conditions.”
+
+Supplements page note (footer):
+“These products are intended to support relaxation and sleep quality. They are not intended to diagnose, treat, cure, or prevent any disease.”
+
+SEO & Routing
+
+Titles ≤ 60 chars; metas 150–160; canonicals; BreadcrumbList.
+
+H1 mirrors query; robots.txt + sitemap.xml.
+
+Ads landing: generic device → /sleep/non-pill-solutions/; generic supplement → /sleep/supplements/; brand “vs” → future /sleep/brand-a-vs-brand-b/ (SEO only unless whitelisted).
+
+Negatives: insomnia cure, prescription, diagnosis, FDA approved, lawsuit, side effects, reddit, scam, and any brands we don’t promote.
+
+Acceptance Criteria
+
+All 3 pages live, linked, mobile-friendly.
+
+Supplements table shows five real offers in payout order (no prices).
+
+Non-Pill table shows three placeholder rows.
+
+Outbound clicks fire with unique event_id and pass through gclid/fbclid/utm_*.
+
+Schema validates; disclosures visible above the fold on mobile.
+
+Lighthouse (mobile): Performance ≥ 90, Accessibility ≥ 90.
+
+Build it.

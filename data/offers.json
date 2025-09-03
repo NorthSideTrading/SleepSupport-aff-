@@ -1,105 +1,111 @@
 {
-  "devices": [
-    {
-      "slug": "snorerx-plus",
-      "name": "SnoreRx Plus",
-      "fit_type": "MAD, boil-and-bite, adjustable up to 6mm",
-      "comfort": "Lateral movement, lightweight design",
-      "care": "Daily rinse; replace ~12-18 months",
-      "trial": "30-night trial",
-      "price": "$100",
-      "our_take": "Advanced adjustability with easy customization",
-      "cta_url": "https://www.snorerx.com/snorerx-plus/"
-    },
-    {
-      "slug": "vitalsleep",
-      "name": "VitalSleep Anti-Snoring",
-      "fit_type": "MAD, boil-and-bite, micro-adjust",
-      "comfort": "Front breathing hole, flexible edges",
-      "care": "Daily clean with soft brush",
-      "trial": "60-night guarantee",
-      "price": "$70",
-      "our_take": "Good value with breathing port for mouth breathers",
-      "cta_url": "https://www.amazon.com/VitalSleep-Anti-Snoring-Mouthpiece-Positioning-Impressions/"
-    },
-    {
-      "slug": "smartguard",
-      "name": "SmartGuard RX",
-      "fit_type": "MAD, adjustable 6mm range, wing design",
-      "comfort": "Moldable trays, comfortable advancement",
-      "care": "Clean daily, durable construction",
-      "trial": "60-night trial",
-      "price": "$50",
-      "our_take": "Best value option with professional design",
-      "cta_url": "https://www.amazon.com/Anti-Snore-SmartGuard-Customizable-Reducing-Mouthpiece/"
-    },
-    {
-      "slug": "somnofit-s",
-      "name": "Somnofit-S Mouth Guard",
-      "fit_type": "MAD, slim profile, elastic straps",
-      "comfort": "Ultra-slim, allows speaking/drinking",
-      "care": "Gentle brush cleaning, elastic strap system",
-      "trial": "60-day return policy",
-      "price": "$150",
-      "our_take": "Most comfortable option with premium materials",
-      "cta_url": "https://sleepdoctor.com/products/somnofit-s-anti-snore-mouth-guard"
-    },
-    {
-      "slug": "zyppah",
-      "name": "Zyppah Anti-Snoring",
-      "fit_type": "MAD/TRD hybrid, tongue stabilization",
-      "comfort": "2mm advancement with tongue strap",
-      "care": "Water/alcohol wash, no soaking",
-      "trial": "91-night trial",
-      "price": "$130",
-      "our_take": "Dual-action approach for complex snoring patterns",
-      "cta_url": "https://sleepdoctor.com/products/original-zyppah-anti-snoring-mouthpiece"
-    }
-  ],
   "supplements": [
     {
-      "slug": "magnesium-glycinate",
-      "name": "Magnesium Glycinate",
+      "slug": "sleeplean",
+      "name": "SleepLean (night-time routine, weight-management angle)",
       "form": "Capsules",
-      "key_ingredients": "Magnesium (glycinate) 200-400mg",
-      "non_habit": "Yes",
-      "notes": "No stimulants; check with medications",
-      "price_per_serving": "$0.25-0.50",
-      "our_take": "Foundational mineral for relaxation support",
-      "cta_url": "https://REPLACE-MAGNESIUM-AFF"
+      "key_points": [
+        "Night-time routine formula",
+        "Positioned for sleep support + weight-management goals",
+        "Vendor satisfaction guarantee"
+      ],
+      "notes": "Use conservative language; avoid explicit weight-loss promises.",
+      "guarantee": "Vendor guarantee",
+      "rank_priority": 1,
+      "img": "/assets/img/placeholder-1.jpg",
+      "cta_url": "https://REPLACE-SLEEPELAN-AFF"
     },
     {
-      "slug": "l-theanine",
-      "name": "L-Theanine 200mg",
+      "slug": "resurge",
+      "name": "Resurge (night-time support blend)",
       "form": "Capsules",
-      "key_ingredients": "L-Theanine 200mg per serving",
-      "non_habit": "Yes",
-      "notes": "Caffeine-free, pairs with magnesium",
-      "price_per_serving": "$0.15-0.30",
-      "our_take": "Gentle relaxation support without drowsiness",
-      "cta_url": "https://REPLACE-LTHEANINE-AFF"
+      "key_points": [
+        "Night-time support formula",
+        "Commonly promoted for sleep & recovery",
+        "Vendor money-back guarantee"
+      ],
+      "notes": "Keep claims to relaxation/sleep-support only.",
+      "guarantee": "Vendor guarantee",
+      "rank_priority": 2,
+      "img": "/assets/img/placeholder-2.jpg",
+      "cta_url": "https://REPLACE-RESURGE-AFF"
     },
     {
-      "slug": "gaba-blend",
-      "name": "Non-Melatonin Sleep Blend",
-      "form": "Capsules",
-      "key_ingredients": "GABA + herbal blend (valerian, passionflower)",
-      "non_habit": "Yes",
-      "notes": "Check interactions; start with lower dose",
-      "price_per_serving": "$0.40-0.80",
-      "our_take": "Herbal option for those avoiding melatonin",
-      "cta_url": "https://REPLACE-GABA-AFF"
+      "slug": "yu-sleep",
+      "name": "YU SLEEP (liquid drops format)",
+      "form": "Liquid drops",
+      "key_points": [
+        "Dropper format for ease of use",
+        "Positioned for sleep support",
+        "Strong affiliate traction reported on some traffic types"
+      ],
+      "notes": "Consumer copy must avoid efficacy promises.",
+      "guarantee": "Vendor guarantee",
+      "rank_priority": 3,
+      "img": "/assets/img/placeholder-3.jpg",
+      "cta_url": "https://REPLACE-YUSLEEP-AFF"
     },
     {
-      "slug": "magnesium-blend",
-      "name": "Multi-Magnesium Complex",
+      "slug": "pitch-black",
+      "name": "Pitch Black (men's deep-sleep formula)",
       "form": "Capsules",
-      "key_ingredients": "Magnesium blend (glycinate, citrate, malate) 400mg",
-      "non_habit": "Yes",
-      "notes": "Multiple forms for better absorption",
-      "price_per_serving": "$0.35-0.60",
-      "our_take": "Enhanced absorption with multiple magnesium types",
-      "cta_url": "https://REPLACE-MAGCOMPLEX-AFF"
+      "key_points": [
+        "Men-focused positioning",
+        "Marketed for deep-sleep support",
+        "Moderate conversion stats in affiliate listings"
+      ],
+      "notes": "Stay general; no hormone/medical claims.",
+      "guarantee": "Vendor guarantee",
+      "rank_priority": 4,
+      "img": "/assets/img/placeholder-1.jpg",
+      "cta_url": "https://REPLACE-PITCHBLACK-AFF"
+    },
+    {
+      "slug": "magnesium-breakthrough",
+      "name": "BiOptimizers Magnesium Breakthrough",
+      "form": "Capsules",
+      "key_points": [
+        "Seven forms of magnesium",
+        "Positioned for relaxation & sleep quality support",
+        "Long 365-day guarantee (vendor)"
+      ],
+      "notes": "Structure/function wording only.",
+      "guarantee": "365-day vendor guarantee",
+      "rank_priority": 5,
+      "img": "/assets/img/placeholder-2.jpg",
+      "cta_url": "https://REPLACE-BIOPTIMIZERS-AFF"
+    }
+  ],
+  "non_pill": [
+    {
+      "slug": "mouthpiece-generic",
+      "name": "Adjustable Mouthpiece (MAD)",
+      "type": "Non-pill • Mouth/Jaw",
+      "comfort": "Breathing port; adjustable",
+      "care": "Rinse daily; periodic re-fit",
+      "trial": "Trial window varies",
+      "img": "/assets/img/placeholder-1.jpg",
+      "cta_url": "#"
+    },
+    {
+      "slug": "nasal-strips",
+      "name": "Nasal Dilator Strips",
+      "type": "Non-pill • Nasal",
+      "comfort": "Low profile; single-use",
+      "care": "Dispose after use",
+      "trial": "—",
+      "img": "/assets/img/placeholder-2.jpg",
+      "cta_url": "#"
+    },
+    {
+      "slug": "wedge-pillow",
+      "name": "Wedge Pillow (Head Elevation)",
+      "type": "Non-pill • Positional",
+      "comfort": "Elevates head to open airway",
+      "care": "Washable cover",
+      "trial": "Typical home-goods returns",
+      "img": "/assets/img/placeholder-3.jpg",
+      "cta_url": "#"
     }
   ]
 }
