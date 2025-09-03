@@ -1,20 +1,5 @@
-# Netlify redirects file
-# Each rule should be on its own line
-
-# Main pages with exact matches
-/sleep/devices/   /sleep/devices/index.html   200
-/sleep/devices    /sleep/devices/index.html   200
-/sleep/supplements/   /sleep/supplements/index.html   200  
-/sleep/supplements    /sleep/supplements/index.html   200
-
-# Static files - let them pass through
-/assets/*   /assets/:splat   200
-/data/*     /data/:splat     200
-/robots.txt /robots.txt     200
-/sitemap.xml /sitemap.xml   200
-
-# Root page
-/   /index.html   200
-
-# Catch-all fallback - must be last
-/*  /index.html   200
+/sleep/devices    /sleep/devices/index.html    200
+/sleep/devices/   /sleep/devices/index.html    200
+/sleep/supplements    /sleep/supplements/index.html    200
+/sleep/supplements/   /sleep/supplements/index.html    200
+/*    /index.html   200
