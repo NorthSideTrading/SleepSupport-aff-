@@ -1,0 +1,264 @@
+Role: Senior front-end dev + content engineer. Ship a 3-page, affiliate comparison microsite for the Sleep niche with a professional look for age 40+. Design for Google Search traffic to land on Devices first, then Supplements. Keep copy compliance-safe.
+
+Objectives (non-negotiable)
+
+Professional look (no rounded corners, no bubbly UI).
+
+Age-40+ readable (base font 18–19px, high contrast, 1.6 line-height).
+
+One clean funnel: Home → Devices hub (/sleep/devices/) → Outbound affiliate CTA; Home → Supplements hub (/sleep/supplements/) → Outbound affiliate CTA.
+
+Claim safety: “helps reduce snoring,” “supports restful sleep,” not medical treatment.
+
+Clear, above-the-fold affiliate disclosure on every page.
+
+Outbound click tracking: Keitaro + GA4 event mirror with event-ID dedupe.
+
+Tech & structure
+
+Static site (no backend).
+
+Files:
+
+/index.html
+/sleep/devices/index.html
+/sleep/supplements/index.html
+/assets/css/style.css
+/assets/js/main.js
+/data/offers.json
+/assets/img/ (placeholders)
+
+
+Performance: inline critical CSS, preload font, lazy-load images, no render-blocking JS.
+
+Accessibility: semantic HTML, visible focus states, alt text.
+
+Style guide (age 40+)
+
+Typography: “IBM Plex Sans”, “Source Sans 3”, system-ui fallback. Sizes: base 18–19px; H1 34–38px; H2 26–28px; H3 21–22px.
+
+Colors: grayscale with one muted accent (navy/teal). No border-radius anywhere.
+
+Layout: grid-based cards, thin dividers, generous spacing, icons for scannability. Minimal imagery—balanced copy + graphics.
+
+Pages & content
+1) Home /
+
+Goal: Split traffic to Devices vs Supplements; set expectations and compliance tone.
+Hero:
+
+H1: Sleep Help Hub: Compare Anti-Snore Devices & Sleep-Support Supplements (2025)
+
+Sub: Conservative, product-first comparisons—no medical claims.
+
+Two primary cards (no rounded corners):
+
+Reduce Snoring Tonight (Devices) → /sleep/devices/
+
+Wind Down Naturally (Supplements) → /sleep/supplements/
+
+Affiliate Disclosure (above fold, small but obvious).
+Sections:
+
+“How we compare” (bullets: fit/comfort/returns for devices; ingredients/dosing/returns for supplements).
+
+“When to see a professional” box (non-alarmist).
+
+3-item FAQ.
+Schema: FAQPage + BreadcrumbList.
+
+2) Devices hub /sleep/devices/
+
+Traffic: all generic non-brand device terms (e.g., anti-snore mouthpiece, snoring mouthguard).
+H1: Best Anti-Snore Mouthpieces (2025)
+Above the fold:
+
+Updated date • Editor’s note • Affiliate Disclosure
+
+ComparisonTable (sortable) with 3–5 rows. Columns:
+
+Product • Fit & Type (MAD/TRD; adjustable?) • Comfort (breathing hole, profile height) • Care (cleaning, replacement cycle) • Trial/Returns (nights) • Price ($ tier) • CTA (“Check Price” → affiliate; “Read Review” → future internal page)
+Below fold blocks:
+
+“How to choose” (jaw position, mouth-breather, side-sleeper).
+
+“Who shouldn’t use” (jaw/TMJ issues → talk to a pro).
+
+Fitting tips (boil-and-bite, adjustment schedule).
+
+FAQ x4 (mouthpiece vs nasal strips; adaptation time; cleaning; when to see a pro).
+Schema: ItemList for top picks + FAQPage.
+Copy guardrails: “helps reduce snoring,” “may help some adults,” “not for sleep apnea treatment.”
+
+3) Supplements hub /sleep/supplements/
+
+Traffic: generic non-brand supplement terms (sleep support supplement, non-habit-forming sleep aid).
+H1: Best Sleep-Support Supplements (2025)
+Above the fold:
+
+Updated date • Editor’s note • Affiliate Disclosure
+
+ComparisonTable (sortable) with 3–5 rows. Columns:
+
+Product • Form (capsule/gummy/tea) • Key Ingredients (e.g., magnesium glycinate mg, L-theanine mg; note melatonin mg if present) • Non-Habit-Forming (yes/notes) • Allergen/Stim Notes • Price/Serving • CTA
+Below fold blocks:
+
+“How we pick” (label transparency, dosing clarity, return policy).
+
+“Stacking with devices” (can complement; listen to your body).
+
+FAQ x4 (melatonin vs no-melatonin; timing; interactions; how long to test).
+Schema: ItemList + FAQPage.
+Copy guardrails: “supports relaxation/restful sleep,” “not a treatment for insomnia.”
+
+Data model /data/offers.json (seed with safe placeholders)
+{
+  "devices": [
+    {
+      "slug": "zquiet",
+      "name": "ZQuiet Mouthpiece",
+      "fit_type": "MAD, boil-and-bite, adjustable",
+      "comfort": "Breathing port; low profile",
+      "care": "Rinse daily; replace ~6–12 months",
+      "trial": "60-night trial",
+      "price": "$$",
+      "our_take": "Easy first step for many adults; simple fit.",
+      "cta_url": "https://REPLACE-ZQUIET-AFF"
+    },
+    {
+      "slug": "vitalsleep",
+      "name": "VitalSleep Mouthpiece",
+      "fit_type": "MAD, boil-and-bite, micro-adjust",
+      "comfort": "Jaw advancement dial; flexible edges",
+      "care": "Daily clean; periodic re-fit",
+      "trial": "60-night trial",
+      "price": "$$",
+      "our_take": "Fine-tuning helps comfort; good return window.",
+      "cta_url": "https://REPLACE-VITALSLEEP-AFF"
+    },
+    {
+      "slug": "snorerx",
+      "name": "SnoreRX Plus",
+      "fit_type": "MAD, adjustable",
+      "comfort": "Incremental advancement; sturdy build",
+      "care": "Clean daily; replace ~12–18 months",
+      "trial": "Try & return policy",
+      "price": "$$-$$$",
+      "our_take": "Durable option if you want more adjustability.",
+      "cta_url": "https://REPLACE-SNORERX-AFF"
+    }
+  ],
+  "supplements": [
+    {
+      "slug": "mag-glycinate",
+      "name": "Magnesium Glycinate",
+      "form": "Capsules",
+      "key_ingredients": "Magnesium (glycinate), 200–400 mg/serving",
+      "non_habit": "Yes",
+      "notes": "No stimulants; check medications",
+      "price_per_serving": "$",
+      "our_take": "Baseline option for night-time routine.",
+      "cta_url": "https://REPLACE-AFF"
+    },
+    {
+      "slug": "ltheanine",
+      "name": "L-Theanine 200 mg",
+      "form": "Capsules",
+      "key_ingredients": "L-Theanine 200 mg",
+      "non_habit": "Yes",
+      "notes": "Caffeine-free",
+      "price_per_serving": "$",
+      "our_take": "Pairs well with magnesium; calm-support.",
+      "cta_url": "https://REPLACE-AFF"
+    },
+    {
+      "slug": "non-melatonin-blend",
+      "name": "Non-Melatonin Sleep Blend",
+      "form": "Capsules",
+      "key_ingredients": "GABA + herbal blend (valerian, passionflower)",
+      "non_habit": "Yes",
+      "notes": "Check interactions; avoid heavy machinery until you know response",
+      "price_per_serving": "$$",
+      "our_take": "Melatonin-free option for those who prefer it.",
+      "cta_url": "https://REPLACE-AFF"
+    }
+  ]
+}
+
+
+(You’ll replace CTA URLs with ShareASale/ClickBank links.)
+
+Components & JS (/assets/js/main.js)
+
+Build a sortable ComparisonTable that hydrates from /data/offers.json.
+
+Two CTA buttons per row: Check Price (affiliate, new tab) and Read Review (placeholder).
+
+Implement trackOutboundClick(e):
+
+Create event_id (UUID v4).
+
+Collect: offer, page_path, timestamp, pass-through gclid, fbclid, utm_*.
+
+Keitaro: GET/POST to tracking endpoint (leave placeholder URL + comment).
+
+GA4: gtag('event','outbound_click',{offer, page_path, event_id}).
+
+Don’t block navigation—sendBeacon/fetch with keepalive.
+
+SEO
+
+Titles ≤ 60 chars; meta descriptions 150–160 chars; canonicals.
+
+BreadcrumbList across pages.
+
+H1 mirrors query.
+
+No brand names in H1s (except future VS pages).
+
+Create robots.txt and basic sitemap.xml.
+
+Compliance copy (drop-in blocks)
+
+Affiliate disclosure (header):
+Disclosure: We may earn a commission if you buy through our links. Our picks are editorial and not medical advice.
+
+Devices disclaimer (below fold):
+Anti-snore mouthpieces may help reduce snoring for some adults. They are not a treatment for sleep apnea or other medical conditions. Consider professional care if you have severe symptoms.
+
+Supplements disclaimer (footer):
+These products are intended to support relaxation and sleep quality. They are not intended to diagnose, treat, cure, or prevent any disease. Talk to a healthcare professional about your situation.
+
+Routing (for Google Ads later)
+
+Generic device keywords → /sleep/devices/
+
+Generic supplement keywords → /sleep/supplements/
+
+“Brand A vs Brand B” → future /sleep/brand-a-vs-brand-b/ (SEO only unless whitelisted).
+
+Add negatives: apnea, CPAP, cure, diagnosis, FDA approved, lawsuit, side effects, reddit, scam and any brands you’re not promoting.
+
+Design polish
+
+No rounded corners. Subtle 1px dividers.
+
+Professional font stack, high contrast, restrained color.
+
+Icons for Fit/Comfort/Care columns.
+
+Hero art: tasteful, high-contrast vector (no cheesy stock).
+
+Acceptance criteria
+
+All 3 pages built and linked; Lighthouse (mobile) Perf ≥ 90, A11y ≥ 90.
+
+Tables load from JSON; sorting works.
+
+Outbound clicks fire Keitaro + GA4 stubs with unique event_id.
+
+Disclosures visible without scrolling on mobile.
+
+Schema validates (ItemList + FAQ).
+
+No medical claims anywhere.
