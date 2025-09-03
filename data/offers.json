@@ -1,0 +1,105 @@
+{
+  "devices": [
+    {
+      "slug": "snorerx-plus",
+      "name": "SnoreRx Plus",
+      "fit_type": "MAD, boil-and-bite, adjustable up to 6mm",
+      "comfort": "Lateral movement, lightweight design",
+      "care": "Daily rinse; replace ~12-18 months",
+      "trial": "30-night trial",
+      "price": "$100",
+      "our_take": "Advanced adjustability with easy customization",
+      "cta_url": "https://www.snorerx.com/snorerx-plus/"
+    },
+    {
+      "slug": "vitalsleep",
+      "name": "VitalSleep Anti-Snoring",
+      "fit_type": "MAD, boil-and-bite, micro-adjust",
+      "comfort": "Front breathing hole, flexible edges",
+      "care": "Daily clean with soft brush",
+      "trial": "60-night guarantee",
+      "price": "$70",
+      "our_take": "Good value with breathing port for mouth breathers",
+      "cta_url": "https://www.amazon.com/VitalSleep-Anti-Snoring-Mouthpiece-Positioning-Impressions/"
+    },
+    {
+      "slug": "smartguard",
+      "name": "SmartGuard RX",
+      "fit_type": "MAD, adjustable 6mm range, wing design",
+      "comfort": "Moldable trays, comfortable advancement",
+      "care": "Clean daily, durable construction",
+      "trial": "60-night trial",
+      "price": "$50",
+      "our_take": "Best value option with professional design",
+      "cta_url": "https://www.amazon.com/Anti-Snore-SmartGuard-Customizable-Reducing-Mouthpiece/"
+    },
+    {
+      "slug": "somnofit-s",
+      "name": "Somnofit-S Mouth Guard",
+      "fit_type": "MAD, slim profile, elastic straps",
+      "comfort": "Ultra-slim, allows speaking/drinking",
+      "care": "Gentle brush cleaning, elastic strap system",
+      "trial": "60-day return policy",
+      "price": "$150",
+      "our_take": "Most comfortable option with premium materials",
+      "cta_url": "https://sleepdoctor.com/products/somnofit-s-anti-snore-mouth-guard"
+    },
+    {
+      "slug": "zyppah",
+      "name": "Zyppah Anti-Snoring",
+      "fit_type": "MAD/TRD hybrid, tongue stabilization",
+      "comfort": "2mm advancement with tongue strap",
+      "care": "Water/alcohol wash, no soaking",
+      "trial": "91-night trial",
+      "price": "$130",
+      "our_take": "Dual-action approach for complex snoring patterns",
+      "cta_url": "https://sleepdoctor.com/products/original-zyppah-anti-snoring-mouthpiece"
+    }
+  ],
+  "supplements": [
+    {
+      "slug": "magnesium-glycinate",
+      "name": "Magnesium Glycinate",
+      "form": "Capsules",
+      "key_ingredients": "Magnesium (glycinate) 200-400mg",
+      "non_habit": "Yes",
+      "notes": "No stimulants; check with medications",
+      "price_per_serving": "$0.25-0.50",
+      "our_take": "Foundational mineral for relaxation support",
+      "cta_url": "https://REPLACE-MAGNESIUM-AFF"
+    },
+    {
+      "slug": "l-theanine",
+      "name": "L-Theanine 200mg",
+      "form": "Capsules",
+      "key_ingredients": "L-Theanine 200mg per serving",
+      "non_habit": "Yes",
+      "notes": "Caffeine-free, pairs with magnesium",
+      "price_per_serving": "$0.15-0.30",
+      "our_take": "Gentle relaxation support without drowsiness",
+      "cta_url": "https://REPLACE-LTHEANINE-AFF"
+    },
+    {
+      "slug": "gaba-blend",
+      "name": "Non-Melatonin Sleep Blend",
+      "form": "Capsules",
+      "key_ingredients": "GABA + herbal blend (valerian, passionflower)",
+      "non_habit": "Yes",
+      "notes": "Check interactions; start with lower dose",
+      "price_per_serving": "$0.40-0.80",
+      "our_take": "Herbal option for those avoiding melatonin",
+      "cta_url": "https://REPLACE-GABA-AFF"
+    },
+    {
+      "slug": "magnesium-blend",
+      "name": "Multi-Magnesium Complex",
+      "form": "Capsules",
+      "key_ingredients": "Magnesium blend (glycinate, citrate, malate) 400mg",
+      "non_habit": "Yes",
+      "notes": "Multiple forms for better absorption",
+      "price_per_serving": "$0.35-0.60",
+      "our_take": "Enhanced absorption with multiple magnesium types",
+      "cta_url": "https://REPLACE-MAGCOMPLEX-AFF"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://yourdomain.com/sitemap.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
+
+# Disallow tracking and admin paths
+Disallow: /api/
+Disallow: /admin/
+Disallow: /assets/js/
+Disallow: /data/
+
+# Allow important content
+Allow: /sleep/devices/
+Allow: /sleep/supplements/
+Allow: /assets/css/
+Allow: /assets/img/
+
+# Block specific user agents if needed for affiliate compliance
+# User-agent: BadBot
+# Disallow: /
