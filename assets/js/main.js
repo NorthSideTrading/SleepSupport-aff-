@@ -84,22 +84,9 @@ function getCurrentPage() {
 // === When hydrating tables, flag first row as Top Pick ===
 function renderSupplements(items){
     const tbody=document.getElementById('supp-table'); if(!tbody) return;
-    
-    // Completely clear and reset the tbody
-    tbody.innerHTML = '';
-    tbody.textContent = '';
-    
-    // Also check the table structure
-    const table = tbody.closest('table');
-    const headerCells = table.querySelectorAll('thead th');
-    console.log('Header cells found:', headerCells.length);
-    headerCells.forEach((cell, i) => console.log(`Header ${i+1}:`, cell.textContent));
-    
+    tbody.innerHTML='';
     // Sort by rank_priority (1 = highest payout)
     const sortedItems = [...items].sort((a, b) => a.rank_priority - b.rank_priority);
-    
-    console.log('Rendering supplements:', sortedItems.length, 'items');
-    console.log('First item:', sortedItems[0]);
     
     sortedItems.forEach((it, i)=>{
         const tr=document.createElement('tr');
@@ -141,10 +128,6 @@ function renderSupplements(items){
                 <a class="btn btn-ghost mt8" href="#">Read Review</a>
             </td>`;
         
-        if(i === 0) {
-            console.log('SleepLean HTML:', rowHTML);
-            console.log('Table cells count:', (rowHTML.match(/<td>/g) || []).length);
-        }
         tr.innerHTML = rowHTML;
         tbody.appendChild(tr);
     });
@@ -330,4 +313,5 @@ if ('serviceWorker' in navigator && location.protocol === 'https:') {
                 console.log('SW registration failed: ', registrationError);
             });
     });
-}console.log("Debug: SleepLean data check");
+console.log("Debug: SleepLean data check");
+}
