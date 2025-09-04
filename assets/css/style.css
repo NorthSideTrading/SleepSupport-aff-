@@ -78,7 +78,19 @@ header .container {
   letter-spacing: 0.2px;
   color: var(--accent);
   text-decoration: none;
-  transition: color 0.2s ease;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+}
+
+.brand img {
+  height: 40px;
+  width: auto;
+  transition: all 0.2s ease;
+}
+
+.brand:hover img {
+  transform: scale(1.05);
 }
 
 .brand:hover {
