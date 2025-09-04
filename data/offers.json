@@ -1,6 +1,21 @@
 {
   "supplements": [
     {
+      "slug": "sleeplean",
+      "name": "SleepLean (night-time routine, weight-management angle)",
+      "form": "Capsules",
+      "key_points": [
+        "Night-time routine formula",
+        "Positioned for sleep support + weight-management goals",
+        "Vendor satisfaction guarantee"
+      ],
+      "notes": "Use conservative language; avoid explicit weight-loss promises.",
+      "guarantee": "Vendor guarantee",
+      "rank_priority": 1,
+      "img": "/assets/img/placeholder-1.jpg",
+      "cta_url": "https://REPLACE-SLEEPELAN-AFF"
+    },
+    {
       "slug": "resurge",
       "name": "Resurge (night-time support blend)",
       "form": "Capsules",
@@ -11,7 +26,7 @@
       ],
       "notes": "Keep claims to relaxation/sleep-support only.",
       "guarantee": "Vendor guarantee",
-      "rank_priority": 1,
+      "rank_priority": 2,
       "img": "/assets/img/placeholder-2.jpg",
       "cta_url": "https://REPLACE-RESURGE-AFF"
     },
@@ -26,7 +41,7 @@
       ],
       "notes": "Consumer copy must avoid efficacy promises.",
       "guarantee": "Vendor guarantee",
-      "rank_priority": 2,
+      "rank_priority": 3,
       "img": "/assets/img/placeholder-3.jpg",
       "cta_url": "https://REPLACE-YUSLEEP-AFF"
     },
@@ -41,7 +56,7 @@
       ],
       "notes": "Stay general; no hormone/medical claims.",
       "guarantee": "Vendor guarantee",
-      "rank_priority": 3,
+      "rank_priority": 4,
       "img": "/assets/img/pitch-black.jpg",
       "cta_url": "https://REPLACE-PITCHBLACK-AFF"
     },
