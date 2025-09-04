@@ -88,6 +88,9 @@ function renderSupplements(items){
     // Sort by rank_priority (1 = highest payout)
     const sortedItems = [...items].sort((a, b) => a.rank_priority - b.rank_priority);
     
+    console.log('Rendering supplements:', sortedItems.length, 'items');
+    console.log('First item:', sortedItems[0]);
+    
     sortedItems.forEach((it, i)=>{
         const tr=document.createElement('tr');
         if(i===0) tr.classList.add('top-pick'); // visual highlight
@@ -311,4 +314,4 @@ if ('serviceWorker' in navigator && location.protocol === 'https:') {
                 console.log('SW registration failed: ', registrationError);
             });
     });
-}
+}console.log("Debug: SleepLean data check");
