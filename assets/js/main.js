@@ -109,18 +109,36 @@ function renderSupplements(items){
         
         // Cell 1: Product (image + info)
         const productCell = document.createElement('td');
-        productCell.innerHTML = `
+        
+        // Debug first item specifically
+        if(index === 0) {
+            console.log('SleepLean Debug:', {
+                name: product.name,
+                form: product.form,
+                img: product.img,
+                badgeHtml: badgeHtml
+            });
+        }
+        
+        // Build product cell content
+        const productCellContent = `
             <div class="product-cell">
                 <div class="product-image">
-                    <img src="${product.img || '/assets/img/placeholder-1.jpg'}" alt="${product.name || 'Product'}" loading="lazy">
+                    <img src="${product.img}" alt="${product.name}" loading="lazy">
                 </div>
                 <div class="product-info">
-                    <div class="k">${product.name || 'Unknown Product'}</div>
+                    <div class="k">${product.name}</div>
                     <div class="rating">${stars}</div>
-                    <div class="small">${product.form || 'Capsules'}</div>
+                    <div class="small">${product.form}</div>
                     ${badgeHtml}
                 </div>
             </div>`;
+        
+        if(index === 0) {
+            console.log('SleepLean HTML:', productCellContent);
+        }
+        
+        productCell.innerHTML = productCellContent;
         
         // Cell 2: Form
         const formCell = document.createElement('td');
