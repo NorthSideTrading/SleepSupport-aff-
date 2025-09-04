@@ -292,8 +292,10 @@ nav a:hover {
 
 /* Tables */
 table {
-  width: 100%;
-  border-collapse: collapse;
+  width: 100% !important;
+  border-collapse: separate !important;
+  border-spacing: 0 !important;
+  table-layout: fixed !important;
 }
 
 .table {
@@ -303,6 +305,8 @@ table {
   overflow: hidden;
   box-shadow: var(--shadow);
   table-layout: fixed !important;
+  border-collapse: separate !important;
+  border-spacing: 0 !important;
 }
 
 .table thead th {
@@ -314,6 +318,12 @@ table {
   letter-spacing: 0.02em;
   padding: 18px 16px;
   border-bottom: 2px solid var(--divider);
+  border-right: 1px solid var(--border);
+  box-sizing: border-box !important;
+}
+
+.table thead th:last-child {
+  border-right: none;
 }
 
 .table thead th:nth-child(1) { width: 30% !important; } /* Product column */
@@ -329,7 +339,21 @@ table {
   vertical-align: top;
   color: var(--ink-2);
   line-height: 1.5;
+  border-right: 1px solid var(--border);
+  box-sizing: border-box !important;
 }
+
+.table tbody td:last-child {
+  border-right: none;
+}
+
+/* Match tbody column widths to header */
+.table tbody td:nth-child(1) { width: 30% !important; } /* Product column */
+.table tbody td:nth-child(2) { width: 6% !important; } /* Form column */
+.table tbody td:nth-child(3) { width: 32% !important; } /* Key Points */
+.table tbody td:nth-child(4) { width: 12% !important; } /* Notes */
+.table tbody td:nth-child(5) { width: 8% !important; } /* Guarantee */
+.table tbody td:nth-child(6) { width: 12% !important; } /* Action */
 
 .table tbody td:nth-child(3) {
   font-size: 14px;
