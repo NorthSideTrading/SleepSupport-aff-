@@ -103,10 +103,17 @@ function renderSupplements(items){
         
         tr.innerHTML=`
             <td>
-                <div class="k">${it.name}</div>
-                <div class="rating">${rating}</div>
-                <div class="small">${it.form||''}</div>
-                ${badge}
+                <div class="product-cell">
+                    <div class="product-image">
+                        <img src="${it.img}" alt="${it.name}" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <div class="k">${it.name}</div>
+                        <div class="rating">${rating}</div>
+                        <div class="small">${it.form||''}</div>
+                        ${badge}
+                    </div>
+                </div>
             </td>
             <td><span class="small">${it.form||''}</span></td>
             <td><span class="small">${(it.key_points||[]).slice(0,3).join('<br>')}</span></td>
