@@ -315,12 +315,12 @@ table {
   border-bottom: 2px solid var(--divider);
 }
 
-.table thead th:nth-child(1) { width: 35%; } /* Product column - wider */
-.table thead th:nth-child(2) { width: 10%; } /* Form column - narrower */
-.table thead th:nth-child(3) { width: 25%; } /* Key Points - wider */
-.table thead th:nth-child(4) { width: 15%; } /* Notes */
-.table thead th:nth-child(5) { width: 10%; } /* Guarantee */
-.table thead th:nth-child(6) { width: 15%; } /* Action */
+.table thead th:nth-child(1) { width: 30%; } /* Product column */
+.table thead th:nth-child(2) { width: 6%; } /* Form column - much thinner */
+.table thead th:nth-child(3) { width: 32%; } /* Key Points - much wider */
+.table thead th:nth-child(4) { width: 12%; } /* Notes - smaller */
+.table thead th:nth-child(5) { width: 8%; } /* Guarantee - smaller */
+.table thead th:nth-child(6) { width: 12%; } /* Action - smaller */
 
 .table tbody td {
   padding: 20px 16px;
@@ -538,8 +538,8 @@ footer .container {
     height: 75px;
   }
   
-  .table thead th:nth-child(1) { width: 40%; }
-  .table thead th:nth-child(3) { width: 25%; }
+  .table thead th:nth-child(1) { width: 35%; }
+  .table thead th:nth-child(3) { width: 30%; }
 }
 
 @media (max-width: 768px) {
