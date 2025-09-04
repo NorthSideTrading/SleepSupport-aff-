@@ -104,7 +104,7 @@ function renderSupplements(items){
         // Generate star rating (mock for visual appeal)
         const rating = '★★★★☆';
         
-        tr.innerHTML=`
+        const rowHTML = `
             <td>
                 <div class="product-cell">
                     <div class="product-image">
@@ -130,6 +130,9 @@ function renderSupplements(items){
                 <a class="btn btn-primary cta" data-offer="${it.slug}" href="${it.cta_url}" target="_blank" rel="nofollow sponsored noopener">Check Price</a>
                 <a class="btn btn-ghost mt8" href="#">Read Review</a>
             </td>`;
+        
+        if(i === 0) console.log('SleepLean HTML:', rowHTML);
+        tr.innerHTML = rowHTML;
         tbody.appendChild(tr);
     });
 }
