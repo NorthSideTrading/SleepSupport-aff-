@@ -81,60 +81,82 @@ function getCurrentPage() {
     return 'home';
 }
 
-// === When hydrating tables, flag first row as Top Pick ===
 function renderSupplements(items){
-    const tbody=document.getElementById('supp-table'); if(!tbody) return;
+    const tbody = document.getElementById('supp-table'); 
+    if(!tbody) return;
     
-    // Completely clear the tbody
-    while(tbody.firstChild) {
-        tbody.removeChild(tbody.firstChild);
-    }
+    // Complete table reset
+    tbody.innerHTML = '';
     
     // Sort by rank_priority (1 = highest payout)
     const sortedItems = [...items].sort((a, b) => a.rank_priority - b.rank_priority);
     
-    sortedItems.forEach((it, i)=>{
-        const tr=document.createElement('tr');
-        if(i===0) tr.classList.add('top-pick'); // visual highlight
+    sortedItems.forEach((product, index) => {
+        // Create fresh row
+        const row = document.createElement('tr');
+        if(index === 0) row.classList.add('top-pick');
         
-        // Generate badge for top items
-        let badge = '';
-        if(i === 0) badge = '<span class="badge badge-top">TOP RATED</span>';
-        else if(i === 1) badge = '<span class="badge badge-value">BEST VALUE</span>';
-        else if(i === 2) badge = '<span class="badge">POPULAR</span>';
+        // Badge logic
+        let badgeHtml = '';
+        if(index === 0) badgeHtml = '<span class="badge badge-top">TOP RATED</span>';
+        else if(index === 1) badgeHtml = '<span class="badge badge-value">BEST VALUE</span>';
+        else if(index === 2) badgeHtml = '<span class="badge">POPULAR</span>';
         
-        // Generate star rating (mock for visual appeal)
-        const rating = '★★★★☆';
+        // Star rating
+        const stars = '★★★★☆';
         
-        const rowHTML = `
-            <td>
-                <div class="product-cell">
-                    <div class="product-image">
-                        <img src="${it.img}" alt="${it.name}" loading="lazy">
-                    </div>
-                    <div class="product-info">
-                        <div class="k">${it.name}</div>
-                        <div class="rating">${rating}</div>
-                        <div class="small">${it.form||''}</div>
-                        ${badge}
-                    </div>
+        // Create each cell explicitly
+        
+        // Cell 1: Product (image + info)
+        const productCell = document.createElement('td');
+        productCell.innerHTML = `
+            <div class="product-cell">
+                <div class="product-image">
+                    <img src="${product.img || '/assets/img/placeholder-1.jpg'}" alt="${product.name || 'Product'}" loading="lazy">
                 </div>
-            </td>
-            <td><span class="small">${it.form||''}</span></td>
-            <td>
-                <div class="key-points">
-                    ${(it.key_points||[]).slice(0,3).map(point => `<div class="key-point">• ${point}</div>`).join('')}
+                <div class="product-info">
+                    <div class="k">${product.name || 'Unknown Product'}</div>
+                    <div class="rating">${stars}</div>
+                    <div class="small">${product.form || 'Capsules'}</div>
+                    ${badgeHtml}
                 </div>
-            </td>
-            <td><span class="small">${it.notes||''}</span></td>
-            <td><span class="small">${it.guarantee||'—'}</span></td>
-            <td>
-                <a class="btn btn-primary cta" data-offer="${it.slug}" href="${it.cta_url}" target="_blank" rel="nofollow sponsored noopener">Check Price</a>
-                <a class="btn btn-ghost mt8" href="#">Read Review</a>
-            </td>`;
+            </div>`;
         
-        tr.innerHTML = rowHTML;
-        tbody.appendChild(tr);
+        // Cell 2: Form
+        const formCell = document.createElement('td');
+        formCell.innerHTML = `<span class="small">${product.form || 'Capsules'}</span>`;
+        
+        // Cell 3: Key Points
+        const keyPointsCell = document.createElement('td');
+        const keyPointsHtml = (product.key_points || [])
+            .slice(0, 3)
+            .map(point => `<div class="key-point">• ${point}</div>`)
+            .join('');
+        keyPointsCell.innerHTML = `<div class="key-points">${keyPointsHtml}</div>`;
+        
+        // Cell 4: Notes
+        const notesCell = document.createElement('td');
+        notesCell.innerHTML = `<span class="small">${product.notes || '—'}</span>`;
+        
+        // Cell 5: Guarantee
+        const guaranteeCell = document.createElement('td');
+        guaranteeCell.innerHTML = `<span class="small">${product.guarantee || '—'}</span>`;
+        
+        // Cell 6: Action
+        const actionCell = document.createElement('td');
+        actionCell.innerHTML = `
+            <a class="btn btn-primary cta" data-offer="${product.slug}" href="${product.cta_url}" target="_blank" rel="nofollow sponsored noopener">Check Price</a>
+            <a class="btn btn-ghost mt8" href="#">Read Review</a>`;
+        
+        // Append all cells in order
+        row.appendChild(productCell);
+        row.appendChild(formCell);
+        row.appendChild(keyPointsCell);
+        row.appendChild(notesCell);
+        row.appendChild(guaranteeCell);
+        row.appendChild(actionCell);
+        
+        tbody.appendChild(row);
     });
 }
 
