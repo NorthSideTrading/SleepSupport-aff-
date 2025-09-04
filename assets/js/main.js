@@ -121,7 +121,6 @@ function renderSupplements(items){
                 </div>
             </td>
             <td><span class="small">${item.notes}</span></td>
-            <td><span class="small">${item.guarantee}</span></td>
             <td>
                 <a class="btn btn-primary cta" data-offer="${item.slug}" href="${item.cta_url}" target="_blank" rel="nofollow sponsored noopener">Check Price</a>
                 <a class="btn btn-ghost mt8" href="#">Read Review</a>
