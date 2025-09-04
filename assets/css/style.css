@@ -302,6 +302,7 @@ table {
   border-radius: 12px;
   overflow: hidden;
   box-shadow: var(--shadow);
+  table-layout: fixed !important;
 }
 
 .table thead th {
@@ -455,7 +456,9 @@ footer .container {
   display: flex;
   align-items: flex-start;
   gap: 16px;
-  min-width: 280px;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
 }
 
 .table tbody td:first-child {
@@ -488,6 +491,7 @@ footer .container {
 .product-info {
   flex: 1;
   min-width: 0;
+  overflow: hidden;
 }
 
 .product-info .k {
