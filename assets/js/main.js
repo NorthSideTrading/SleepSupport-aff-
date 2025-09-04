@@ -84,12 +84,17 @@ function getCurrentPage() {
 // === When hydrating tables, flag first row as Top Pick ===
 function renderSupplements(items){
     const tbody=document.getElementById('supp-table'); if(!tbody) return;
-    tbody.innerHTML='';
+    
+    // Completely clear and reset the tbody
+    tbody.innerHTML = '';
+    tbody.textContent = '';
+    
     // Sort by rank_priority (1 = highest payout)
     const sortedItems = [...items].sort((a, b) => a.rank_priority - b.rank_priority);
     
     console.log('Rendering supplements:', sortedItems.length, 'items');
     console.log('First item:', sortedItems[0]);
+    console.log('Table columns expected:', 6);
     
     sortedItems.forEach((it, i)=>{
         const tr=document.createElement('tr');
@@ -131,7 +136,10 @@ function renderSupplements(items){
                 <a class="btn btn-ghost mt8" href="#">Read Review</a>
             </td>`;
         
-        if(i === 0) console.log('SleepLean HTML:', rowHTML);
+        if(i === 0) {
+            console.log('SleepLean HTML:', rowHTML);
+            console.log('Table cells count:', (rowHTML.match(/<td>/g) || []).length);
+        }
         tr.innerHTML = rowHTML;
         tbody.appendChild(tr);
     });
