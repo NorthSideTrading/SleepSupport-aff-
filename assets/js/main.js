@@ -116,7 +116,11 @@ function renderSupplements(items){
                 </div>
             </td>
             <td><span class="small">${it.form||''}</span></td>
-            <td><span class="small">${(it.key_points||[]).slice(0,3).join('<br>')}</span></td>
+            <td>
+                <div class="key-points">
+                    ${(it.key_points||[]).slice(0,3).map(point => `<div class="key-point">• ${point}</div>`).join('')}
+                </div>
+            </td>
             <td><span class="small">${it.notes||''}</span></td>
             <td><span class="small">${it.guarantee||'—'}</span></td>
             <td>
