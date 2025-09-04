@@ -37,6 +37,9 @@ function initializeApp() {
     
     // Setup performance monitoring
     setupPerformanceMonitoring();
+    
+    // Initialize FAQ dropdown functionality
+    initializeFAQ();
 }
 
 // === Outbound click tracking ===
@@ -297,6 +300,52 @@ function showErrorMessage(message) {
             }
         }, 5000);
     }
+}
+
+/**
+ * Initialize FAQ dropdown functionality
+ */
+function initializeFAQ() {
+    // Convert existing FAQ items to dropdown format
+    const faqGrids = document.querySelectorAll('.faq-grid');
+    
+    faqGrids.forEach(grid => {
+        // Add faq-container class and update structure
+        grid.classList.add('faq-container');
+        grid.classList.remove('faq-grid');
+        
+        const faqItems = grid.querySelectorAll('.faq-item');
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            const answer = item.querySelector('.faq-answer');
+            
+            if (question && answer) {
+                // Add toggle icon to question
+                const toggle = document.createElement('span');
+                toggle.className = 'faq-toggle';
+                toggle.textContent = '+';
+                question.appendChild(toggle);
+                
+                // Add click event listener
+                question.addEventListener('click', () => {
+                    const isActive = item.classList.contains('active');
+                    
+                    // Close all other items
+                    faqItems.forEach(otherItem => {
+                        otherItem.classList.remove('active');
+                        const otherToggle = otherItem.querySelector('.faq-toggle');
+                        if (otherToggle) otherToggle.textContent = '+';
+                    });
+                    
+                    // Toggle current item
+                    if (!isActive) {
+                        item.classList.add('active');
+                        toggle.textContent = '−';
+                    }
+                });
+            }
+        });
+    });
 }
 
 // Service Worker registration - per specification
