@@ -290,23 +290,18 @@ nav a:hover {
   border-color: #2563eb;
 }
 
-/* Tables */
-table {
-  width: 100% !important;
-  border-collapse: separate !important;
-  border-spacing: 0 !important;
-  table-layout: fixed !important;
-}
-
-.table {
+.table-wrapper {
   background: var(--surface);
   border: 1px solid var(--divider);
   border-radius: 12px;
   overflow: hidden;
   box-shadow: var(--shadow);
-  table-layout: fixed !important;
-  border-collapse: separate !important;
-  border-spacing: 0 !important;
+}
+
+#supplements-comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
 }
 
 .table thead th {
