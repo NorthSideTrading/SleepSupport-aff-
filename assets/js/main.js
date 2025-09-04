@@ -89,12 +89,17 @@ function renderSupplements(items){
     tbody.innerHTML = '';
     tbody.textContent = '';
     
+    // Also check the table structure
+    const table = tbody.closest('table');
+    const headerCells = table.querySelectorAll('thead th');
+    console.log('Header cells found:', headerCells.length);
+    headerCells.forEach((cell, i) => console.log(`Header ${i+1}:`, cell.textContent));
+    
     // Sort by rank_priority (1 = highest payout)
     const sortedItems = [...items].sort((a, b) => a.rank_priority - b.rank_priority);
     
     console.log('Rendering supplements:', sortedItems.length, 'items');
     console.log('First item:', sortedItems[0]);
-    console.log('Table columns expected:', 6);
     
     sortedItems.forEach((it, i)=>{
         const tr=document.createElement('tr');
