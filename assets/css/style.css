@@ -141,6 +141,16 @@ nav a:hover {
   border: 1px solid var(--divider);
   border-radius: 16px;
   box-shadow: var(--shadow-lg);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero .img-wrap::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(5, 150, 105, 0.1) 0%, rgba(16, 185, 129, 0.05) 100%);
+  border-radius: 16px;
 }
 
 /* Meta/Disclosure */
