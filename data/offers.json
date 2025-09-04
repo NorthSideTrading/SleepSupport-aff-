@@ -11,7 +11,7 @@
       ],
       "notes": "Keep claims to relaxation/sleep-support only.",
       "guarantee": "Vendor guarantee",
-      "rank_priority": 2,
+      "rank_priority": 1,
       "img": "/assets/img/placeholder-2.jpg",
       "cta_url": "https://REPLACE-RESURGE-AFF"
     },
@@ -26,7 +26,7 @@
       ],
       "notes": "Consumer copy must avoid efficacy promises.",
       "guarantee": "Vendor guarantee",
-      "rank_priority": 3,
+      "rank_priority": 2,
       "img": "/assets/img/placeholder-3.jpg",
       "cta_url": "https://REPLACE-YUSLEEP-AFF"
     },
@@ -41,7 +41,7 @@
       ],
       "notes": "Stay general; no hormone/medical claims.",
       "guarantee": "Vendor guarantee",
-      "rank_priority": 4,
+      "rank_priority": 3,
       "img": "/assets/img/pitch-black.jpg",
       "cta_url": "https://REPLACE-PITCHBLACK-AFF"
     },
