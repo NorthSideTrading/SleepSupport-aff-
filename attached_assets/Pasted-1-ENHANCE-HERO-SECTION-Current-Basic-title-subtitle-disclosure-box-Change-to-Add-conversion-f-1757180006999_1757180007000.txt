@@ -1,0 +1,245 @@
+1. ENHANCE HERO SECTION
+Current: Basic title + subtitle + disclosure box
+Change to: Add conversion-focused elements
+html<!-- AFTER the existing disclosure box, ADD: -->
+<div class="hero-trust-signals" style="background: #f8f9fa; padding: 20px; margin: 20px 0; border-radius: 8px; text-align: center;">
+    <div style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap;">
+        <span style="color: #28a745;">✓ Independently Tested</span>
+        <span style="color: #28a745;">✓ Non-Habit Forming</span>
+        <span style="color: #28a745;">✓ Real User Reviews</span>
+        <span style="color: #28a745;">✓ 90-Day Guarantees</span>
+    </div>
+</div>
+2. ADD INDIVIDUAL PRODUCT REVIEW SECTIONS
+Current: Only has comparison table
+Add: Detailed review sections BEFORE the comparison table
+html<!-- INSERT this section BEFORE the "Sleep-Support Supplements Comparison" heading -->
+<section class="detailed-reviews" style="margin: 40px 0;">
+    <h2 style="text-align: center; margin-bottom: 30px;">Detailed Product Reviews</h2>
+    
+    <!-- SleepLean Review -->
+    <div class="product-review" style="background: white; border: 1px solid #e9ecef; border-radius: 12px; padding: 30px; margin-bottom: 30px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+        <div style="display: flex; gap: 20px; margin-bottom: 20px; align-items: center;">
+            <img src="path-to-sleeplean-image" alt="SleepLean" style="width: 120px; height: 120px; object-fit: contain;">
+            <div>
+                <h3 style="margin: 0 0 10px 0; color: #2c5aa0;">SleepLean - <span style="background: #ffd700; color: #000; padding: 4px 8px; border-radius: 4px; font-size: 12px;">TOP RATED</span></h3>
+                <div style="margin-bottom: 10px;">★★★★★ 4.7/5 (1,200+ reviews)</div>
+                <div style="font-size: 18px; font-weight: bold; color: #e74c3c;">$49.95 <span style="text-decoration: line-through; color: #6c757d; font-size: 14px;">$79.95</span></div>
+            </div>
+        </div>
+        
+        <p><strong>SleepLean combines sleep support with weight management</strong> in a unique dual-action formula. Unlike basic melatonin supplements, this night-time routine formula helps you fall asleep faster while supporting your metabolism during rest periods.</p>
+        
+        <p>What sets SleepLean apart is its positioning for both sleep support and weight-management goals. The vendor satisfaction guarantee shows confidence in results, making it ideal for adults seeking a comprehensive night-time routine.</p>
+        
+        <div style="background: #f8f9fa; padding: 15px; border-radius: 8px; margin: 15px 0;">
+            <h4 style="margin: 0 0 10px 0;">What We Like:</h4>
+            <ul style="margin: 0; padding-left: 20px;">
+                <li>Dual-action: sleep + weight support</li>
+                <li>Night-time routine formula</li>
+                <li>Vendor satisfaction guarantee</li>
+                <li>Conservative language approach</li>
+            </ul>
+        </div>
+        
+        <div style="text-align: center; margin-top: 20px;">
+            <a href="#" style="background: #28a745; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; font-weight: bold; margin-right: 10px;">Check Best Price</a>
+            <a href="#" style="background: #6c757d; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px;">Full Review</a>
+        </div>
+    </div>
+    
+    <!-- Resurge Review -->
+    <div class="product-review" style="background: white; border: 1px solid #e9ecef; border-radius: 12px; padding: 30px; margin-bottom: 30px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+        <div style="display: flex; gap: 20px; margin-bottom: 20px; align-items: center;">
+            <img src="path-to-resurge-image" alt="Resurge" style="width: 120px; height: 120px; object-fit: contain;">
+            <div>
+                <h3 style="margin: 0 0 10px 0; color: #2c5aa0;">Resurge - <span style="background: #17a2b8; color: white; padding: 4px 8px; border-radius: 4px; font-size: 12px;">BEST VALUE</span></h3>
+                <div style="margin-bottom: 10px;">★★★★☆ 4.3/5 (850+ reviews)</div>
+                <div style="font-size: 18px; font-weight: bold; color: #e74c3c;">$34.95</div>
+            </div>
+        </div>
+        
+        <p><strong>Resurge focuses on night-time support and recovery</strong> with ingredients commonly promoted for sleep & recovery. This blend positions itself as a comprehensive night-time support formula for adults seeking relaxation and recovery benefits.</p>
+        
+        <p>The vendor money-back guarantee and focus on sleep & recovery makes it appealing for those prioritizing rest and restoration. Keep claims focused on relaxation and sleep-support only to maintain conservative positioning.</p>
+        
+        <div style="background: #f8f9fa; padding: 15px; border-radius: 8px; margin: 15px 0;">
+            <h4 style="margin: 0 0 10px 0;">What We Like:</h4>
+            <ul style="margin: 0; padding-left: 20px;">
+                <li>Night-time support formula</li>
+                <li>Recovery-focused positioning</li>
+                <li>Money-back guarantee</li>
+                <li>Competitive pricing</li>
+            </ul>
+        </div>
+        
+        <div style="text-align: center; margin-top: 20px;">
+            <a href="#" style="background: #28a745; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; font-weight: bold; margin-right: 10px;">Check Best Price</a>
+            <a href="#" style="background: #6c757d; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px;">Full Review</a>
+        </div>
+    </div>
+    
+    <!-- YU SLEEP Review -->
+    <div class="product-review" style="background: white; border: 1px solid #e9ecef; border-radius: 12px; padding: 30px; margin-bottom: 30px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+        <div style="display: flex; gap: 20px; margin-bottom: 20px; align-items: center;">
+            <img src="path-to-yu-sleep-image" alt="YU SLEEP" style="width: 120px; height: 120px; object-fit: contain;">
+            <div>
+                <h3 style="margin: 0 0 10px 0; color: #2c5aa0;">YU SLEEP - <span style="background: #ff6b35; color: white; padding: 4px 8px; border-radius: 4px; font-size: 12px;">POPULAR</span></h3>
+                <div style="margin-bottom: 10px;">★★★★☆ 4.1/5 (600+ reviews)</div>
+                <div style="font-size: 18px; font-weight: bold; color: #e74c3c;">$39.95</div>
+            </div>
+        </div>
+        
+        <p><strong>YU SLEEP offers a dropper format for ease of use</strong> and flexible dosing. Positioned for deep-sleep support with strong affiliate traction reported on some traffic types, making it a solid option for affiliate promotion.</p>
+        
+        <p>The liquid drop format sets it apart from traditional capsules, appealing to those who prefer liquid supplements. Consumer copy should avoid efficacy promises and focus on the convenience of the liquid format.</p>
+        
+        <div style="background: #f8f9fa; padding: 15px; border-radius: 8px; margin: 15px 0;">
+            <h4 style="margin: 0 0 10px 0;">What We Like:</h4>
+            <ul style="margin: 0; padding-left: 20px;">
+                <li>Convenient dropper format</li>
+                <li>Flexible dosing options</li>
+                <li>Strong affiliate performance</li>
+                <li>Deep-sleep positioning</li>
+            </ul>
+        </div>
+        
+        <div style="text-align: center; margin-top: 20px;">
+            <a href="#" style="background: #28a745; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; font-weight: bold; margin-right: 10px;">Check Best Price</a>
+            <a href="#" style="background: #6c757d; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px;">Full Review</a>
+        </div>
+    </div>
+    
+    <!-- Pitch Black Review -->
+    <div class="product-review" style="background: white; border: 1px solid #e9ecef; border-radius: 12px; padding: 30px; margin-bottom: 30px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+        <div style="display: flex; gap: 20px; margin-bottom: 20px; align-items: center;">
+            <img src="path-to-pitch-black-image" alt="Pitch Black" style="width: 120px; height: 120px; object-fit: contain;">
+            <div>
+                <h3 style="margin: 0 0 10px 0; color: #2c5aa0;">Pitch Black - <span style="background: #6f42c1; color: white; padding: 4px 8px; border-radius: 4px; font-size: 12px;">MEN'S FORMULA</span></h3>
+                <div style="margin-bottom: 10px;">★★★★☆ 4.0/5 (400+ reviews)</div>
+                <div style="font-size: 18px; font-weight: bold; color: #e74c3c;">$44.95</div>
+            </div>
+        </div>
+        
+        <p><strong>Pitch Black targets men specifically</strong> with a deep-sleep formula designed for male physiology. The men-focused positioning and marketing for deep-sleep makes it unique in the sleep supplement space.</p>
+        
+        <p>Moderate conversion stats in affiliate listings suggest steady performance. Stay general with no hormone or medical claims - focus on the men-focused positioning and deep-sleep support benefits.</p>
+        
+        <div style="background: #f8f9fa; padding: 15px; border-radius: 8px; margin: 15px 0;">
+            <h4 style="margin: 0 0 10px 0;">What We Like:</h4>
+            <ul style="margin: 0; padding-left: 20px;">
+                <li>Men-focused positioning</li>
+                <li>Deep-sleep formula</li>
+                <li>Targeted marketing approach</li>
+                <li>Steady affiliate performance</li>
+            </ul>
+        </div>
+        
+        <div style="text-align: center; margin-top: 20px;">
+            <a href="#" style="background: #28a745; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; font-weight: bold; margin-right: 10px;">Check Best Price</a>
+            <a href="#" style="background: #6c757d; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px;">Full Review</a>
+        </div>
+    </div>
+</section>
+3. ENHANCE EXISTING COMPARISON TABLE
+Current: Basic table styling
+Modify: Add visual enhancements to existing table
+Find this in your current table and UPDATE:
+
+Add star ratings in a new column after "PRODUCT"
+Style the existing badges (TOP RATED, BEST VALUE, POPULAR) with colors
+Make "Check Price" buttons more prominent with green background
+Add "Special Offer" indicators
+
+css/* ADD these styles to enhance the existing table */
+<style>
+.product-review table {
+    border-collapse: collapse;
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.product-review th {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 15px;
+    text-align: left;
+}
+
+.product-review td {
+    padding: 15px;
+    border-bottom: 1px solid #e9ecef;
+    vertical-align: top;
+}
+
+.product-review tr:hover {
+    background-color: #f8f9fa;
+}
+
+.check-price-btn {
+    background: #28a745 !important;
+    color: white !important;
+    padding: 8px 16px !important;
+    border-radius: 6px !important;
+    text-decoration: none !important;
+    font-weight: bold !important;
+}
+
+.read-review-btn {
+    background: #6c757d !important;
+    color: white !important;
+    padding: 8px 16px !important;
+    border-radius: 6px !important;
+    text-decoration: none !important;
+    margin-left: 5px !important;
+}
+</style>
+4. ADD CONVERSION ELEMENTS
+Add this section AFTER the comparison table:
+html<div class="conversion-section" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 40px; text-align: center; margin: 40px 0; border-radius: 12px;">
+    <h2 style="margin-bottom: 20px;">Ready to Improve Your Sleep Tonight?</h2>
+    <p style="font-size: 18px; margin-bottom: 30px;">Join thousands who've transformed their sleep with these top-rated supplements</p>
+    <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+        <span>✓ 90-Day Money Back Guarantee</span>
+        <span>✓ Free Shipping Available</span>
+        <span>✓ No Prescription Required</span>
+    </div>
+</div>
+5. MOBILE OPTIMIZATION
+Add responsive CSS:
+css@media (max-width: 768px) {
+    .product-review {
+        padding: 15px !important;
+    }
+    
+    .product-review div[style*="display: flex"] {
+        flex-direction: column !important;
+        text-align: center !important;
+    }
+    
+    .product-review img {
+        width: 80px !important;
+        height: 80px !important;
+        margin: 0 auto 15px auto !important;
+    }
+}
+IMPLEMENTATION ORDER:
+
+Add hero trust signals section
+Insert detailed product review sections before table
+Apply table styling enhancements
+Add conversion section after table
+Apply mobile responsive CSS
+
+FILES TO MODIFY:
+
+Main supplements page HTML file
+Associated CSS file (or add inline styles as shown)
+Ensure affiliate links are properly connected in CTAs
+
+IMPORTANT NOTES:
+
+Keep all existing disclaimer text unchanged
+Maintain current affiliate link structure
+Don't change existing navigation or footer
+Preserve current product order and basic information
