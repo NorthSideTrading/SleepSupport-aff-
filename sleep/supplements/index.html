@@ -299,37 +299,62 @@
     
     <!-- Enhanced Product Review Styling -->
     <style>
-        /* Enhanced table styling */
-        .table-wrapper table {
-            border-collapse: collapse;
-            width: 100%;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        /* Enhanced comparison table styling */
+        .comparison-table-container {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            overflow: hidden;
+            margin: 30px 0;
         }
 
-        .table-wrapper th {
+        .comparison-table-container table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .comparison-table-container th {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
             padding: 15px;
             text-align: left;
+            font-weight: 600;
         }
 
-        .table-wrapper td {
+        .comparison-table-container td {
             padding: 15px;
-            border-bottom: 1px solid #e9ecef;
+            border-bottom: 1px solid #f1f3f4;
             vertical-align: top;
         }
 
-        .table-wrapper tr:hover {
+        .comparison-table-container tr:hover {
             background-color: #f8f9fa;
+            transform: scale(1.01);
+            transition: all 0.3s ease;
         }
 
+        /* Style the existing badges */
+        .top-rated { background: linear-gradient(45deg, #ffd700, #ffed4e) !important; color: #000 !important; }
+        .best-value { background: #17a2b8 !important; color: white !important; }
+        .popular { background: #ff6b35 !important; color: white !important; }
+        .mens-formula { background: #6f42c1 !important; color: white !important; }
+        .premium { background: #8e44ad !important; color: white !important; }
+
+        /* Enhanced CTA buttons */
         .check-price-btn {
-            background: #28a745 !important;
+            background: linear-gradient(45deg, #28a745, #20c997) !important;
             color: white !important;
-            padding: 8px 16px !important;
-            border-radius: 6px !important;
+            padding: 10px 20px !important;
+            border-radius: 8px !important;
             text-decoration: none !important;
             font-weight: bold !important;
+            box-shadow: 0 4px 15px rgba(40,167,69,0.3) !important;
+            transition: all 0.3s ease !important;
+        }
+
+        .check-price-btn:hover {
+            transform: translateY(-2px) !important;
+            box-shadow: 0 6px 20px rgba(40,167,69,0.4) !important;
         }
 
         .read-review-btn {
@@ -713,7 +738,7 @@
         <section class="section">
             <div class="container">
                 <h2>Sleep-Support Supplements Comparison</h2>
-                <div class="table-wrapper">
+                <div class="table-wrapper comparison-table-container">
                     <table id="supplements-comparison-table">
                         <thead>
                             <tr>
@@ -731,15 +756,29 @@
             </div>
         </section>
         
-        <!-- Conversion Section -->
-        <div class="conversion-section" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 40px; text-align: center; margin: 40px 0; border-radius: 12px;">
+        <!-- Enhanced Final CTA Section -->
+        <div class="final-cta-section" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 50px 30px; text-align: center; margin: 50px 0; border-radius: 15px; box-shadow: 0 10px 30px rgba(102,126,234,0.3);">
             <div class="container">
-                <h2 style="margin-bottom: 20px; color: white;">Ready to Improve Your Sleep Tonight?</h2>
-                <p style="font-size: 18px; margin-bottom: 30px;">Join thousands who've transformed their sleep with these top-rated supplements</p>
-                <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
-                    <span style="font-weight: 600;">✓ 90-Day Money Back Guarantee</span>
-                    <span style="font-weight: 600;">✓ Free Shipping Available</span>
-                    <span style="font-weight: 600;">✓ No Prescription Required</span>
+                <h2 style="margin-bottom: 20px; font-size: 28px;">Ready to Transform Your Sleep Tonight? 🌙</h2>
+                <p style="font-size: 18px; margin-bottom: 30px; opacity: 0.95;">Join over 50,000+ people who've improved their sleep with these top-rated supplements</p>
+                
+                <div style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; margin-bottom: 30px;">
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <span style="background: rgba(255,255,255,0.2); padding: 10px; border-radius: 50%; font-size: 18px;">✓</span>
+                        <span>90-Day Money Back Guarantee</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <span style="background: rgba(255,255,255,0.2); padding: 10px; border-radius: 50%; font-size: 18px;">✓</span>
+                        <span>Free Shipping Available</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <span style="background: rgba(255,255,255,0.2); padding: 10px; border-radius: 50%; font-size: 18px;">✓</span>
+                        <span>No Prescription Required</span>
+                    </div>
+                </div>
+                
+                <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 10px; margin: 20px 0;">
+                    <p style="margin: 0; font-size: 16px; font-weight: 600;">🏆 Top Choice: SleepLean - Get 37% OFF Today Only!</p>
                 </div>
             </div>
         </div>
