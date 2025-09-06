@@ -299,62 +299,37 @@
     
     <!-- Enhanced Product Review Styling -->
     <style>
-        /* Enhanced comparison table styling */
-        .comparison-table-container {
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-            overflow: hidden;
-            margin: 30px 0;
-        }
-
-        .comparison-table-container table {
-            width: 100%;
+        /* Enhanced table styling */
+        .table-wrapper table {
             border-collapse: collapse;
+            width: 100%;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
 
-        .comparison-table-container th {
+        .table-wrapper th {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
             padding: 15px;
             text-align: left;
-            font-weight: 600;
         }
 
-        .comparison-table-container td {
+        .table-wrapper td {
             padding: 15px;
-            border-bottom: 1px solid #f1f3f4;
+            border-bottom: 1px solid #e9ecef;
             vertical-align: top;
         }
 
-        .comparison-table-container tr:hover {
+        .table-wrapper tr:hover {
             background-color: #f8f9fa;
-            transform: scale(1.01);
-            transition: all 0.3s ease;
         }
 
-        /* Style the existing badges */
-        .top-rated { background: linear-gradient(45deg, #ffd700, #ffed4e) !important; color: #000 !important; }
-        .best-value { background: #17a2b8 !important; color: white !important; }
-        .popular { background: #ff6b35 !important; color: white !important; }
-        .mens-formula { background: #6f42c1 !important; color: white !important; }
-        .premium { background: #8e44ad !important; color: white !important; }
-
-        /* Enhanced CTA buttons */
         .check-price-btn {
-            background: linear-gradient(45deg, #28a745, #20c997) !important;
+            background: #28a745 !important;
             color: white !important;
-            padding: 10px 20px !important;
-            border-radius: 8px !important;
+            padding: 8px 16px !important;
+            border-radius: 6px !important;
             text-decoration: none !important;
             font-weight: bold !important;
-            box-shadow: 0 4px 15px rgba(40,167,69,0.3) !important;
-            transition: all 0.3s ease !important;
-        }
-
-        .check-price-btn:hover {
-            transform: translateY(-2px) !important;
-            box-shadow: 0 6px 20px rgba(40,167,69,0.4) !important;
         }
 
         .read-review-btn {
@@ -525,24 +500,12 @@
                         <strong>Disclosure:</strong> We may earn a commission if you buy through our links. Not medical advice.
                     </p>
                     
-                    <div class="hero-trust-signals" style="background: linear-gradient(135deg, #f8f9fa, #e9ecef); padding: 25px; margin: 30px 0; border-radius: 12px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-                        <div style="display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; align-items: center;">
-                            <div style="display: flex; align-items: center; gap: 8px;">
-                                <span style="background: #28a745; color: white; padding: 8px; border-radius: 50%; font-size: 16px;">✓</span>
-                                <span style="color: #2c3e50; font-weight: 600;">Independently Tested</span>
-                            </div>
-                            <div style="display: flex; align-items: center; gap: 8px;">
-                                <span style="background: #17a2b8; color: white; padding: 8px; border-radius: 50%; font-size: 16px;">✓</span>
-                                <span style="color: #2c3e50; font-weight: 600;">Non-Habit Forming</span>
-                            </div>
-                            <div style="display: flex; align-items: center; gap: 8px;">
-                                <span style="background: #ffc107; color: white; padding: 8px; border-radius: 50%; font-size: 16px;">✓</span>
-                                <span style="color: #2c3e50; font-weight: 600;">2,000+ Reviews</span>
-                            </div>
-                            <div style="display: flex; align-items: center; gap: 8px;">
-                                <span style="background: #dc3545; color: white; padding: 8px; border-radius: 50%; font-size: 16px;">✓</span>
-                                <span style="color: #2c3e50; font-weight: 600;">90-Day Guarantees</span>
-                            </div>
+                    <div class="hero-trust-signals" style="background: #f8f9fa; padding: 20px; margin: 20px 0; border-radius: 8px; text-align: center;">
+                        <div style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap;">
+                            <span style="color: #28a745; font-weight: 600;">✓ Independently Tested</span>
+                            <span style="color: #28a745; font-weight: 600;">✓ Non-Habit Forming</span>
+                            <span style="color: #28a745; font-weight: 600;">✓ Real User Reviews</span>
+                            <span style="color: #28a745; font-weight: 600;">✓ 90-Day Guarantees</span>
                         </div>
                     </div>
                 </div>
@@ -558,12 +521,11 @@
                 <!-- SleepLean Review -->
                 <div class="product-review" style="background: white; border: 1px solid #e9ecef; border-radius: 12px; padding: 30px; margin-bottom: 30px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
                     <div style="display: flex; gap: 20px; margin-bottom: 20px; align-items: center;">
-                        <img src="https://via.placeholder.com/120x120/FF6B35/white?text=SleepLean" alt="SleepLean" style="width: 120px; height: 120px; object-fit: contain; border-radius: 8px; border: 2px solid #ffd700;">
+                        <img src="/assets/img/sleeplean.png" alt="SleepLean" style="width: 120px; height: 120px; object-fit: contain;">
                         <div>
-                            <h3 style="margin: 0 0 10px 0; color: #2c5aa0;">SleepLean - <span style="background: linear-gradient(45deg, #ffd700, #ffed4e); color: #000; padding: 6px 12px; border-radius: 20px; font-size: 12px; font-weight: bold;">🏆 TOP RATED</span></h3>
-                            <div style="margin-bottom: 10px; color: #f39c12; font-size: 16px;">★★★★★ 4.7/5 (1,200+ reviews)</div>
+                            <h3 style="margin: 0 0 10px 0; color: #2c5aa0;">SleepLean - <span style="background: #ffd700; color: #000; padding: 4px 8px; border-radius: 4px; font-size: 12px; font-weight: 700;">TOP RATED</span></h3>
+                            <div style="margin-bottom: 10px;">★★★★★ 4.7/5 (1,200+ reviews)</div>
                             <div style="font-size: 18px; font-weight: bold; color: #e74c3c;">$49.95 <span style="text-decoration: line-through; color: #6c757d; font-size: 14px;">$79.95</span></div>
-                            <div style="background: #28a745; color: white; padding: 2px 6px; border-radius: 3px; font-size: 11px; display: inline-block; margin-top: 5px;">✅ 37% OFF TODAY</div>
                         </div>
                     </div>
                     
@@ -590,12 +552,11 @@
                 <!-- Resurge Review -->
                 <div class="product-review" style="background: white; border: 1px solid #e9ecef; border-radius: 12px; padding: 30px; margin-bottom: 30px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
                     <div style="display: flex; gap: 20px; margin-bottom: 20px; align-items: center;">
-                        <img src="https://via.placeholder.com/120x120/17A2B8/white?text=Resurge" alt="Resurge" style="width: 120px; height: 120px; object-fit: contain; border-radius: 8px;">
+                        <img src="/assets/img/resurge.png" alt="Resurge" style="width: 120px; height: 120px; object-fit: contain;">
                         <div>
-                            <h3 style="margin: 0 0 10px 0; color: #2c5aa0;">Resurge - <span style="background: #17a2b8; color: white; padding: 6px 12px; border-radius: 20px; font-size: 12px; font-weight: bold;">💰 BEST VALUE</span></h3>
-                            <div style="margin-bottom: 10px; color: #f39c12; font-size: 16px;">★★★★☆ 4.3/5 (850+ reviews)</div>
+                            <h3 style="margin: 0 0 10px 0; color: #2c5aa0;">Resurge - <span style="background: #17a2b8; color: white; padding: 4px 8px; border-radius: 4px; font-size: 12px; font-weight: 700;">BEST VALUE</span></h3>
+                            <div style="margin-bottom: 10px;">★★★★☆ 4.3/5 (850+ reviews)</div>
                             <div style="font-size: 18px; font-weight: bold; color: #e74c3c;">$34.95</div>
-                            <div style="background: #17a2b8; color: white; padding: 2px 6px; border-radius: 3px; font-size: 11px; display: inline-block; margin-top: 5px;">🚚 FREE SHIPPING</div>
                         </div>
                     </div>
                     
@@ -622,12 +583,11 @@
                 <!-- YU SLEEP Review -->
                 <div class="product-review" style="background: white; border: 1px solid #e9ecef; border-radius: 12px; padding: 30px; margin-bottom: 30px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
                     <div style="display: flex; gap: 20px; margin-bottom: 20px; align-items: center;">
-                        <img src="https://via.placeholder.com/120x120/FF6B35/white?text=YU+SLEEP" alt="YU SLEEP" style="width: 120px; height: 120px; object-fit: contain; border-radius: 8px;">
+                        <img src="/assets/img/yusleep.png" alt="YU SLEEP" style="width: 120px; height: 120px; object-fit: contain;">
                         <div>
-                            <h3 style="margin: 0 0 10px 0; color: #2c5aa0;">YU SLEEP - <span style="background: #ff6b35; color: white; padding: 6px 12px; border-radius: 20px; font-size: 12px; font-weight: bold;">🔥 POPULAR</span></h3>
-                            <div style="margin-bottom: 10px; color: #f39c12; font-size: 16px;">★★★★☆ 4.1/5 (600+ reviews)</div>
+                            <h3 style="margin: 0 0 10px 0; color: #2c5aa0;">YU SLEEP - <span style="background: #ff6b35; color: white; padding: 4px 8px; border-radius: 4px; font-size: 12px; font-weight: 700;">POPULAR</span></h3>
+                            <div style="margin-bottom: 10px;">★★★★☆ 4.1/5 (600+ reviews)</div>
                             <div style="font-size: 18px; font-weight: bold; color: #e74c3c;">$39.95</div>
-                            <div style="background: #ff6b35; color: white; padding: 2px 6px; border-radius: 3px; font-size: 11px; display: inline-block; margin-top: 5px;">💧 LIQUID FORMAT</div>
                         </div>
                     </div>
                     
@@ -654,12 +614,11 @@
                 <!-- Pitch Black Review -->
                 <div class="product-review" style="background: white; border: 1px solid #e9ecef; border-radius: 12px; padding: 30px; margin-bottom: 30px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
                     <div style="display: flex; gap: 20px; margin-bottom: 20px; align-items: center;">
-                        <img src="https://via.placeholder.com/120x120/6F42C1/white?text=Pitch+Black" alt="Pitch Black" style="width: 120px; height: 120px; object-fit: contain; border-radius: 8px;">
+                        <img src="/assets/img/pitchblack.png" alt="Pitch Black" style="width: 120px; height: 120px; object-fit: contain;">
                         <div>
-                            <h3 style="margin: 0 0 10px 0; color: #2c5aa0;">Pitch Black - <span style="background: #6f42c1; color: white; padding: 6px 12px; border-radius: 20px; font-size: 12px; font-weight: bold;">♂️ MEN'S FORMULA</span></h3>
-                            <div style="margin-bottom: 10px; color: #f39c12; font-size: 16px;">★★★★☆ 4.0/5 (400+ reviews)</div>
+                            <h3 style="margin: 0 0 10px 0; color: #2c5aa0;">Pitch Black - <span style="background: #6f42c1; color: white; padding: 4px 8px; border-radius: 4px; font-size: 12px; font-weight: 700;">MEN'S FORMULA</span></h3>
+                            <div style="margin-bottom: 10px;">★★★★☆ 4.0/5 (400+ reviews)</div>
                             <div style="font-size: 18px; font-weight: bold; color: #e74c3c;">$44.95</div>
-                            <div style="background: #6f42c1; color: white; padding: 2px 6px; border-radius: 3px; font-size: 11px; display: inline-block; margin-top: 5px;">🎯 FOR MEN</div>
                         </div>
                     </div>
                     
@@ -682,55 +641,6 @@
                         <a href="#" style="background: #6c757d; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px;">Full Review</a>
                     </div>
                 </div>
-                
-                <!-- BiOptimizers Review -->
-                <div class="product-review" style="background: white; border: 1px solid #e9ecef; border-radius: 12px; padding: 30px; margin-bottom: 30px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
-                    <div style="display: flex; gap: 20px; margin-bottom: 20px; align-items: center;">
-                        <img src="https://via.placeholder.com/120x120/4CAF50/white?text=BiOptimizers" alt="BiOptimizers" style="width: 120px; height: 120px; object-fit: contain; border-radius: 8px;">
-                        <div>
-                            <h3 style="margin: 0 0 10px 0; color: #2c5aa0;">BiOptimizers - <span style="background: #8e44ad; color: white; padding: 4px 8px; border-radius: 4px; font-size: 12px; font-weight: 700;">PREMIUM</span></h3>
-                            <div style="margin-bottom: 10px; color: #f39c12;">★★★★★ 4.6/5 (950+ reviews)</div>
-                            <div style="font-size: 18px; font-weight: bold; color: #e74c3c;">$59.95 <span style="text-decoration: line-through; color: #6c757d; font-size: 14px;">$89.95</span></div>
-                            <div style="background: #e74c3c; color: white; padding: 2px 6px; border-radius: 3px; font-size: 11px; display: inline-block; margin-top: 5px;">🔥 LIMITED TIME: 33% OFF</div>
-                        </div>
-                    </div>
-                    
-                    <p><strong>BiOptimizers represents premium sleep optimization</strong> with advanced formulation and high-quality ingredients. This comprehensive sleep support formula combines multiple pathways for enhanced rest and recovery, positioning itself at the premium end of the market.</p>
-                    
-                    <p>The premium pricing reflects superior ingredient quality and research-backed formulation. Ideal for serious biohackers and those who prioritize top-tier sleep optimization supplements with proven results and premium manufacturing standards.</p>
-                    
-                    <div style="background: #f8f9fa; padding: 15px; border-radius: 8px; margin: 15px 0;">
-                        <h4 style="margin: 0 0 10px 0; color: #27ae60;">✅ What We Like:</h4>
-                        <ul style="margin: 0; padding-left: 20px; color: #2c3e50;">
-                            <li>Premium ingredient quality</li>
-                            <li>Research-backed formulation</li>
-                            <li>Advanced sleep optimization</li>
-                            <li>Trusted by biohackers</li>
-                            <li>90-day money-back guarantee</li>
-                        </ul>
-                    </div>
-                    
-                    <div style="background: #fff3cd; padding: 15px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #ffc107;">
-                        <h4 style="margin: 0 0 10px 0; color: #856404;">⚠️ Consider:</h4>
-                        <ul style="margin: 0; padding-left: 20px; color: #856404;">
-                            <li>Premium pricing point</li>
-                            <li>May be overkill for basic sleep needs</li>
-                        </ul>
-                    </div>
-                    
-                    <div style="background: #d1ecf1; padding: 15px; border-radius: 8px; margin: 15px 0; text-align: center;">
-                        <p style="margin: 0; font-weight: bold; color: #0c5460;">🎯 Best For: Serious biohackers, premium supplement users, advanced sleep optimization</p>
-                    </div>
-                    
-                    <div style="text-align: center; margin-top: 20px;">
-                        <a href="#" class="cta" data-offer="bioptimizers" style="background: linear-gradient(45deg, #28a745, #20c997); color: white; padding: 15px 30px; text-decoration: none; border-radius: 8px; font-weight: bold; margin-right: 10px; box-shadow: 0 4px 15px rgba(40,167,69,0.3); transition: all 0.3s;">🛒 Get 33% OFF Now</a>
-                        <a href="#" style="background: #6c757d; color: white; padding: 15px 24px; text-decoration: none; border-radius: 8px; margin-left: 5px;">📖 Full Review</a>
-                    </div>
-                    
-                    <div style="text-align: center; margin-top: 10px; font-size: 12px; color: #6c757d;">
-                        ✓ Free Shipping • ✓ 90-Day Guarantee • ✓ Secure Checkout
-                    </div>
-                </div>
             </div>
         </section>
 
@@ -738,7 +648,7 @@
         <section class="section">
             <div class="container">
                 <h2>Sleep-Support Supplements Comparison</h2>
-                <div class="table-wrapper comparison-table-container">
+                <div class="table-wrapper">
                     <table id="supplements-comparison-table">
                         <thead>
                             <tr>
@@ -756,29 +666,15 @@
             </div>
         </section>
         
-        <!-- Enhanced Final CTA Section -->
-        <div class="final-cta-section" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 50px 30px; text-align: center; margin: 50px 0; border-radius: 15px; box-shadow: 0 10px 30px rgba(102,126,234,0.3);">
+        <!-- Conversion Section -->
+        <div class="conversion-section" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 40px; text-align: center; margin: 40px 0; border-radius: 12px;">
             <div class="container">
-                <h2 style="margin-bottom: 20px; font-size: 28px;">Ready to Transform Your Sleep Tonight? 🌙</h2>
-                <p style="font-size: 18px; margin-bottom: 30px; opacity: 0.95;">Join over 50,000+ people who've improved their sleep with these top-rated supplements</p>
-                
-                <div style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; margin-bottom: 30px;">
-                    <div style="display: flex; align-items: center; gap: 10px;">
-                        <span style="background: rgba(255,255,255,0.2); padding: 10px; border-radius: 50%; font-size: 18px;">✓</span>
-                        <span>90-Day Money Back Guarantee</span>
-                    </div>
-                    <div style="display: flex; align-items: center; gap: 10px;">
-                        <span style="background: rgba(255,255,255,0.2); padding: 10px; border-radius: 50%; font-size: 18px;">✓</span>
-                        <span>Free Shipping Available</span>
-                    </div>
-                    <div style="display: flex; align-items: center; gap: 10px;">
-                        <span style="background: rgba(255,255,255,0.2); padding: 10px; border-radius: 50%; font-size: 18px;">✓</span>
-                        <span>No Prescription Required</span>
-                    </div>
-                </div>
-                
-                <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 10px; margin: 20px 0;">
-                    <p style="margin: 0; font-size: 16px; font-weight: 600;">🏆 Top Choice: SleepLean - Get 37% OFF Today Only!</p>
+                <h2 style="margin-bottom: 20px; color: white;">Ready to Improve Your Sleep Tonight?</h2>
+                <p style="font-size: 18px; margin-bottom: 30px;">Join thousands who've transformed their sleep with these top-rated supplements</p>
+                <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+                    <span style="font-weight: 600;">✓ 90-Day Money Back Guarantee</span>
+                    <span style="font-weight: 600;">✓ Free Shipping Available</span>
+                    <span style="font-weight: 600;">✓ No Prescription Required</span>
                 </div>
             </div>
         </div>
