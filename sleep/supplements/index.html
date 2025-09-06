@@ -297,6 +297,82 @@
     <!-- Load external CSS -->
     <link rel="stylesheet" href="/assets/css/style.css">
     
+    <!-- Enhanced Product Review Styling -->
+    <style>
+        /* Enhanced table styling */
+        .table-wrapper table {
+            border-collapse: collapse;
+            width: 100%;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .table-wrapper th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px;
+            text-align: left;
+        }
+
+        .table-wrapper td {
+            padding: 15px;
+            border-bottom: 1px solid #e9ecef;
+            vertical-align: top;
+        }
+
+        .table-wrapper tr:hover {
+            background-color: #f8f9fa;
+        }
+
+        .check-price-btn {
+            background: #28a745 !important;
+            color: white !important;
+            padding: 8px 16px !important;
+            border-radius: 6px !important;
+            text-decoration: none !important;
+            font-weight: bold !important;
+        }
+
+        .read-review-btn {
+            background: #6c757d !important;
+            color: white !important;
+            padding: 8px 16px !important;
+            border-radius: 6px !important;
+            text-decoration: none !important;
+            margin-left: 5px !important;
+        }
+        
+        /* Mobile optimization */
+        @media (max-width: 768px) {
+            .product-review {
+                padding: 15px !important;
+            }
+            
+            .product-review div[style*="display: flex"] {
+                flex-direction: column !important;
+                text-align: center !important;
+            }
+            
+            .product-review img {
+                width: 80px !important;
+                height: 80px !important;
+                margin: 0 auto 15px auto !important;
+            }
+            
+            .hero-trust-signals div {
+                gap: 15px !important;
+            }
+            
+            .hero-trust-signals span {
+                font-size: 14px !important;
+            }
+            
+            .conversion-section div[style*="display: flex"] {
+                flex-direction: column !important;
+                gap: 10px !important;
+            }
+        }
+    </style>
+    
     <!-- Schema Markup -->
     <script type="application/ld+json">
     {
@@ -589,6 +665,19 @@
                 </div>
             </div>
         </section>
+        
+        <!-- Conversion Section -->
+        <div class="conversion-section" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 40px; text-align: center; margin: 40px 0; border-radius: 12px;">
+            <div class="container">
+                <h2 style="margin-bottom: 20px; color: white;">Ready to Improve Your Sleep Tonight?</h2>
+                <p style="font-size: 18px; margin-bottom: 30px;">Join thousands who've transformed their sleep with these top-rated supplements</p>
+                <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+                    <span style="font-weight: 600;">✓ 90-Day Money Back Guarantee</span>
+                    <span style="font-weight: 600;">✓ Free Shipping Available</span>
+                    <span style="font-weight: 600;">✓ No Prescription Required</span>
+                </div>
+            </div>
+        </div>
         
         <!-- How We Pick -->
         <section class="section section-alt">
