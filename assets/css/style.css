@@ -936,11 +936,66 @@ img { max-width: 100%; display: block; }
   }
 }
 
+/* Discreet Footer for Legal Pages */
+.footer-legal {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.footer-legal-left {
+  flex: 0 0 auto;
+}
+
+.footer-legal-right {
+  text-align: right;
+  flex: 1;
+}
+
+.footer-links {
+  margin-bottom: 8px;
+  font-size: 12px;
+  color: #8a8a8a;
+}
+
+.footer-links a {
+  color: #8a8a8a;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: var(--accent);
+}
+
+.footer-disclosure {
+  font-size: 12px;
+  color: #8a8a8a;
+  margin: 0;
+}
+
+.footer-legal-left p {
+  font-size: 12px;
+  color: #8a8a8a;
+  margin: 0;
+}
+
 /* Update footer responsive */
 @media (max-width: 768px) {
   .footer-content {
     grid-template-columns: 1fr;
     gap: 1.5rem;
+  }
+  
+  .footer-legal {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .footer-legal-right {
+    text-align: center;
   }
   
   .container {
