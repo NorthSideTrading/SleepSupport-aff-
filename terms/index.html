@@ -158,5 +158,16 @@
     </footer>
     
     <script src="/assets/js/main.js?v=1757020400"></script>
+    <script src="/affiliate_click_listener.js"></script>
+    <script>
+(function(){
+  var qs = window.location.search;
+  if(!qs) return;
+  document.querySelectorAll('a[href^="/go/"]').forEach(function(a){
+    var href = a.getAttribute('href')||'';
+    a.setAttribute('href', href + (href.includes('?') ? '&' + qs.slice(1) : qs));
+  });
+})();
+    </script>
 </body>
 </html>

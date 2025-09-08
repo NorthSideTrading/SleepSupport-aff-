@@ -2,6 +2,12 @@
   publish = "."
 
 [[redirects]]
+  from = "/go/sleeplean"
+  to   = "https://cf5ebf3dm3ebet5fu7lly4ni33.hop.clickbank.net/?tid=ssgsleeplean"
+  status = 302
+  force  = true
+
+[[redirects]]
   from = "/go/*"
   to = "https://TRACKER.EXAMPLE/click?offer=:splat"
   status = 302

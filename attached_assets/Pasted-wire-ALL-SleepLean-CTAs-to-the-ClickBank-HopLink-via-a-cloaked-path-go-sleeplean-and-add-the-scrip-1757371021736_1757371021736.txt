@@ -1,0 +1,80 @@
+wire ALL SleepLean CTAs to the ClickBank HopLink via a cloaked path /go/sleeplean, and add the scripts needed for tracking. Do everything below, then commit and push.
+
+1) Netlify redirect
+
+Open (or create if missing) netlify.toml at the repo root.
+
+Add (or update) this block. Normalize the extra “&” so the URL is ?tid=ssgsleeplean (no double ?&):
+
+[[redirects]]
+  from = "/go/sleeplean"
+  to   = "https://cf5ebf3dm3ebet5fu7lly4ni33.hop.clickbank.net/?tid=ssgsleeplean"
+  status = 302
+  force  = true
+
+
+Keep the existing redirects intact. Only add this one if it doesn’t exist; if it exists, ensure it matches exactly as above.
+
+2) Update ALL SleepLean CTAs
+
+Search the codebase for any SleepLean buttons/links (text like SleepLean, IDs/anchors like #sleeplean, or old external links).
+
+Change their href to /go/sleeplean and add these attributes (don’t duplicate if already present):
+
+rel="nofollow sponsored"
+data-aff="true"
+data-merchant="SleepLean"
+data-offer="SleepLean"
+data-position="Top#1"
+
+
+Example final CTA:
+
+<a href="/go/sleeplean" rel="nofollow sponsored"
+   data-aff="true" data-merchant="SleepLean" data-offer="SleepLean" data-position="Top#1">
+  Check Best Price
+</a>
+
+
+3) Append page query params to all /go/ links (to pass gclid/extclid/utms)
+
+In the global layout (the HTML that renders on every page), before </body>, add this once (skip if an identical block already exists):
+
+<script>
+(function(){
+  var qs = window.location.search;
+  if(!qs) return;
+  document.querySelectorAll('a[href^="/go/"]').forEach(function(a){
+    var href = a.getAttribute('href')||'';
+    a.setAttribute('href', href + (href.includes('?') ? '&' + qs.slice(1) : qs));
+  });
+})();
+</script>
+
+
+4) Fire GA4 event on affiliate clicks
+
+If /affiliate_click_listener.js does not exist, create it with:
+
+(function(){
+  function onClick(e){
+    var a = e.target.closest && e.target.closest('a');
+    if(!a) return;
+    var href = a.getAttribute('href') || '';
+    var isAff = (a.dataset && a.dataset.aff === 'true') || /\/go\//i.test(href);
+    if(!isAff) return;
+    var outHost = '';
+    try { outHost = new URL(a.href, location.href).hostname; } catch(err){}
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      event: 'affiliate_click',
+      merchant: (a.dataset && a.dataset.merchant) || '',
+      offer: (a.dataset && a.dataset.offer) || '',
+      position: (a.dataset && a.dataset.position) || '',
+      price: (a.dataset && a.dataset.price) || '',
+      out_url_domain: outHost,
+      link_url: a.href || href
+    });
+  }
+  document.addEventListener('click', onClick, {capture:true});
+})();

@@ -668,7 +668,7 @@
                     </div>
                     
                     <div style="text-align: center; margin-top: 20px;">
-                        <a href="#" class="cta" data-offer="sleeplean" style="background: #28a745; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; font-weight: bold; margin-right: 10px;">Check Best Price</a>
+                        <a href="/go/sleeplean" rel="nofollow sponsored" data-aff="true" data-merchant="SleepLean" data-offer="SleepLean" data-position="Top#1" class="cta" style="background: #28a745; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; font-weight: bold; margin-right: 10px;">Check Best Price</a>
                         <a href="#" style="background: #6c757d; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px;">Full Review</a>
                     </div>
                 </div>
@@ -902,6 +902,7 @@
     </footer>
     
     <script src="/assets/js/main.js?v=1757020400"></script>
+    <script src="/affiliate_click_listener.js"></script>
     <script>
         function scrollToComparison(event) {
             event.preventDefault();
@@ -910,6 +911,16 @@
                 block: 'start'
             });
         }
+    </script>
+    <script>
+(function(){
+  var qs = window.location.search;
+  if(!qs) return;
+  document.querySelectorAll('a[href^="/go/"]').forEach(function(a){
+    var href = a.getAttribute('href')||'';
+    a.setAttribute('href', href + (href.includes('?') ? '&' + qs.slice(1) : qs));
+  });
+})();
     </script>
 </body>
 </html>
