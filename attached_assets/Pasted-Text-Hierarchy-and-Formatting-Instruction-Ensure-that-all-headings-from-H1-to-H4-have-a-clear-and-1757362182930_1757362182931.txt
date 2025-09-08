@@ -1,0 +1,65 @@
+Text Hierarchy and Formatting:
+
+Instruction: Ensure that all headings from H1 to H4 have a clear and distinct size hierarchy, with H1 being the largest and H4 being the smallest.
+
+Instruction: Use bolded text to highlight key terms and concepts within paragraphs and bulleted lists. This makes the article scannable and allows users to quickly find the information they are looking for.  
+
+
+
+Structured Product Cards:
+
+Instruction: Create a clean, minimalist, and consistent card design for each affiliate product. This card will be a prominent feature within each supplement's review section.
+
+Card Structure:
+
+Top: Placeholder for a custom, high-quality, professional product image or a unique icon.
+
+Title: "Our Top Pick: [Product Name]"
+
+Summary: A brief, 2-3 sentence paragraph summarizing why this product is a top recommendation based on the detailed review.
+
+CTA Button: A visually prominent button with a soft-sell call to action.
+
+Strategic Image and Icon Placeholders:
+
+Instruction: The hero section and each product card require a visual element. The images should be professional and calming, and the icons should be simple, clear, and symbolic of the content they represent.
+
+Section 3.4: Integrating Soft-Sell CTAs
+
+Directive: Integrate a layered approach to soft-sell calls to action throughout the page.
+
+
+
+In-line Text CTAs:
+
+Instruction: Create subtle, hyperlinked phrases within the body of the text to guide users deeper into the funnel.
+
+Example Phrases:
+
+"To explore a third-party tested melatonin supplement, see our top pick below."  
+
+
+
+
+
+"If you're ready to find a highly-rated magnesium supplement, visit our recommended product page."
+
+Dedicated Product Card CTAs:
+
+Instruction: The primary conversion point will be the button on the Product Card. The copy should be low-friction and action-oriented.
+
+Button Copy: "Explore [Product Name]" or "Learn More & Shop"
+
+Mid-Page and Exit-Intent Soft-Sell Banners:
+
+Instruction: Below the final product review section, add a small, non-intrusive banner.
+
+Banner Copy: "Ready to start sleeping better? We've compiled a curated list of our top-reviewed supplements to help." (Link to the first Product Card).
+
+Content & Conversion Blueprint for Replit Agent
+
+Page SectionComponent TypeCopy to ImplementVisual DirectiveSource SnippetHero SectionH1 Heading"Unlock Deeper Sleep: Your Definitive Guide to Natural Supplements"Larger font size, center-aligned.Sub-Heading"Explore our expert-vetted reviews and find the science-backed solution for your best night’s rest."Subtly smaller font size, center-aligned.Image PlaceholderImage placeholder for a calming, professional graphic.High-quality, non-stock photo image.Authority SectionH2 Heading"Our Commitment to Your Sleep"Clear heading above a three-column section.Column 1 CopyVetted by Experts
+
+"Every product and ingredient on this page is reviewed by our team of certified nutritionists and sleep specialists to ensure accuracy and safety."Icon: Pill/Vial. Use bold text for heading.Column 2 CopyScience-Backed
+
+"We cross-reference every claim with peer-reviewed studies and clinical research to provide you with an evidence-based perspective."Icon: Microscope/Lab. Use bold text for heading.Column 3 CopyTransparent Reviews

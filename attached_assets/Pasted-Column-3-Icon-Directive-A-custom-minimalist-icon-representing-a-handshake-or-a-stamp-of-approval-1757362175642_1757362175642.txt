@@ -1,0 +1,76 @@
+Column 3:
+
+Icon Directive: A custom, minimalist icon representing a handshake or a stamp of approval.
+
+Heading Copy: "Transparent Reviews"
+
+Text Copy: "Our recommendations are based on rigorous analysis, not on sponsorship. We believe in providing you with the truth to make the right choice."
+
+Section 3.2: The Core Content Engine: Product-Specific Copy & Expansion
+
+Directive: Replace the current, thin product listings with a detailed, structured, and copy-rich review for each supplement.
+
+
+
+The New Product Review Template:
+
+Instruction: Implement the following template for each new supplement review section. Each section should be a self-contained content block.
+
+H3 Heading: ": The Science Behind Better Sleep"
+
+Paragraph 1 (Program Overview): Write an introductory paragraph that explains what the substance is and how it works to promote sleep.  
+
+
+
+
+
+H4 Heading: "Who is this for?"
+
+Bulleted List: Use bullet points to list specific target audiences who may benefit from this supplement (e.g., "shift workers," "jet lag sufferers," "students").  
+
+
+
+
+
+H4 Heading: "The Science-Backed Benefits"
+
+Bulleted List: Detail the specific, evidence-based benefits of the supplement, citing its mechanism of action (e.g., "regulates neurotransmitters," "facilitates melatonin production").  
+
+
+
+
+
+H4 Heading: "Potential Side Effects & Cautions"
+
+Bulleted List: A mandatory, detailed list of potential side effects, contraindications, and general warnings. This section is critical for building trust and credibility by providing a balanced view.  
+
+
+
+
+
+Copy for Specific Supplements:
+
+Melatonin: Incorporate details about its role in circadian rhythms, its production in response to darkness, and its use for issues like jet lag and shift work disorder. Include a warning about potential medication interactions and side effects like headaches and nausea.  
+
+
+
+
+
+Magnesium: Detail its role in nerve and muscle function, and its ability to regulate sleep-related neurotransmitters. Emphasize the importance of choosing forms like Magnesium Glycinate or Magnesium Citrate and caution against Magnesium Oxide.  
+
+
+
+
+
+L-Theanine: Explain that it is an amino acid found in tea leaves. Describe how research suggests it can reduce stress and anxiety, thereby promoting relaxation and improving sleep.  
+
+
+
+Valerian Root: State that it is an herbal sleep aid and mention the recommended dosage. Crucially, include the warning that for a small percentage of people it can have the opposite effect and may cause side effects like morning drowsiness, dizziness, and upset stomach.  
+
+
+
+Section 3.3: Visual & Readability Enhancements
+
+Directive: Implement design changes that enhance the user experience, improve scannability, and visually reinforce the content hierarchy.
+
