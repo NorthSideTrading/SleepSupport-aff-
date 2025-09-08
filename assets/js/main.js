@@ -134,11 +134,11 @@ function renderSupplements(items){
             <td><span class="small" style="color: #64748b; font-size: 13px; line-height: 1.4;">${friendlyNotes}</span></td>
             <td>
                 <div style="display: flex; flex-direction: row; gap: 12px; justify-content: center; align-items: center; flex-wrap: wrap;">
-                    <a class="btn btn-primary cta" data-offer="${item.slug}" href="${item.cta_url}" target="_blank" rel="nofollow sponsored noopener" 
+                    <a class="btn btn-primary cta" data-offer="${item.slug}" href="${item.cta_url}" rel="nofollow sponsored" data-aff="true" data-merchant="${item.name.split(' (')[0]}" data-offer="${item.name.split(' (')[0]}" data-position="Table#${index + 1}"
                        style="background: linear-gradient(135deg, #059669 0%, #047857 100%); color: white; padding: 14px 18px; border-radius: 8px; font-weight: 600; text-decoration: none; font-size: 14px; text-align: center; transition: all 0.2s ease; box-shadow: 0 3px 12px rgba(5, 150, 105, 0.3); border: 2px solid transparent;">
                         Check Price ▶
                     </a>
-                    <a class="btn btn-ghost" href="#" 
+                    <a class="btn btn-ghost" href="${item.cta_url}" rel="nofollow sponsored" data-aff="true" data-merchant="${item.name.split(' (')[0]}" data-offer="${item.name.split(' (')[0]}" data-position="Table#${index + 1}Review"
                        style="background: white; color: #059669; padding: 14px 18px; border: 2px solid #059669; border-radius: 8px; font-weight: 500; text-decoration: none; font-size: 14px; text-align: center; transition: all 0.2s ease;">
                         Read Review
                     </a>
