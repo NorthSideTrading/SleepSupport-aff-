@@ -1,0 +1,160 @@
+Domain: https://sleepsupportguide.com
+Rule: Do not include /contact in the sitemap or robots. If any /contact page exists, ignore it.
+
+Goals
+
+Create/update /sitemap.xml with canonical URLs (home + legal/trust pages).
+
+Create/update /robots.txt that references the sitemap.
+
+Automate generation on build.
+
+Work for any stack (static HTML, React SPA, Next.js app/pages).
+
+Acceptance checks at the end.
+
+Detect Stack
+
+If next.config.js exists:
+
+If app/ directory exists → Next.js App Router.
+
+Else if pages/ directory exists → Next.js Pages Router.
+
+Else:
+
+If public/ exists → Static/React.
+
+Common Variables
+
+BASE_URL = "https://sleepsupportguide.com"
+
+Required routes (hardcode; expand later as site grows):
+/, /privacy, /terms, /editorial-policy, /affiliate-disclosure
+(NO /contact.)
+
+Implementation
+A) Next.js — App Router (app/)
+
+Create app/sitemap.ts with this content:
+
+export default function sitemap() {
+  const base = "https://sleepsupportguide.com";
+  const routes = ["", "privacy", "terms", "editorial-policy", "affiliate-disclosure"];
+  return routes.map((p) => ({
+    url: `${base}/${p}`,
+    changefreq: p === "" ? "daily" : "weekly",
+    priority: p === "" ? 1.0 : 0.7,
+  }));
+}
+
+
+Create/overwrite public/robots.txt:
+
+User-agent: *
+Allow: /
+Sitemap: https://sleepsupportguide.com/sitemap.xml
+
+
+Do not add /contact anywhere.
+
+B) Next.js — Pages Router (pages/) using next-sitemap
+
+Install: npm i -D next-sitemap
+
+Create next-sitemap.config.js:
+
+/** @type {import('next-sitemap').IConfig} */
+module.exports = {
+  siteUrl: 'https://sleepsupportguide.com',
+  generateRobotsTxt: true,
+  changefreq: 'weekly',
+  priority: 0.7,
+  exclude: ['/contact', '/contact/*'],
+  additionalPaths: async (config) => {
+    const urls = [
+      '/', '/privacy', '/terms', '/editorial-policy', '/affiliate-disclosure'
+    ];
+    return urls.map((loc) => ({
+      loc, changefreq: loc === '/' ? 'daily' : 'weekly', priority: loc === '/' ? 1.0 : 0.7
+    }));
+  },
+};
+
+
+In package.json add:
+
+{
+  "scripts": {
+    "postbuild": "next-sitemap"
+  }
+}
+
+
+This generates both /public/sitemap.xml and /public/robots.txt.
+/contact stays excluded.
+
+C) Static HTML or React SPA (Vite/CRA)
+
+Ensure a public/ folder exists (served at site root).
+
+Create scripts/generate-sitemap.mjs:
+
+// scripts/generate-sitemap.mjs
+import { writeFileSync, existsSync, readFileSync, mkdirSync } from "fs";
+import { dirname } from "path";
+import { fileURLToPath } from "url";
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
+const BASE = process.env.BASE_URL || "https://sleepsupportguide.com";
+
+// Seed routes (expand later). Never include /contact.
+const seedRoutes = ["/", "/privacy", "/terms", "/editorial-policy", "/affiliate-disclosure"];
+
+// Optional: pull extra routes from routes.json if present.
+let extra = [];
+try {
+  if (existsSync("routes.json")) {
+    extra = JSON.parse(readFileSync("routes.json", "utf8"));
+  }
+} catch { extra = []; }
+
+// Merge, de-dupe, and hard-filter out any accidental /contact
+const routes = Array.from(new Set([...seedRoutes, ...extra]))
+  .filter(r => typeof r === "string" && r.trim().length > 0 && !r.startsWith("/contact"));
+
+const xml =
+  `<?xml version="1.0" encoding="UTF-8"?>\n` +
+  `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n` +
+  routes.map(r => `  <url><loc>${BASE}${r}</loc><changefreq>${r === "/" ? "daily" : "weekly"}</changefreq><priority>${r === "/" ? "1.0" : "0.7"}</priority></url>`).join("\n") +
+  `\n</urlset>\n`;
+
+if (!existsSync("public")) mkdirSync("public");
+writeFileSync("public/sitemap.xml", xml);
+writeFileSync("public/robots.txt",
+`User-agent: *
+Allow: /
+Sitemap: ${BASE}/sitemap.xml
+`);
+console.log("✔ Generated public/sitemap.xml and public/robots.txt (no /contact).");
+
+
+Create (optional) routes.json at project root to add future URLs:
+
+[
+  "/some-category",
+  "/some-review-page"
+]
+
+
+Add scripts in package.json:
+
+{
+  "scripts": {
+    "build:sitemap": "node scripts/generate-sitemap.mjs",
+    "postbuild": "npm run build:sitemap"
+  }
+}
+
+
+Ensure your build/deploy copies public/ to the site root (Replit does by default for Vite/CRA).
