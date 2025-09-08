@@ -349,10 +349,54 @@ nav a:hover {
 }
 
 #supplements-comparison-table tbody td {
-  padding: 1.5rem 1rem;
+  padding: 2rem 1rem;
   vertical-align: top;
   border-bottom: 1px solid #f1f5f9;
   transition: all 0.2s ease;
+}
+
+/* Enhanced button styling for table CTAs */
+#supplements-comparison-table .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(5, 150, 105, 0.4) !important;
+}
+
+#supplements-comparison-table .btn-ghost:hover {
+  background: #059669;
+  color: white;
+  box-shadow: 0 4px 12px rgba(5, 150, 105, 0.3);
+}
+
+/* Product cell styling */
+.product-cell {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.product-image {
+  flex-shrink: 0;
+}
+
+.product-image img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+
+.product-info {
+  flex: 1;
+}
+
+/* Enhanced badge animations */
+.badge {
+  display: inline-block;
+  animation: badge-glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes badge-glow {
+  0% { box-shadow: 0 0 5px rgba(255, 255, 255, 0.3); }
+  100% { box-shadow: 0 0 10px rgba(255, 255, 255, 0.6); }
 }
 
 #supplements-comparison-table tbody tr:nth-child(even) {

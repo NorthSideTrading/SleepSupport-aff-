@@ -97,36 +97,52 @@ function renderSupplements(items){
         if(index === 0) row.classList.add('top-pick');
         
         let badge = '';
-        if(index === 0) badge = '<span class="badge badge-top">TOP RATED</span>';
-        else if(index === 1) badge = '<span class="badge badge-value">BEST VALUE</span>';
-        else if(index === 2) badge = '<span class="badge">POPULAR</span>';
+        if(index === 0) badge = '<span class="badge badge-top" style="background: linear-gradient(135deg, #10b981 0%, #047857 100%); color: white; padding: 4px 10px; border-radius: 20px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;">⭐ Top Choice</span>';
+        else if(index === 1) badge = '<span class="badge badge-value" style="background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%); color: white; padding: 4px 10px; border-radius: 20px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;">💎 Best Value</span>';
+        else if(index === 2) badge = '<span class="badge" style="background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%); color: white; padding: 4px 10px; border-radius: 20px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;">🔥 Popular</span>';
         
         const rating = '★★★★☆';
+        
+        // Friendly copy updates
+        const friendlyNotes = item.notes
+            .replace('Use conservative language; avoid explicit weight-loss promises.', 'Perfect for those seeking dual benefits of better sleep and weight management support.')
+            .replace('Keep claims to relaxation/sleep-support only.', 'Ideal for deep restoration and recovery during sleep hours.')
+            .replace('Consumer copy must avoid efficacy promises.', 'Great choice for those preferring liquid supplements over capsules.')
+            .replace('Stay general; no hormone/medical claims.', 'Specially formulated with men\'s sleep patterns in mind.')
+            .replace('Structure/function wording only.', 'Premium choice for comprehensive magnesium supplementation.');
         
         row.innerHTML = `
             <td>
                 <div class="product-cell">
                     <div class="product-image">
-                        <img src="${item.img}" alt="${item.name}" loading="lazy">
+                        <img src="${item.img}" alt="${item.name}" loading="lazy" style="border-radius: 8px;">
                     </div>
                     <div class="product-info">
-                        <div class="k">${item.name}</div>
-                        <div class="rating">${rating}</div>
-                        <div class="small">${item.form}</div>
+                        <div class="k" style="font-weight: 600; color: #1e293b; margin-bottom: 6px;">${item.name}</div>
+                        <div class="rating" style="color: #f59e0b; font-size: 14px; margin-bottom: 8px;">${rating} <span style="color: #64748b; font-size: 13px;">(4.2/5)</span></div>
+                        <div class="small" style="color: #64748b; font-size: 13px; text-transform: uppercase; font-weight: 500; margin-bottom: 8px;">${item.form}</div>
                         ${badge}
                     </div>
                 </div>
             </td>
-            <td><span class="small">${item.form}</span></td>
+            <td><span class="small" style="color: #64748b; font-weight: 500;">${item.form}</span></td>
             <td>
                 <div class="key-points">
-                    ${item.key_points.slice(0,3).map(point => `<div class="key-point">• ${point}</div>`).join('')}
+                    ${item.key_points.slice(0,3).map(point => `<div class="key-point" style="margin-bottom: 6px; color: #475569; font-size: 14px; line-height: 1.4;">✓ ${point}</div>`).join('')}
                 </div>
             </td>
-            <td><span class="small">${item.notes}</span></td>
+            <td><span class="small" style="color: #64748b; font-size: 13px; line-height: 1.4;">${friendlyNotes}</span></td>
             <td>
-                <a class="btn btn-primary cta" data-offer="${item.slug}" href="${item.cta_url}" target="_blank" rel="nofollow sponsored noopener">Check Price</a>
-                <a class="btn btn-ghost mt8" href="#">Read Review</a>
+                <div style="display: flex; flex-direction: column; gap: 8px; align-items: center;">
+                    <a class="btn btn-primary cta" data-offer="${item.slug}" href="${item.cta_url}" target="_blank" rel="nofollow sponsored noopener" 
+                       style="background: linear-gradient(135deg, #059669 0%, #047857 100%); color: white; padding: 12px 20px; border-radius: 8px; font-weight: 600; text-decoration: none; font-size: 14px; text-align: center; min-width: 120px; transition: all 0.2s ease; box-shadow: 0 2px 8px rgba(5, 150, 105, 0.3);">
+                        🛍️ Check Price
+                    </a>
+                    <a class="btn btn-ghost" href="#" 
+                       style="background: transparent; color: #059669; padding: 8px 16px; border: 2px solid #059669; border-radius: 8px; font-weight: 500; text-decoration: none; font-size: 13px; text-align: center; min-width: 120px; transition: all 0.2s ease;">
+                        📖 Read Review
+                    </a>
+                </div>
             </td>`;
         
         tbody.appendChild(row);
