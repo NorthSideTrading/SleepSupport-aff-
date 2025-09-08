@@ -520,7 +520,7 @@
                 <div style="max-width: 800px; margin: 0 auto; text-align: center;">
                     <h2 style="color: #2c5aa0; margin-bottom: 20px;">Ready to start sleeping better?</h2>
                     <p style="margin-bottom: 30px; line-height: 1.6; font-size: 18px;">We've compiled a curated list of our top-reviewed supplements to help you find the right solution for your sleep needs.</p>
-                    <a href="#comparison-table" style="background: #2c5aa0; color: white; padding: 15px 30px; text-decoration: none; border-radius: 6px; font-weight: 600; font-size: 18px;">View Our Top Picks</a>
+                    <a href="#comparison-table" onclick="scrollToComparison(event)" style="background: #2c5aa0; color: white; padding: 15px 30px; text-decoration: none; border-radius: 6px; font-weight: 600; font-size: 18px;">Compare Supplements</a>
                 </div>
             </div>
         </section>
@@ -636,7 +636,7 @@
                     <div style="background: #f8f9fa; border-left: 4px solid #2c5aa0; padding: 25px; margin-top: 40px; border-radius: 8px;">
                         <h4 style="color: #2c5aa0; margin-bottom: 15px;">Ready to Choose the Right Supplement?</h4>
                         <p style="margin-bottom: 20px; line-height: 1.6;">Each supplement works differently for different people. We recommend starting with one option, testing it for 1-2 weeks, and consulting your healthcare provider about combinations.</p>
-                        <a href="#comparison-table" style="background: #2c5aa0; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; font-weight: 600; display: inline-block;">Compare Our Top Picks</a>
+                        <a href="#comparison-table" onclick="scrollToComparison(event)" style="background: #2c5aa0; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; font-weight: 600; display: inline-block;">Compare Our Top Picks</a>
                     </div>
                 </div>
             </div>
@@ -644,7 +644,7 @@
         
 
         <!-- Comparison Table -->
-        <section class="section">
+        <section class="section" id="comparison-table">
             <div class="container">
                 <h2>Sleep-Support Supplements Comparison</h2>
                 <div class="table-wrapper">
@@ -762,5 +762,14 @@
     </footer>
     
     <script src="/assets/js/main.js?v=1757020400"></script>
+    <script>
+        function scrollToComparison(event) {
+            event.preventDefault();
+            document.getElementById('comparison-table').scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    </script>
 </body>
 </html>
