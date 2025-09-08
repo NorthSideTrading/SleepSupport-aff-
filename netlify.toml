@@ -22,11 +22,12 @@
   status = 302
   force  = true
 
-[[redirects]]
-  from = "/go/*"
-  to = "https://TRACKER.EXAMPLE/click?offer=:splat"
-  status = 302
-  force = true
+# Generic fallback redirect commented out - using specific redirects above
+# [[redirects]]
+#   from = "/go/*"
+#   to = "https://TRACKER.EXAMPLE/click?offer=:splat"
+#   status = 302
+#   force = true
 
 [[redirects]]
   from = "/sleep/non-pill-solutions"
