@@ -1,0 +1,93 @@
+Tasks
+
+Footer (global)
+
+Add a global <Footer> included on every page (layout root).
+
+Style: small font-size (e.g., 12–13px), neutral color (e.g., #8a8a8a), top border in a very light gray, generous padding.
+
+Left side: © {currentYear} {SITE_NAME}. All rights reserved.
+
+Right side (inline list, separated by •):
+Privacy • Terms • Contact • Editorial Policy • Affiliate Disclosure
+Link paths: /privacy, /terms, /contact, /editorial-policy, /affiliate-disclosure.
+
+Add a short one-line disclosure under the links (muted, same size):
+“We may earn commissions from qualifying purchases. Content is independent. See Affiliate Disclosure.”
+
+Pages
+Create the five pages below. Add “Last updated: {ISO date}”. Keep headings semantic (H1, H2). Use the copy provided verbatim, filling variables. Keep internal links to the other policies in a small “Related Policies” block at the bottom of each page.
+
+/affiliate-disclosure
+
+H1: Affiliate Disclosure
+Body (template):
+{SITE_NAME} participates in affiliate marketing programs. This means we may earn commissions when you click links or make purchases via links on our site. This comes at no extra cost to you.
+
+Our editorial opinions are our own. Compensation may influence placement of offers but not our ratings or the facts we present.
+
+We only recommend products we believe are genuinely useful based on our review process (see our Editorial Policy
+).
+
+Programs we participate in: {AFFILIATE_NETWORKS}. (Include the exact Amazon Associates sentence only if applicable: “As an Amazon Associate we earn from qualifying purchases.”)
+Contact: Questions? Email us at {CONTACT_EMAIL}.
+Related Policies: Privacy • Terms • Editorial Policy
+
+/editorial-policy
+
+H1: Editorial Policy
+Body:
+Our mission is to provide clear, useful reviews of physical products.
+How we review:
+
+Criteria: build quality, efficacy, value, customer feedback, third-party certifications.
+
+Process: hands-on evaluation where possible; otherwise documentation, spec sheets, reputable lab reports, and verified customer data.
+
+Independence: Writers and editors do not accept incentives to alter findings.
+
+Corrections: We correct material errors promptly and note changes in “Updates.”
+
+Funding & bias: Affiliate revenue may influence what we cover, but not how we rate. Our ratings reflect our criteria above.
+Medical/health note (if relevant): Content is for informational purposes only and not medical advice. Consult a qualified professional.
+Related Policies: Affiliate Disclosure • Privacy • Terms
+
+/privacy
+
+H1: Privacy Policy
+Body (short, ad-policy-friendly):
+We respect your privacy. This page explains what we collect and why.
+
+Information we collect: basic site analytics (pages viewed, approximate location, device info), referral source, and actions taken on our site.
+
+Cookies & tracking: We use cookies and similar technologies to run the site, measure performance, and, where allowed, personalize ads and content.
+
+Ads & partners: We may use third-party ad/analytics partners that set cookies or receive limited data to measure performance. Review their policies for details.
+
+Your choices: You can disable cookies in your browser; some features may not work.
+
+Data retention: Kept only as long as necessary for the purposes above.
+
+Contact: {CONTACT_EMAIL}
+Related Policies: Terms • Affiliate Disclosure
+(If you use GTM/GA4, add a short “Analytics” section stating GA4 via GTM is used, and link to Google’s policies.)
+
+/terms
+
+H1: Terms of Use
+Body:
+By using {SITE_NAME}, you agree to these terms.
+
+No warranties: Content is provided “as is” without warranties of accuracy or fitness for a particular purpose.
+
+Not professional advice: Content is informational only (not medical, legal, financial, or professional advice).
+
+Affiliate relationships: We may earn commissions from links. See our Affiliate Disclosure.
+
+User responsibility: Verify product details (ingredients, compatibility, allergens) with manufacturers before purchase.
+
+Limitation of liability: {SITE_NAME} and {BUSINESS_NAME} are not liable for losses arising from use of this site.
+
+Changes: We may update these terms at any time by posting a new date.
+Contact: {CONTACT_EMAIL}
+Related Policies: Privacy • Editorial Policy • Affiliate Disclosure
