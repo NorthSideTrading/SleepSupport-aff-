@@ -1,0 +1,148 @@
+Task: Overhaul the entire page structure and content to establish immediate credibility and guide the user through a deliberate funnel.
+
+1.1. Metadata and SEO Enhancements
+Instruction: Update the page's <title> tag and <meta name="description"> tag.
+
+Page Title Copy: "Expert-Vetted Sleep Supplements: Find the Right Aid for Your Night"
+
+Meta Description Copy: "Struggling with sleep? Explore our in-depth, medically-reviewed guide to the best natural sleep supplements, including melatonin, magnesium, and more. Learn the science and find your solution."
+
+1.2. The New Hero Section
+Instruction: Replace the existing header and introductory text with a new hero section.
+
+H1 Heading Copy: "Unlock Deeper Sleep: Your Definitive Guide to Natural Supplements"
+
+Sub-Heading Copy: "Explore our expert-vetted reviews and find the science-backed solution for your best night’s rest."
+
+Visual Directive: Add a placeholder for a new, high-quality, professional image or graphic conveying calm and restful sleep.
+
+1.3. Establishing Authority: The "Our Process" Section
+Instruction: Insert a new, visually distinct section immediately below the hero. This section will have a three-column layout.
+
+H2 Heading Copy: "Our Commitment to Your Sleep"
+
+Column 1:
+
+Icon Directive: A custom, minimalist icon representing a pill bottle or a vial.
+
+Heading Copy: "Vetted by Experts"
+
+Text Copy: "Every product and ingredient on this page is reviewed by our team of certified nutritionists and sleep specialists to ensure accuracy and safety."
+
+Column 2:
+
+Icon Directive: A custom, minimalist icon representing a microscope or a lab setting.
+
+Heading Copy: "Science-Backed"
+
+Text Copy: "We cross-reference every claim with peer-reviewed studies and clinical research to provide you with an evidence-based perspective."
+
+Column 3:
+
+Icon Directive: A custom, minimalist icon representing a handshake or a stamp of approval.
+
+Heading Copy: "Transparent Reviews"
+
+Text Copy: "Our recommendations are based on rigorous analysis, not on sponsorship. We believe in providing you with the truth to make the right choice."
+
+Part 2: The Core Content Engine: Product-Specific Copy & Expansion
+Task: Replace the current, thin product listings with detailed, structured, and copy-rich reviews for each supplement.
+
+2.1. New Product Review Template
+Instruction: Implement the following template for each new supplement review section.
+
+H3 Heading: "[SUPPLEMENT NAME]: The Science Behind Better Sleep"
+
+Paragraph 1: Write an introductory paragraph explaining what the substance is and how it works.
+
+H4 Heading: "Who is this for?"
+
+Bulleted List: Use bullet points to list specific target audiences.
+
+H4 Heading: "The Science-Backed Benefits"
+
+Bulleted List: Detail specific, evidence-based benefits.
+
+H4 Heading: "Potential Side Effects & Cautions"
+
+Bulleted List: A mandatory, detailed list of potential side effects and warnings.
+
+2.2. Copy for Specific Supplements
+Melatonin:
+
+Paragraph 1: Explain its role in circadian rhythms, production, and use for jet lag/shift work.
+
+Benefits: Focus on its ability to help regulate sleep cycles.
+
+Cautions: Include warnings about medication interactions, headaches, and nausea.
+
+Magnesium:
+
+Paragraph 1: Detail its role in nerve and muscle function and regulation of sleep-related neurotransmitters.
+
+Benefits: Focus on its calming effects.
+
+Cautions: Emphasize the importance of forms like Magnesium Glycinate and warn against Magnesium Oxide.
+
+L-Theanine:
+
+Paragraph 1: Explain it's an amino acid from tea leaves.
+
+Benefits: Describe how it can reduce stress and anxiety, promoting relaxation.
+
+Cautions: Mention it's generally well-tolerated.
+
+Valerian Root:
+
+Paragraph 1: State it's an herbal sleep aid and mention recommended dosages.
+
+Benefits: Focus on its traditional use as a sedative.
+
+Cautions: Crucially, include a warning that for a small percentage of people it can have the opposite effect and may cause morning drowsiness, dizziness, and upset stomach.
+
+Part 3: Visual & Readability Enhancements
+Task: Implement design changes that enhance UX and improve scannability.
+
+3.1. Text Hierarchy and Formatting
+Instruction: Ensure all headings (H1-H4) have a distinct size hierarchy.
+
+Instruction: Use bolded text to highlight key terms and concepts within paragraphs and bulleted lists.
+
+Instruction: Use clear bulleted lists and consistent spacing for easy readability.
+
+3.2. Structured Product Cards
+Instruction: Create a clean, minimalist card design for each affiliate product.
+
+Card Structure:
+
+Top: Placeholder for a custom, high-quality, professional product image or icon.
+
+Title: "Our Top Pick: [Product Name]"
+
+Summary: A brief, 2-3 sentence paragraph summarizing why it's a top pick.
+
+CTA Button: A visually prominent button.
+
+3.3. Strategic Image and Icon Placeholders
+Instruction: The hero section and each product card require a visual element. Images should be professional and calming; icons should be simple and clear.
+
+Part 4: Integrating Soft-Sell CTAs
+Task: Integrate a layered approach to soft-sell calls to action throughout the page. DO NOT mention the word "guarantee" or any specific pricing.
+
+4.1. In-line Text CTAs
+Instruction: Create subtle, hyperlinked phrases within the body of the text.
+
+Example Phrases to Link: "To explore a third-party tested melatonin supplement, see our top pick below." and "If you're ready to find a highly-rated magnesium supplement, visit our recommended product page."
+
+4.2. Dedicated Product Card CTAs
+Instruction: The primary conversion point is the button on the Product Card.
+
+Button Copy Options: "Explore [Product Name]" or "Learn More & Shop"
+
+4.3. Mid-Page and Exit-Intent Soft-Sell Banners
+Instruction: Below the final product review section, add a small, non-intrusive banner.
+
+Banner Copy: "Ready to start sleeping better? We've compiled a curated list of our top-reviewed supplements to help." (This copy should link to the first Product Card).
+
+Final Agent Action
+Begin implementation of this blueprint. Work through each section sequentially, starting with the site-wide structural changes and proceeding to the detailed content and visual enhancements. The final deliverable is a fully updated website with all specified content, visual elements, and CTAs integrated.
