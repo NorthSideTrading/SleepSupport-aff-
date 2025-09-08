@@ -6,10 +6,3 @@
 
 # If you prefer per-offer campaign IDs instead of ?offer=, use this pattern instead (uncomment and adjust):
 # /go/:campaignid  https://TRACKER.EXAMPLE/click/:campaignid  302
-
-# === Internal page redirects ===
-/sleep/non-pill-solutions    /sleep/non-pill-solutions/index.html    200
-/sleep/non-pill-solutions/   /sleep/non-pill-solutions/index.html    200
-/sleep/supplements    /sleep/supplements/index.html    200
-/sleep/supplements/   /sleep/supplements/index.html    200
-/*    /index.html   200
