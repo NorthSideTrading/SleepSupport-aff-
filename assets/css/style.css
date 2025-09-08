@@ -357,14 +357,21 @@ nav a:hover {
 
 /* Enhanced button styling for table CTAs */
 #supplements-comparison-table .btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(5, 150, 105, 0.4) !important;
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 6px 20px rgba(5, 150, 105, 0.4) !important;
 }
 
 #supplements-comparison-table .btn-ghost:hover {
-  background: #059669;
+  background: linear-gradient(135deg, #059669 0%, #047857 100%);
   color: white;
-  box-shadow: 0 4px 12px rgba(5, 150, 105, 0.3);
+  border-color: #047857;
+  box-shadow: 0 6px 20px rgba(5, 150, 105, 0.3);
+  transform: translateY(-2px) scale(1.02);
+}
+
+#supplements-comparison-table .btn-primary:hover {
+  background: linear-gradient(135deg, #047857 0%, #065f46 100%);
+  border-color: rgba(255,255,255,0.3);
 }
 
 /* Product cell styling */
@@ -388,15 +395,29 @@ nav a:hover {
   flex: 1;
 }
 
-/* Enhanced badge animations */
+/* Enhanced badge styling */
 .badge {
   display: inline-block;
-  animation: badge-glow 2s ease-in-out infinite alternate;
+  position: relative;
+  overflow: hidden;
 }
 
-@keyframes badge-glow {
-  0% { box-shadow: 0 0 5px rgba(255, 255, 255, 0.3); }
-  100% { box-shadow: 0 0 10px rgba(255, 255, 255, 0.6); }
+.badge::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, transparent, rgba(255,255,255,0.3), transparent);
+  transform: rotate(45deg);
+  animation: badge-shine 3s ease-in-out infinite;
+}
+
+@keyframes badge-shine {
+  0% { transform: translateX(-100%) rotate(45deg); }
+  50% { transform: translateX(100%) rotate(45deg); }
+  100% { transform: translateX(-100%) rotate(45deg); }
 }
 
 #supplements-comparison-table tbody tr:nth-child(even) {

@@ -97,9 +97,9 @@ function renderSupplements(items){
         if(index === 0) row.classList.add('top-pick');
         
         let badge = '';
-        if(index === 0) badge = '<span class="badge badge-top" style="background: linear-gradient(135deg, #10b981 0%, #047857 100%); color: white; padding: 4px 10px; border-radius: 20px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;">⭐ Top Choice</span>';
-        else if(index === 1) badge = '<span class="badge badge-value" style="background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%); color: white; padding: 4px 10px; border-radius: 20px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;">💎 Best Value</span>';
-        else if(index === 2) badge = '<span class="badge" style="background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%); color: white; padding: 4px 10px; border-radius: 20px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;">🔥 Popular</span>';
+        if(index === 0) badge = '<span class="badge badge-top" style="background: linear-gradient(135deg, #10b981 0%, #047857 100%); color: white; padding: 6px 12px; border-radius: 6px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; border: 2px solid rgba(255,255,255,0.2);">● TOP RATED</span>';
+        else if(index === 1) badge = '<span class="badge badge-value" style="background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%); color: white; padding: 6px 12px; border-radius: 6px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; border: 2px solid rgba(255,255,255,0.2);">◆ BEST VALUE</span>';
+        else if(index === 2) badge = '<span class="badge" style="background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%); color: white; padding: 6px 12px; border-radius: 6px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; border: 2px solid rgba(255,255,255,0.2);">▲ POPULAR</span>';
         
         const rating = '★★★★☆';
         
@@ -128,19 +128,19 @@ function renderSupplements(items){
             <td><span class="small" style="color: #64748b; font-weight: 500;">${item.form}</span></td>
             <td>
                 <div class="key-points">
-                    ${item.key_points.slice(0,3).map(point => `<div class="key-point" style="margin-bottom: 6px; color: #475569; font-size: 14px; line-height: 1.4;">✓ ${point}</div>`).join('')}
+                    ${item.key_points.slice(0,3).map(point => `<div class="key-point" style="margin-bottom: 8px; color: #475569; font-size: 14px; line-height: 1.4; display: flex; align-items: flex-start; gap: 8px;"><span style="color: #10b981; font-weight: bold; margin-top: 2px;">•</span>${point}</div>`).join('')}
                 </div>
             </td>
             <td><span class="small" style="color: #64748b; font-size: 13px; line-height: 1.4;">${friendlyNotes}</span></td>
             <td>
-                <div style="display: flex; flex-direction: column; gap: 8px; align-items: center;">
+                <div style="display: flex; flex-direction: row; gap: 12px; justify-content: center; align-items: center; flex-wrap: wrap;">
                     <a class="btn btn-primary cta" data-offer="${item.slug}" href="${item.cta_url}" target="_blank" rel="nofollow sponsored noopener" 
-                       style="background: linear-gradient(135deg, #059669 0%, #047857 100%); color: white; padding: 12px 20px; border-radius: 8px; font-weight: 600; text-decoration: none; font-size: 14px; text-align: center; min-width: 120px; transition: all 0.2s ease; box-shadow: 0 2px 8px rgba(5, 150, 105, 0.3);">
-                        🛍️ Check Price
+                       style="background: linear-gradient(135deg, #059669 0%, #047857 100%); color: white; padding: 14px 18px; border-radius: 8px; font-weight: 600; text-decoration: none; font-size: 14px; text-align: center; transition: all 0.2s ease; box-shadow: 0 3px 12px rgba(5, 150, 105, 0.3); border: 2px solid transparent;">
+                        Check Price ▶
                     </a>
                     <a class="btn btn-ghost" href="#" 
-                       style="background: transparent; color: #059669; padding: 8px 16px; border: 2px solid #059669; border-radius: 8px; font-weight: 500; text-decoration: none; font-size: 13px; text-align: center; min-width: 120px; transition: all 0.2s ease;">
-                        📖 Read Review
+                       style="background: white; color: #059669; padding: 14px 18px; border: 2px solid #059669; border-radius: 8px; font-weight: 500; text-decoration: none; font-size: 14px; text-align: center; transition: all 0.2s ease;">
+                        Read Review
                     </a>
                 </div>
             </td>`;
