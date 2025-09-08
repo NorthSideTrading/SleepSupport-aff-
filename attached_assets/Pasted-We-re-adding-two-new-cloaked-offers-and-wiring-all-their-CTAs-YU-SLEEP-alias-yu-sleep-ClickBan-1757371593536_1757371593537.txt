@@ -1,0 +1,72 @@
+We’re adding two new cloaked offers and wiring all their CTAs:
+
+YU SLEEP → alias yu-sleep → ClickBank HopLink:
+https://1472fk1mi-gfcr5uzm-7iobsf8.hop.clickbank.net/?tid=ssgyusleep (normalize ?& → ?)
+
+PITCH BLACK → alias pitch-black → ClickBank HopLink:
+https://9009080lm5n6fm9iqp6nyo5zaz.hop.clickbank.net/?tid=ssgpitchblack (normalize ?& → ?)
+
+Do all steps below, then commit & push.
+
+1) Netlify redirects
+
+Open netlify.toml at the repo root.
+
+Add these new blocks under the existing redirects (do not remove SleepLean):
+
+# === CLOAKED OFFER LINKS ===
+# /go/<alias> -> affiliate URL (Netlify preserves incoming ?gclid&utm_* automatically)
+
+[[redirects]]
+  from = "/go/yu-sleep"
+  to   = "https://1472fk1mi-gfcr5uzm-7iobsf8.hop.clickbank.net/?tid=ssgyusleep"
+  status = 302
+  force  = true
+
+[[redirects]]
+  from = "/go/pitch-black"
+  to   = "https://9009080lm5n6fm9iqp6nyo5zaz.hop.clickbank.net/?tid=ssgpitchblack"
+  status = 302
+  force  = true
+
+2) Update ALL CTAs for these products
+
+Search the codebase for YU SLEEP and Pitch Black buttons/links (including any old external URLs).
+
+Change their href to the cloaked paths and ensure these attributes are present (don’t duplicate):
+
+<!-- YU SLEEP -->
+<a href="/go/yu-sleep" rel="nofollow sponsored"
+   data-aff="true" data-merchant="YU SLEEP" data-offer="YU SLEEP" data-position="Top#1">
+  Check Best Price
+</a>
+
+<!-- PITCH BLACK -->
+<a href="/go/pitch-black" rel="nofollow sponsored"
+   data-aff="true" data-merchant="Pitch Black" data-offer="Pitch Black" data-position="Top#1">
+  Check Best Price
+</a>
+
+3) Keep query params flowing (gclid/extclid/UTMs)
+
+Confirm the query-string forwarder script already exists globally (added earlier). If it’s missing, add this once before </body>:
+
+<script>
+(function(){
+  var qs = window.location.search;
+  if(!qs) return;
+  document.querySelectorAll('a[href^="/go/"]').forEach(function(a){
+    var href = a.getAttribute('href')||'';
+    a.setAttribute('href', href + (href.includes('?') ? '&' + qs.slice(1) : qs));
+  });
+})();
+</script>
+
+4) GA4 event on affiliate clicks
+
+Ensure /affiliate_click_listener.js exists and is loaded on every page:
+
+<script src="/affiliate_click_listener.js" defer></script>
+
+
+(Do not duplicate; only add if missing.)
