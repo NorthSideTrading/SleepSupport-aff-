@@ -61,19 +61,19 @@
       "cta_url": "/go/pitch-black"
     },
     {
-      "slug": "magnesium-breakthrough",
-      "name": "BiOptimizers Magnesium Breakthrough",
+      "slug": "andrew-lessman-night-time",
+      "name": "Andrew Lessman Night-Time",
       "form": "Capsules",
       "key_points": [
-        "Seven forms of magnesium in one formula",
-        "Premium positioning and quality standards",
-        "Comprehensive magnesium supplementation"
+        "Complete night-time wellness formula",
+        "Comprehensive blend of natural ingredients",
+        "Trusted by customers for over 30 years"
       ],
-      "notes": "Structure/function wording only.",
-      "guarantee": "365-day vendor guarantee",
+      "notes": "Established brand with long track record of quality.",
+      "guarantee": "Amazon return policy",
       "rank_priority": 5,
-      "img": "/assets/img/magnesium-breakthrough.jpg",
-      "cta_url": "https://REPLACE-BIOPTIMIZERS-AFF"
+      "img": "/assets/img/andrew-lessman-night-time.jpg",
+      "cta_url": "https://www.amazon.com/Andrew-Lessman-Night-Time-Capsules/dp/B00CH3ULCU?th=1"
     }
   ],
   "non_pill": [
