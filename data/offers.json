@@ -16,19 +16,19 @@
       "cta_url": "/go/sleeplean"
     },
     {
-      "slug": "resurge",
-      "name": "Resurge (night-time support blend)",
+      "slug": "cortisol-calm",
+      "name": "Pure Encapsulations Cortisol Calm",
       "form": "Capsules",
       "key_points": [
-        "Deep-sleep regeneration focus",
-        "Recovery and restoration support",
-        "Night-time recovery formula"
+        "Supports cortisol health and relaxation",
+        "Contains Ashwagandha and L-Theanine",
+        "Promotes restful sleep naturally"
       ],
-      "notes": "Keep claims to relaxation/sleep-support only.",
-      "guarantee": "Vendor guarantee",
+      "notes": "Premium brand trusted by healthcare professionals.",
+      "guarantee": "Amazon return policy",
       "rank_priority": 4,
-      "img": "/assets/img/placeholder-2.jpg",
-      "cta_url": "https://REPLACE-RESURGE-AFF"
+      "img": "/assets/img/cortisol-calm.jpg",
+      "cta_url": "https://amazon.com/Pure-Encapsulations-Cortisol-Hypoallergenic-Supplement/dp/B0058HXOYE"
     },
     {
       "slug": "yu-sleep",
