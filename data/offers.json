@@ -26,7 +26,7 @@
       ],
       "notes": "Keep claims to relaxation/sleep-support only.",
       "guarantee": "Vendor guarantee",
-      "rank_priority": 2,
+      "rank_priority": 4,
       "img": "/assets/img/placeholder-2.jpg",
       "cta_url": "https://REPLACE-RESURGE-AFF"
     },
@@ -56,7 +56,7 @@
       ],
       "notes": "Stay general; no hormone/medical claims.",
       "guarantee": "Vendor guarantee",
-      "rank_priority": 4,
+      "rank_priority": 2,
       "img": "/assets/img/pitch-black.jpg",
       "cta_url": "/go/pitch-black"
     },
