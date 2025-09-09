@@ -128,7 +128,7 @@ function renderSupplements(items){
             <td><span class="small" style="color: #64748b; font-weight: 500;">${item.form}</span></td>
             <td>
                 <div class="key-points">
-                    ${item.key_points.slice(0,3).map(point => `<div class="key-point" style="margin-bottom: 8px; color: #475569; font-size: 14px; line-height: 1.4; display: flex; align-items: flex-start; gap: 8px;"><span style="color: #10b981; font-weight: bold; margin-top: 2px;">•</span>${point}</div>`).join('')}
+                    ${item.key_points.slice(0,3).map(point => `<div class="key-point" style="margin-bottom: 8px; color: #475569; font-size: 14px; line-height: 1.4;">${point}</div>`).join('')}
                 </div>
             </td>
             <td><span class="small" style="color: #64748b; font-size: 13px; line-height: 1.4;">${friendlyNotes}</span></td>
