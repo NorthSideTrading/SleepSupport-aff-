@@ -96,6 +96,10 @@ app.use((req, res, next) => {
     res.sendFile(path.join(rootDir, 'sleep', 'supplements', 'index.html'));
   });
 
+  app.get('/sleep/non-pill-solutions/', (req, res) => {
+    res.sendFile(path.join(rootDir, 'sleep', 'non-pill-solutions', 'index.html'));
+  });
+
   // Fallback to home page for unmatched routes
   app.get('*', (req, res) => {
     res.sendFile(path.join(rootDir, 'index.html'));
