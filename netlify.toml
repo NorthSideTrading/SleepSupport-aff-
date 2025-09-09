@@ -1,33 +1,21 @@
 [build]
   publish = "."
 
-# === CLOAKED OFFER LINKS ===
-# /go/<alias> -> affiliate URL (Netlify preserves incoming ?gclid&utm_* automatically)
-
 [[redirects]]
   from = "/go/sleeplean"
   to   = "https://cf5ebf3dm3ebet5fu7lly4ni33.hop.clickbank.net/?tid=ssgsleeplean"
   status = 302
   force  = true
-
 [[redirects]]
   from = "/go/yu-sleep"
   to   = "https://1472fk1mi-gfcr5uzm-7iobsf8.hop.clickbank.net/?tid=ssgyusleep"
   status = 302
   force  = true
-
 [[redirects]]
   from = "/go/pitch-black"
   to   = "https://9009080lm5n6fm9iqp6nyo5zaz.hop.clickbank.net/?tid=ssgpitchblack"
   status = 302
   force  = true
-
-# Generic fallback redirect commented out - using specific redirects above
-# [[redirects]]
-#   from = "/go/*"
-#   to = "https://TRACKER.EXAMPLE/click?offer=:splat"
-#   status = 302
-#   force = true
 
 [[redirects]]
   from = "/sleep/non-pill-solutions"
