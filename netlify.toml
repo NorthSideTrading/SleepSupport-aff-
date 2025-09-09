@@ -37,6 +37,11 @@
   to = "/sleep/supplements/index.html"
   status = 200
 
+[[headers]]
+  for = "/go/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow, noarchive"
+
 [[redirects]]
   from = "/*"
   to = "/index.html"

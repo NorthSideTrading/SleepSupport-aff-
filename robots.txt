@@ -1,3 +1,3 @@
 User-agent: *
-Allow: /
-Sitemap: https://sleepsupportguide.com/sitemap.xml
+Disallow: /go/
+Sitemap: https://www.sleepsupportguide.com/sitemap.xml
