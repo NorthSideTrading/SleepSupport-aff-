@@ -1,11 +1,7 @@
-# === Affiliate cloak to Keitaro ===
-# Replace TRACKER.EXAMPLE with your Keitaro domain.
-# This forwards /go/{offer-alias} to your tracker and preserves the original query string (UTM, gclid, etc.).
-# Example: https://www.sleepsupportguide.com/go/sleeplean?gclid=123 → https://TRACKER.EXAMPLE/click?offer=sleeplean&gclid=123
-/go/*  https://TRACKER.EXAMPLE/click?offer=:splat  302
-
-# If you prefer per-offer campaign IDs instead of ?offer=, use this pattern instead (uncomment and adjust):
-# /go/:campaignid  https://TRACKER.EXAMPLE/click/:campaignid  302
+# === Specific Affiliate Redirects ===
+/go/sleeplean   https://cf5ebf3dm3ebet5fu7lly4ni33.hop.clickbank.net/?tid=ssgsleeplean   302
+/go/yu-sleep    https://1472fk1mi-gfcr5uzm-7iobsf8.hop.clickbank.net/?tid=ssgyusleep    302
+/go/pitch-black https://9009080lm5n6fm9iqp6nyo5zaz.hop.clickbank.net/?tid=ssgpitchblack 302
 
 # === Internal page redirects ===
 /sleep/non-pill-solutions    /sleep/non-pill-solutions/index.html    200
