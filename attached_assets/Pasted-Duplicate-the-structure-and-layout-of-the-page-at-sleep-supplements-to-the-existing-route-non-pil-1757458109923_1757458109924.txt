@@ -1,0 +1,115 @@
+Duplicate the structure and layout of the page at /sleep/supplements/ to the existing route /non-pill-solutions (do not alter /sleep/supplements/). Keep the same design system, components, CSS classes, spacing, and review card layout. Replace only context (text, images, links, metadata) so it fits Non-Pill Sleep Solutions (devices/gear, not supplements).
+
+Find & Base Template
+
+Locate the source files that render /sleep/supplements/ (page file + any section/partial components it imports).
+
+Confirm the existing /non-pill-solutions route. If it exists, refactor it to reuse the same components/layout as the supplements page. If it’s a different template, align it to the supplements page structure. If it does not exist, create it using the supplements template.
+
+Content Replacements (Non-Pill Solutions):
+Use these five products (title, brand, URL). Replace the supplements list/cards with this exact list in the same order:
+
+LectroFan Classic White Noise Machine — Brand: Sound of Sleep — URL: https://www.soundofsleep.com/product/lectrofan-classic/
+
+Hatch Restore 3 (Sunrise Alarm & Sound Machine) — Brand: Hatch — URL: https://www.hatch.co/restore
+
+Eight Sleep Pod 5 (Bed Cooling System) — Brand: Eight Sleep — URL: https://www.eightsleep.com/product/pod5ultra/
+
+Gravity Original Weighted Blanket — Brand: Gravity Blankets — URL: https://gravityblankets.com/products/gravity-blanket
+
+SnoreRx Adjustable Mouthguard (anti-snoring) — Brand: SnoreRx — URL: https://snorerx.com/
+
+Card Content Rules (apply to each item):
+
+Keep the same visual card template used on /sleep/supplements/.
+
+Swap titles, brand names, and outbound CTAs to the URLs above.
+
+Set CTA links to rel="sponsored nofollow" and target="_blank".
+
+Add short, factual blurbs (2–3 bullets) per item tailored to devices (no medical claims):
+
+LectroFan: consistent digital white noise; no looping; volume range.
+
+Hatch Restore 3: sunrise wake, wind-down sounds; phone-free bedside use.
+
+Eight Sleep Pod 5: active cooling/heating cover; dual-zone if applicable; app control.
+
+Gravity Blanket: deep-pressure “calming”; multiple weights/sizes; machine-wash cover.
+
+SnoreRx Mouthguard: adjustable mandibular advancement; boil-and-bite fit; nightly use.
+
+Add meaningful alt text for all images (e.g., “LectroFan Classic white noise machine on nightstand”). If images don’t exist, generate placeholder filenames under /assets/img/non-pill/ using kebab-case (e.g., lectrofan-classic.jpg) and wire them in (leave placeholders in repo if real images absent).
+
+For SnoreRx, add a small Note under the card: “For snoring only; not a treatment for sleep apnea. If you suspect apnea, talk to a clinician.”
+
+Page-Level Copy (replace ‘supplement’ language):
+
+H1: “Non-Pill Sleep Solutions: Gear That Helps You Sleep Better”
+
+Subhead: “Real-world tools for noise, light, temperature, and snoring—no pills required.”
+
+Add a short “How These Help” section with 4 badges/mini-blocks:
+
+Noise (sound machines)
+
+Light (sunrise alarm / dim bedside lights)
+
+Temperature (bed cooling)
+
+Snoring (mouthguard / nasal airflow aids)
+
+Internal link in intro: “Prefer vitamins and botanicals? See our Sleep Supplements page.” → link to /sleep/supplements/.
+
+SEO & Metadata (match supplements page structure, new values):
+
+<title>: “Non-Pill Sleep Solutions | SleepSupportGuide”
+
+<meta name="description">: “5 proven non-pill sleep solutions—white noise, sunrise alarm, bed cooling, weighted blanket, and an adjustable anti-snoring mouthguard.”
+
+Canonical: https://www.sleepsupportguide.com/non-pill-solutions/
+
+Open Graph/Twitter: update title/description/og:url/og:image to match this page.
+
+Breadcrumbs: Home » Sleep » Non-Pill Solutions (mirror supplements breadcrumb style).
+
+Structured Data (JSON-LD):
+Add an ItemList of Product (position 1–5) with name, brand, url, and placeholder image. Do NOT invent ratings or prices; omit those fields if unknown.
+
+Tracking & Events (preserve existing):
+
+Keep existing GTM snippet and GA4 events intact.
+
+On each product CTA, add data-gtm="ssg_product_cta" and data-product-name="<exact title>" so GTM can bind click tracking (page context = non_pill_solutions).
+
+Do not change measurement IDs. (FYI: GA4 = G-PRMWNW40K2; GTM = GTM-PMD5N2V4—use what’s already in the repo.)
+
+Nav, Footer, and Links:
+
+Update site nav to include “Non-Pill Solutions” if the supplements page appears there (match style).
+
+Footer legal links remain: Privacy, Terms, Editorial Policy, Affiliate Disclosure.
+
+Add an inline disclosure near the top or above the product grid: “We may earn a commission from links on this page.”
+
+Sitemap & Robots:
+
+If sitemap.xml exists, ensure /non-pill-solutions/ is included with today’s lastmod.
+
+Page should be indexable (index,follow).
+
+Quality Pass / Acceptance Criteria:
+
+/non-pill-solutions/ renders with the same layout as /sleep/supplements/, but with the 5 non-pill products and updated copy/SEO.
+
+All five outbound CTAs open in new tabs and include rel="sponsored nofollow".
+
+No “supplement” wording remains on the page body except the internal link referencing the supplements page.
+
+JSON-LD validates (no fake ratings/prices).
+
+Lighthouse: no broken images/links, no major SEO errors.
+
+Build and run locally; provide the path(s) of files changed.
+
+End of instructions.

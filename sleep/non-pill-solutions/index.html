@@ -19,9 +19,9 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Expert-Vetted Non-Pill Sleep Solutions: Find the Right Device for Your Night</title>
-    <meta name="description" content="Struggling with snoring or sleep disruptions? Explore our in-depth, expert-reviewed guide to the best non-pill sleep solutions, including anti-snoring devices, sleep aids, and more. Learn what works and find your solution.">
-    <link rel="canonical" href="/sleep/non-pill-solutions/">
+    <title>Non-Pill Sleep Solutions | SleepSupportGuide</title>
+    <meta name="description" content="5 proven non-pill sleep solutions—white noise, sunrise alarm, bed cooling, weighted blanket, and an adjustable anti-snoring mouthguard.">
+    <link rel="canonical" href="https://www.sleepsupportguide.com/non-pill-solutions/">
     
     <!-- Preload critical fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -242,6 +242,38 @@
             background-color: var(--muted);
         }
         
+        .section {
+            padding: 2rem 0;
+        }
+        
+        .section-alt {
+            background-color: var(--secondary);
+        }
+        
+        /* FAQ */
+        .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .faq-item {
+            background-color: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 0.5rem;
+            padding: 1rem;
+        }
+        
+        .faq-question {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .faq-answer {
+            color: var(--muted-foreground);
+        }
+        
         /* Footer */
         footer {
             background-color: var(--secondary);
@@ -250,6 +282,29 @@
             text-align: center;
             font-size: 16px;
             color: var(--muted-foreground);
+        }
+        
+        .footer-legal {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        
+        .footer-legal-right {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .footer-legal a {
+            color: var(--muted-foreground);
+            text-decoration: none;
+        }
+        
+        .footer-legal a:hover {
+            color: var(--primary);
         }
         
         /* Mobile responsive */
@@ -281,82 +336,6 @@
     <!-- Load external CSS -->
     <link rel="stylesheet" href="/assets/css/style.css">
     
-    <!-- Enhanced Product Review Styling -->
-    <style>
-        /* Enhanced table styling */
-        .table-wrapper table {
-            border-collapse: collapse;
-            width: 100%;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-
-        .table-wrapper th {
-            background: #1e3a5f !important;
-            color: white !important;
-            padding: 15px;
-            text-align: left;
-        }
-
-        .table-wrapper td {
-            padding: 15px;
-            border-bottom: 1px solid #e9ecef;
-            vertical-align: top;
-        }
-
-        .table-wrapper tr:hover {
-            background-color: #f8f9fa;
-        }
-
-        .check-price-btn {
-            background: #28a745 !important;
-            color: white !important;
-            padding: 8px 16px !important;
-            border-radius: 6px !important;
-            text-decoration: none !important;
-            font-weight: bold !important;
-        }
-
-        .read-review-btn {
-            background: #6c757d !important;
-            color: white !important;
-            padding: 8px 16px !important;
-            border-radius: 6px !important;
-            text-decoration: none !important;
-            margin-left: 5px !important;
-        }
-        
-        /* Mobile optimization */
-        @media (max-width: 768px) {
-            .product-review {
-                padding: 15px !important;
-            }
-            
-            .product-review div[style*="display: flex"] {
-                flex-direction: column !important;
-                text-align: center !important;
-            }
-            
-            .product-review img {
-                width: 80px !important;
-                height: 80px !important;
-                margin: 0 auto 15px auto !important;
-            }
-            
-            .hero-trust-signals div {
-                gap: 15px !important;
-            }
-            
-            .hero-trust-signals span {
-                font-size: 14px !important;
-            }
-            
-            .conversion-section div[style*="display: flex"] {
-                flex-direction: column !important;
-                gap: 10px !important;
-            }
-        }
-    </style>
-    
     <!-- Schema Markup -->
     <script type="application/ld+json">
     {
@@ -368,32 +347,42 @@
         {
           "@type": "Product",
           "position": 1,
-          "name": "SleepGuard Pro",
-          "description": "Anti-snoring mouthpiece with mandibular advancement technology"
+          "name": "LectroFan Classic White Noise Machine",
+          "brand": "Sound of Sleep",
+          "url": "https://www.soundofsleep.com/product/lectrofan-classic/",
+          "image": "/assets/img/non-pill/lectrofan-classic.jpg"
         },
         {
           "@type": "Product", 
           "position": 2,
-          "name": "NasalMax Plus",
-          "description": "Advanced nasal dilators and strips for improved airflow"
+          "name": "Hatch Restore 3 (Sunrise Alarm & Sound Machine)",
+          "brand": "Hatch",
+          "url": "https://www.hatch.co/restore",
+          "image": "/assets/img/non-pill/hatch-restore-3.jpg"
         },
         {
           "@type": "Product",
           "position": 3,
-          "name": "RestRite Wedge",
-          "description": "Sleep positioning device and wedge pillow system"
+          "name": "Eight Sleep Pod 5 (Bed Cooling System)",
+          "brand": "Eight Sleep",
+          "url": "https://www.eightsleep.com/product/pod5ultra/",
+          "image": "/assets/img/non-pill/eight-sleep-pod-5.jpg"
         },
         {
           "@type": "Product",
           "position": 4,
-          "name": "QuietNight Pro",
-          "description": "White noise machine with sleep-enhancing soundscapes"
+          "name": "Gravity Original Weighted Blanket",
+          "brand": "Gravity Blankets",
+          "url": "https://gravityblankets.com/products/gravity-blanket",
+          "image": "/assets/img/non-pill/gravity-blanket.jpg"
         },
         {
           "@type": "Product",
           "position": 5,
-          "name": "DreamShield Max",
-          "description": "Premium sleep mask with blackout technology"
+          "name": "SnoreRx Adjustable Mouthguard (anti-snoring)",
+          "brand": "SnoreRx",
+          "url": "https://snorerx.com/",
+          "image": "/assets/img/non-pill/snorerx-mouthguard.jpg"
         }
       ]
     }
@@ -409,7 +398,7 @@
           "name": "Which anti-snoring device works best?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Mandibular advancement devices (MADs) show the highest success rates for most people, but nasal solutions work better for nose-breathing issues. Individual anatomy determines effectiveness."
+            "text": "Mandibular advancement devices (MADs) show the highest success rates for most people, but individual anatomy determines effectiveness. Professional fitting is recommended."
           }
         },
         {
@@ -425,7 +414,7 @@
           "name": "Are sleep devices safe for long-term use?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Most non-pill sleep devices are safe for long-term use when properly fitted and maintained. Consult your dentist or healthcare provider for device-specific guidance."
+            "text": "Most non-pill sleep devices are safe for long-term use when properly fitted and maintained. Consult your healthcare provider for device-specific guidance."
           }
         },
         {
@@ -433,7 +422,7 @@
           "name": "Can I combine different sleep devices?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Some devices work well together (like sleep masks with white noise machines), while others may interfere. Start with one solution and add others gradually as needed."
+            "text": "Some devices work well together (like sound machines with weighted blankets), while others may interfere. Start with one solution and add others gradually as needed."
           }
         }
       ]
@@ -449,13 +438,19 @@
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "/"
+          "item": "https://www.sleepsupportguide.com/"
         },
         {
           "@type": "ListItem",
           "position": 2,
+          "name": "Sleep",
+          "item": "https://www.sleepsupportguide.com/sleep/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
           "name": "Non-Pill Solutions",
-          "item": "/sleep/non-pill-solutions/"
+          "item": "https://www.sleepsupportguide.com/non-pill-solutions/"
         }
       ]
     }
@@ -467,13 +462,28 @@
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
     
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-content">
+                <span>🔬 Expert-reviewed • 📊 Data-driven • 🎯 No-BS approach</span>
+                <span>We may earn a commission from links on this page.</span>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Header -->
     <header>
         <div class="container">
-            <a href="/" class="brand"><img src="/assets/img/logo.png" alt="Sleep Support Guide" /></a>
-            <nav>
-                <a href="/sleep/supplements/">Supplements</a>
-                <a href="/sleep/non-pill-solutions/" style="border-bottom-color: var(--accent);">Non-Pill Solutions</a>
-            </nav>
+            <div class="header-content">
+                <a href="/" class="logo">Sleep Support Guide</a>
+                <nav>
+                    <ul>
+                        <li><a href="/sleep/supplements/">Sleep Supplements</a></li>
+                        <li><a href="/sleep/non-pill-solutions/" class="active">Non-Pill Solutions</a></li>
+                    </ul>
+                </nav>
+            </div>
         </div>
     </header>
 
@@ -481,12 +491,25 @@
         <!-- Hero -->
         <section class="hero">
             <div class="container">
-                <div>
-                    <h1>Breakthrough Sleep Devices: Your Complete Guide to Non-Pill Solutions</h1>
-                    <p class="lead">Discover our expert-tested reviews and find the device-based solution for your best night's rest.</p>
-                    
+                <h1 style="color: #2c5aa0;">Non-Pill Sleep Solutions: Gear That Helps You Sleep Better</h1>
+                <p class="hero-description">Real-world tools for noise, light, temperature, and snoring—no pills required.</p>
+                
+                <!-- Trust Signals -->
+                <div style="display: flex; gap: 30px; margin: 30px 0; padding: 20px; background: #f8f9fa; border-radius: 8px; align-items: center; justify-content: center; flex-wrap: wrap;" class="hero-trust-signals">
+                    <span style="display: flex; align-items: center; gap: 8px; font-weight: 500; color: #2c5aa0;">
+                        ⭐ Expert-Tested Devices
+                    </span>
+                    <span style="display: flex; align-items: center; gap: 8px; font-weight: 500; color: #2c5aa0;">
+                        🔬 Science-Backed Solutions
+                    </span>
+                    <span style="display: flex; align-items: center; gap: 8px; font-weight: 500; color: #2c5aa0;">
+                        ✅ Real User Results
+                    </span>
                 </div>
-                <div class="img-wrap" aria-hidden="true" style="background-image: url('/assets/img/hero-nonpill.jpg');"></div>
+                
+                <p style="text-align: center; font-size: 16px; color: #6c757d; margin-top: 20px;">
+                    Prefer vitamins and botanicals? <a href="/sleep/supplements/" style="color: #2c5aa0; text-decoration: underline;">See our Sleep Supplements page</a>.
+                </p>
             </div>
         </section>
         
@@ -494,297 +517,399 @@
         <section style="padding: 40px 0; background: white;">
             <div class="container">
                 <div style="max-width: 800px; margin: 0 auto; text-align: center;">
-                    <p style="font-size: 19px; line-height: 1.7; color: #5a6b73; margin-bottom: 0;">If you're among the millions who struggle with snoring, sleep positioning, or environmental disturbances, device-based solutions might be your answer. Unlike pills, these physical solutions work by addressing the mechanical causes of sleep disruption—from keeping airways open with mandibular advancement devices, to optimizing sleep position with specialized pillows, to creating the perfect sleep environment with sound and light control. Here's what the research shows about the most effective non-pill options:</p>
+                    <p style="font-size: 19px; line-height: 1.7; color: #5a6b73; margin-bottom: 0;">If you're among the millions who struggle with falling asleep or staying asleep, you're not alone. While the causes vary—from daily stress to natural aging—the solution might be simpler than you think. Non-pill sleep solutions work by targeting different environmental and physical factors that disrupt sleep using tools like white noise machines for sound masking, sunrise alarms for circadian rhythm support, temperature control for optimal sleep conditions, and weighted blankets for calming pressure. Here's what the science says about these most effective options:</p>
+                </div>
             </div>
-        </div>
-    </section>
-    
-    <!-- Educational Core: Understanding Non-Pill Sleep Solutions -->
-    <section class="detailed-reviews" style="margin: 60px 0; background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%); padding: 50px 0; border-radius: 16px;">
-        <div class="container">
-            <h2 style="text-align: center; margin-bottom: 40px; color: #2c5aa0;">Understanding Non-Pill Sleep Solutions: The Science Behind Device-Based Rest</h2>
-            
-            <div style="background: white; border-radius: 12px; padding: 40px; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
+        </section>
+        
+        <!-- How These Help Section -->
+        <section class="detailed-reviews" style="margin: 60px 0; background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%); padding: 50px 0; border-radius: 16px;">
+            <div class="container">
+                <h2 style="text-align: center; margin-bottom: 40px; color: #2c5aa0;">How These Help: Understanding Non-Pill Sleep Solutions</h2>
                 
-                <!-- Anti-Snoring Devices -->
-                <div style="background: #fafbfc; border-radius: 8px; padding: 30px; margin-bottom: 25px; border-left: 4px solid #2c5aa0;">
-                    <h3 style="color: #2c5aa0; font-size: 24px; margin-bottom: 15px; font-weight: 600; display: flex; align-items: center;">
-                        <span style="background: #2c5aa0; color: white; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 16px; font-weight: bold; margin-right: 12px;">1</span>
-                        Anti-Snoring Devices - Airway Management
-                    </h3>
-                    <p style="line-height: 1.6; margin-bottom: 25px; color: #475569;">Mandibular advancement devices (MADs) and tongue-retaining devices physically keep airways open during sleep. Most effective for tongue-based snoring.</p>
+                <div style="background: white; border-radius: 12px; padding: 40px; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
                     
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 25px;">
-                        <div style="background: #f0fdf4; border-radius: 6px; padding: 20px; border-left: 3px solid #22c55e;">
-                            <h4 style="color: #22c55e; margin-bottom: 12px; font-weight: 600;">✓ Key Benefits:</h4>
-                            <ul style="line-height: 1.6; margin: 0; padding-left: 20px; color: #475569;">
-                                <li>Reduces snoring in 80% of users when properly fitted</li>
-                                <li>No side effects or drug interactions</li>
-                                <li>Immediate results from first night of use</li>
-                            </ul>
-                        </div>
-                        <div style="border-radius: 6px; padding: 20px; border-left: 3px solid #2c5aa0;">
-                            <h4 style="color: #2c5aa0; margin-bottom: 12px; font-weight: 600;">⚠ Important Considerations:</h4>
-                            <ul style="line-height: 1.6; margin: 0; padding-left: 20px; color: #475569;">
-                                <li>Adjustment period of 1-2 weeks for comfort</li>
-                                <li>May cause temporary jaw discomfort initially</li>
-                                <li>Requires proper dental health and fitting</li>
-                            </ul>
+                    <!-- Noise -->
+                    <div style="background: #fafbfc; border-radius: 8px; padding: 30px; margin-bottom: 25px; border-left: 4px solid #2c5aa0;">
+                        <h3 style="color: #2c5aa0; font-size: 24px; margin-bottom: 15px; font-weight: 600; display: flex; align-items: center;">
+                            <span style="background: #2c5aa0; color: white; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 16px; font-weight: bold; margin-right: 12px;">1</span>
+                            Noise - Sound Masking Technology
+                        </h3>
+                        <p style="line-height: 1.6; margin-bottom: 25px; color: #475569;">Sound machines create consistent audio environments that mask disruptive noises and promote sleep onset through auditory conditioning.</p>
+                        
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 25px;">
+                            <div style="background: #f0fdf4; border-radius: 6px; padding: 20px; border-left: 3px solid #22c55e;">
+                                <h4 style="color: #22c55e; margin-bottom: 12px; font-weight: 600;">✓ Key Benefits:</h4>
+                                <ul style="line-height: 1.6; margin: 0; padding-left: 20px; color: #475569;">
+                                    <li>Masks environmental noise disruptions</li>
+                                    <li>Creates consistent sleep environment</li>
+                                    <li>No medication or side effects</li>
+                                </ul>
+                            </div>
+                            <div style="border-radius: 6px; padding: 20px; border-left: 3px solid #2c5aa0;">
+                                <h4 style="color: #2c5aa0; margin-bottom: 12px; font-weight: 600;">⚠ Important Considerations:</h4>
+                                <ul style="line-height: 1.6; margin: 0; padding-left: 20px; color: #475569;">
+                                    <li>Choose non-looping digital sounds</li>
+                                    <li>Volume should be comfortable, not loud</li>
+                                    <li>Placement affects sound distribution</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                </div>
-                
-                <!-- Nasal Solutions -->
-                <div style="background: #fafbfc; border-radius: 8px; padding: 30px; margin-bottom: 25px; border-left: 4px solid #2c5aa0;">
-                    <h3 style="color: #2c5aa0; font-size: 24px; margin-bottom: 15px; font-weight: 600; display: flex; align-items: center;">
-                        <span style="background: #2c5aa0; color: white; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 16px; font-weight: bold; margin-right: 12px;">2</span>
-                        Nasal Solutions - Breathing Enhancement
-                    </h3>
-                    <p style="line-height: 1.6; margin-bottom: 25px; color: #475569;">External nasal strips and internal nasal dilators improve airflow through nasal passages. Best for congestion-related snoring and breathing issues.</p>
                     
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 25px;">
-                        <div style="background: #f0fdf4; border-radius: 6px; padding: 20px; border-left: 3px solid #22c55e;">
-                            <h4 style="color: #22c55e; margin-bottom: 12px; font-weight: 600;">✓ Key Benefits:</h4>
-                            <ul style="line-height: 1.6; margin: 0; padding-left: 20px; color: #475569;">
-                                <li>Immediate improvement in nasal breathing</li>
-                                <li>Non-invasive and easy to use</li>
-                                <li>Helps with allergies and congestion</li>
-                            </ul>
-                        </div>
-                        <div style="border-radius: 6px; padding: 20px; border-left: 3px solid #2c5aa0;">
-                            <h4 style="color: #2c5aa0; margin-bottom: 12px; font-weight: 600;">⚠ Important Considerations:</h4>
-                            <ul style="line-height: 1.6; margin: 0; padding-left: 20px; color: #475569;">
-                                <li>Less effective for tongue-based snoring</li>
-                                <li>Adhesive strips may cause skin irritation</li>
-                                <li>Results vary based on nasal anatomy</li>
-                            </ul>
+                    <!-- Light -->
+                    <div style="background: #fafbfc; border-radius: 8px; padding: 30px; margin-bottom: 25px; border-left: 4px solid #2c5aa0;">
+                        <h3 style="color: #2c5aa0; font-size: 24px; margin-bottom: 15px; font-weight: 600; display: flex; align-items: center;">
+                            <span style="background: #2c5aa0; color: white; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 16px; font-weight: bold; margin-right: 12px;">2</span>
+                            Light - Circadian Rhythm Support
+                        </h3>
+                        <p style="line-height: 1.6; margin-bottom: 25px; color: #475569;">Sunrise alarm clocks and light therapy devices regulate your body's natural sleep-wake cycle through controlled light exposure.</p>
+                        
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 25px;">
+                            <div style="background: #f0fdf4; border-radius: 6px; padding: 20px; border-left: 3px solid #22c55e;">
+                                <h4 style="color: #22c55e; margin-bottom: 12px; font-weight: 600;">✓ Key Benefits:</h4>
+                                <ul style="line-height: 1.6; margin: 0; padding-left: 20px; color: #475569;">
+                                    <li>Natural wake-up without jarring alarms</li>
+                                    <li>Regulates circadian rhythm patterns</li>
+                                    <li>Reduces morning grogginess</li>
+                                </ul>
+                            </div>
+                            <div style="border-radius: 6px; padding: 20px; border-left: 3px solid #2c5aa0;">
+                                <h4 style="color: #2c5aa0; margin-bottom: 12px; font-weight: 600;">⚠ Important Considerations:</h4>
+                                <ul style="line-height: 1.6; margin: 0; padding-left: 20px; color: #475569;">
+                                    <li>Requires consistent daily use for effectiveness</li>
+                                    <li>Light sensitivity varies between individuals</li>
+                                    <li>Positioning near bed is important</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                </div>
-                
-                <!-- Sleep Positioning -->
-                <div style="background: #fafbfc; border-radius: 8px; padding: 30px; margin-bottom: 25px; border-left: 4px solid #2c5aa0;">
-                    <h3 style="color: #2c5aa0; font-size: 24px; margin-bottom: 15px; font-weight: 600; display: flex; align-items: center;">
-                        <span style="background: #2c5aa0; color: white; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 16px; font-weight: bold; margin-right: 12px;">3</span>
-                        Sleep Positioning - Gravity Assistance
-                    </h3>
-                    <p style="line-height: 1.6; margin-bottom: 25px; color: #475569;">Wedge pillows, positional trainers, and specialized pillows use gravity and alignment to reduce airway collapse and acid reflux.</p>
                     
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 25px;">
-                        <div style="background: #f0fdf4; border-radius: 6px; padding: 20px; border-left: 3px solid #22c55e;">
-                            <h4 style="color: #22c55e; margin-bottom: 12px; font-weight: 600;">✓ Key Benefits:</h4>
-                            <ul style="line-height: 1.6; margin: 0; padding-left: 20px; color: #475569;">
-                                <li>Reduces positional snoring (back sleeping)</li>
-                                <li>Helps with acid reflux and sleep apnea</li>
-                                <li>Comfortable and non-restricting</li>
-                            </ul>
-                        </div>
-                        <div style="border-radius: 6px; padding: 20px; border-left: 3px solid #2c5aa0;">
-                            <h4 style="color: #2c5aa0; margin-bottom: 12px; font-weight: 600;">⚠ Important Considerations:</h4>
-                            <ul style="line-height: 1.6; margin: 0; padding-left: 20px; color: #475569;">
-                                <li>Adjustment period for new sleep positions</li>
-                                <li>May not work for all snoring types</li>
-                                <li>Requires consistent use for effectiveness</li>
-                            </ul>
+                    <!-- Temperature -->
+                    <div style="background: #fafbfc; border-radius: 8px; padding: 30px; margin-bottom: 25px; border-left: 4px solid #2c5aa0;">
+                        <h3 style="color: #2c5aa0; font-size: 24px; margin-bottom: 15px; font-weight: 600; display: flex; align-items: center;">
+                            <span style="background: #2c5aa0; color: white; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 16px; font-weight: bold; margin-right: 12px;">3</span>
+                            Temperature - Thermal Regulation
+                        </h3>
+                        <p style="line-height: 1.6; margin-bottom: 25px; color: #475569;">Active cooling systems maintain optimal sleep temperature, supporting your body's natural temperature drop that signals sleepiness.</p>
+                        
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 25px;">
+                            <div style="background: #f0fdf4; border-radius: 6px; padding: 20px; border-left: 3px solid #22c55e;">
+                                <h4 style="color: #22c55e; margin-bottom: 12px; font-weight: 600;">✓ Key Benefits:</h4>
+                                <ul style="line-height: 1.6; margin: 0; padding-left: 20px; color: #475569;">
+                                    <li>Maintains optimal sleep temperature</li>
+                                    <li>Reduces night sweats and overheating</li>
+                                    <li>Dual-zone options for couples</li>
+                                </ul>
+                            </div>
+                            <div style="border-radius: 6px; padding: 20px; border-left: 3px solid #2c5aa0;">
+                                <h4 style="color: #2c5aa0; margin-bottom: 12px; font-weight: 600;">⚠ Important Considerations:</h4>
+                                <ul style="line-height: 1.6; margin: 0; padding-left: 20px; color: #475569;">
+                                    <li>Higher upfront investment required</li>
+                                    <li>May require mattress compatibility check</li>
+                                    <li>Monthly subscription for some features</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                </div>
-                
-                <!-- Environmental Control -->
-                <div style="background: #fafbfc; border-radius: 8px; padding: 30px; margin-bottom: 25px; border-left: 4px solid #2c5aa0;">
-                    <h3 style="color: #2c5aa0; font-size: 24px; margin-bottom: 15px; font-weight: 600; display: flex; align-items: center;">
-                        <span style="background: #2c5aa0; color: white; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 16px; font-weight: bold; margin-right: 12px;">4</span>
-                        Environmental Control - Sleep Optimization
-                    </h3>
-                    <p style="line-height: 1.6; margin-bottom: 25px; color: #475569;">White noise machines, sleep masks, and temperature control devices optimize your sleep environment for better rest quality.</p>
                     
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 25px;">
-                        <div style="background: #f0fdf4; border-radius: 6px; padding: 20px; border-left: 3px solid #22c55e;">
-                            <h4 style="color: #22c55e; margin-bottom: 12px; font-weight: 600;">✓ Key Benefits:</h4>
-                            <ul style="line-height: 1.6; margin: 0; padding-left: 20px; color: #475569;">
-                                <li>Masks environmental disruptions</li>
-                                <li>Improves sleep quality and duration</li>
-                                <li>Works well combined with other solutions</li>
-                            </ul>
+                    <!-- Snoring -->
+                    <div style="background: #fafbfc; border-radius: 8px; padding: 30px; margin-bottom: 0; border-left: 4px solid #2c5aa0;">
+                        <h3 style="color: #2c5aa0; font-size: 24px; margin-bottom: 15px; font-weight: 600; display: flex; align-items: center;">
+                            <span style="background: #2c5aa0; color: white; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 16px; font-weight: bold; margin-right: 12px;">4</span>
+                            Snoring - Airway Management
+                        </h3>
+                        <p style="line-height: 1.6; margin-bottom: 25px; color: #475569;">Anti-snoring devices physically keep airways open during sleep by repositioning the jaw or tongue to prevent tissue collapse.</p>
+                        
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 25px;">
+                            <div style="background: #f0fdf4; border-radius: 6px; padding: 20px; border-left: 3px solid #22c55e;">
+                                <h4 style="color: #22c55e; margin-bottom: 12px; font-weight: 600;">✓ Key Benefits:</h4>
+                                <ul style="line-height: 1.6; margin: 0; padding-left: 20px; color: #475569;">
+                                    <li>Reduces snoring in most users</li>
+                                    <li>Improves sleep quality for partners</li>
+                                    <li>Non-invasive alternative to surgery</li>
+                                </ul>
+                            </div>
+                            <div style="border-radius: 6px; padding: 20px; border-left: 3px solid #2c5aa0;">
+                                <h4 style="color: #2c5aa0; margin-bottom: 12px; font-weight: 600;">⚠ Important Considerations:</h4>
+                                <ul style="line-height: 1.6; margin: 0; padding-left: 20px; color: #475569;">
+                                    <li>Adjustment period of 1-2 weeks</li>
+                                    <li>Proper dental health required</li>
+                                    <li>Not suitable for sleep apnea treatment</li>
+                                </ul>
+                            </div>
                         </div>
-                        <div style="border-radius: 6px; padding: 20px; border-left: 3px solid #2c5aa0;">
-                            <h4 style="color: #2c5aa0; margin-bottom: 12px; font-weight: 600;">⚠ Important Considerations:</h4>
-                            <ul style="line-height: 1.6; margin: 0; padding-left: 20px; color: #475569;">
-                                <li>Individual preferences for sounds/darkness</li>
-                                <li>Some devices require power/maintenance</li>
-                                <li>May take time to find optimal settings</li>
-                            </ul>
+                    </div>
+                    
+                    <div style="background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.1)), url('/assets/img/bedroom-background.jpg'); background-size: cover; background-position: center; color: white; padding: 30px; margin-top: 40px; border-radius: 12px; text-align: center;">
+                        <h4 style="color: white; margin-bottom: 15px; font-size: 20px;">Ready to Choose the Right Device?</h4>
+                        <p style="margin-bottom: 25px; line-height: 1.6; opacity: 0.9;">Each device works differently for different people. We recommend starting with one solution, testing it for 1-2 weeks, and consulting your healthcare provider about combinations.</p>
+                        <a href="#comparison-table" onclick="scrollToComparison(event)" style="background: white; color: #2c5aa0; padding: 14px 28px; text-decoration: none; border-radius: 8px; font-weight: 600; display: inline-block; transition: all 0.2s ease;">Compare Our Top Picks →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Detailed Product Reviews -->
+        <section class="section" style="padding: 60px 0; background: #f8f9fa;">
+            <div class="container">
+                <h2 style="text-align: center; margin-bottom: 50px; color: #2c5aa0;">Detailed Product Reviews</h2>
+                
+                <!-- LectroFan Classic Review -->
+                <div style="background: white; border-radius: 12px; padding: 30px; margin-bottom: 30px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                    <div style="display: flex; gap: 20px; margin-bottom: 20px; align-items: center;">
+                        <img src="/assets/img/non-pill/lectrofan-classic.jpg" alt="LectroFan Classic white noise machine on nightstand" style="width: 120px; height: 120px; object-fit: contain;">
+                        <div>
+                            <h3 style="margin: 0 0 10px 0; color: #2c5aa0;">LectroFan Classic White Noise Machine - <span style="background: #28a745; color: white; padding: 4px 8px; border-radius: 4px; font-size: 12px; font-weight: 700;">TOP RATED</span></h3>
+                            <div style="margin-bottom: 10px;">★★★★★ 4.6/5 (15,000+ reviews)</div>
                         </div>
                     </div>
-                </div>
-                
-                <div style="background: linear-gradient(135deg, #2c5aa0 0%, #1e3a5f 100%); color: white; padding: 30px; margin-top: 40px; border-radius: 12px; text-align: center;">
-                    <h4 style="color: white; margin-bottom: 15px; font-size: 20px;">Ready to Choose the Right Device?</h4>
-                    <p style="margin-bottom: 25px; line-height: 1.6; opacity: 0.9;">Each device type works differently for different sleep issues. We recommend starting with one solution, testing it for 1-2 weeks, and consulting your healthcare provider about combinations.</p>
-                    <a href="#comparison-table" onclick="scrollToComparison(event)" style="background: white; color: #2c5aa0; padding: 14px 28px; text-decoration: none; border-radius: 8px; font-weight: 600; display: inline-block; transition: all 0.2s ease;">Compare Our Top Picks →</a>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Detailed Product Reviews -->
-    <section class="section" style="padding: 60px 0; background: #f8f9fa;">
-        <div class="container">
-            <h2 style="text-align: center; margin-bottom: 50px; color: #2c5aa0;">Detailed Product Reviews</h2>
-            
-            <!-- SleepGuard Pro Review -->
-            <div style="background: white; border-radius: 12px; padding: 30px; margin-bottom: 30px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-                <div style="display: flex; gap: 20px; margin-bottom: 20px; align-items: center;">
-                    <img src="/assets/img/placeholder-1.jpg" alt="SleepGuard Pro" style="width: 120px; height: 120px; object-fit: contain;">
-                    <div>
-                        <h3 style="margin: 0 0 10px 0; color: #2c5aa0;">SleepGuard Pro - <span style="background: #ffd700; color: #000; padding: 4px 8px; border-radius: 4px; font-size: 12px; font-weight: 700;">TOP RATED</span></h3>
-                        <div style="margin-bottom: 10px;">★★★★★ 4.8/5 (2,400+ reviews)</div>
+                    
+                    <p><strong>LectroFan Classic provides consistent digital white noise generation</strong> with no looping or repetitive patterns that can disrupt sleep. This professional-grade device offers precise volume control and multiple sound options for personalized sleep environments.</p>
+                    
+                    <p>The non-looping digital sound generation ensures a truly consistent audio experience without the subtle interruptions found in cheaper sound machines. The wide volume range makes it suitable for various room sizes and noise sensitivity levels.</p>
+                    
+                    <div style="background: #f8f9fa; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                        <h4 style="margin: 0 0 10px 0;">What We Like:</h4>
+                        <ul style="margin: 0; padding-left: 20px;">
+                            <li>Consistent digital white noise generation</li>
+                            <li>No looping or repetitive patterns</li>
+                            <li>Wide volume range for customization</li>
+                            <li>Compact design for travel</li>
+                        </ul>
+                    </div>
+                    
+                    <div style="text-align: center; margin-top: 20px;">
+                        <a href="https://www.soundofsleep.com/product/lectrofan-classic/" rel="nofollow sponsored" target="_blank" data-gtm="ssg_product_cta" data-product-name="LectroFan Classic White Noise Machine" class="cta" style="background: #28a745; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; font-weight: bold; margin-right: 10px;">Check Best Price</a>
+                        <a href="https://www.soundofsleep.com/product/lectrofan-classic/" rel="nofollow sponsored" target="_blank" data-gtm="ssg_product_cta" data-product-name="LectroFan Classic White Noise Machine" style="background: #6c757d; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px;">Full Review</a>
                     </div>
                 </div>
                 
-                <p><strong>SleepGuard Pro is a premium mandibular advancement device</strong> designed to prevent snoring by gently advancing the lower jaw to keep airways open. Unlike basic mouthpieces, this custom-moldable device provides personalized fit and maximum comfort.</p>
-                
-                <p>What sets SleepGuard Pro apart is its dual-adjustment mechanism allowing fine-tuning of jaw positioning for optimal effectiveness. The medical-grade materials ensure durability and safety for nightly use.</p>
-                
-                <div style="background: #f8f9fa; padding: 15px; border-radius: 8px; margin: 15px 0;">
-                    <h4 style="margin: 0 0 10px 0;">What We Like:</h4>
-                    <ul style="margin: 0; padding-left: 20px;">
-                        <li>Custom-moldable for perfect fit</li>
-                        <li>Dual-adjustment mechanism</li>
-                        <li>Medical-grade materials</li>
-                        <li>Proven 85% success rate</li>
-                    </ul>
-                </div>
-                
-                <div style="text-align: center; margin-top: 20px;">
-                    <a href="#" class="cta" data-offer="sleepguard" style="background: #28a745; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; font-weight: bold; margin-right: 10px;">Check Best Price</a>
-                    <a href="#" style="background: #6c757d; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px;">Full Review</a>
-                </div>
-            </div>
-            
-            <!-- NasalMax Plus Review -->
-            <div style="background: white; border-radius: 12px; padding: 30px; margin-bottom: 30px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-                <div style="display: flex; gap: 20px; margin-bottom: 20px; align-items: center;">
-                    <img src="/assets/img/placeholder-2.jpg" alt="NasalMax Plus" style="width: 120px; height: 120px; object-fit: contain;">
-                    <div>
-                        <h3 style="margin: 0 0 10px 0; color: #2c5aa0;">NasalMax Plus - <span style="background: #17a2b8; color: white; padding: 4px 8px; border-radius: 4px; font-size: 12px; font-weight: 700;">BEST VALUE</span></h3>
-                        <div style="margin-bottom: 10px;">★★★★☆ 4.5/5 (1,850+ reviews)</div>
+                <!-- Hatch Restore 3 Review -->
+                <div style="background: white; border-radius: 12px; padding: 30px; margin-bottom: 30px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                    <div style="display: flex; gap: 20px; margin-bottom: 20px; align-items: center;">
+                        <img src="/assets/img/non-pill/hatch-restore-3.jpg" alt="Hatch Restore 3 sunrise alarm clock and sound machine" style="width: 120px; height: 120px; object-fit: contain;">
+                        <div>
+                            <h3 style="margin: 0 0 10px 0; color: #2c5aa0;">Hatch Restore 3 (Sunrise Alarm & Sound Machine) - <span style="background: #17a2b8; color: white; padding: 4px 8px; border-radius: 4px; font-size: 12px; font-weight: 700;">PREMIUM CHOICE</span></h3>
+                            <div style="margin-bottom: 10px;">★★★★☆ 4.4/5 (8,500+ reviews)</div>
+                        </div>
+                    </div>
+                    
+                    <p><strong>Hatch Restore 3 combines sunrise wake simulation technology with comprehensive sound therapy</strong> for both sleep and wake cycles. The clinically proven light therapy helps regulate natural circadian rhythms while offering phone-free bedside operation.</p>
+                    
+                    <p>The device features customizable wind-down routines and wake-up sequences, allowing users to create personalized sleep and wake experiences without the blue light exposure from smartphones.</p>
+                    
+                    <div style="background: #f8f9fa; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                        <h4 style="margin: 0 0 10px 0;">What We Like:</h4>
+                        <ul style="margin: 0; padding-left: 20px;">
+                            <li>Sunrise wake simulation technology</li>
+                            <li>Wind-down sounds and routines</li>
+                            <li>Phone-free bedside operation</li>
+                            <li>Customizable light and sound combinations</li>
+                        </ul>
+                    </div>
+                    
+                    <div style="text-align: center; margin-top: 20px;">
+                        <a href="https://www.hatch.co/restore" rel="nofollow sponsored" target="_blank" data-gtm="ssg_product_cta" data-product-name="Hatch Restore 3 (Sunrise Alarm & Sound Machine)" class="cta" style="background: #28a745; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; font-weight: bold; margin-right: 10px;">Check Best Price</a>
+                        <a href="https://www.hatch.co/restore" rel="nofollow sponsored" target="_blank" data-gtm="ssg_product_cta" data-product-name="Hatch Restore 3 (Sunrise Alarm & Sound Machine)" style="background: #6c757d; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px;">Full Review</a>
                     </div>
                 </div>
                 
-                <p><strong>NasalMax Plus combines internal nasal dilators with external strips</strong> for maximum nasal airflow improvement. This comprehensive nasal solution addresses both structural and temporary breathing restrictions.</p>
-                
-                <p>The system includes reusable internal dilators and single-use external strips, providing flexibility for different situations and personal preferences. Ideal for congestion-related snoring and sleep breathing issues.</p>
-                
-                <div style="background: #f8f9fa; padding: 15px; border-radius: 8px; margin: 15px 0;">
-                    <h4 style="margin: 0 0 10px 0;">What We Like:</h4>
-                    <ul style="margin: 0; padding-left: 20px;">
-                        <li>Dual internal/external system</li>
-                        <li>Reusable and disposable options</li>
-                        <li>Immediate breathing improvement</li>
-                        <li>Great for allergy sufferers</li>
-                    </ul>
-                </div>
-                
-                <div style="text-align: center; margin-top: 20px;">
-                    <a href="#" class="cta" data-offer="nasalmax" style="background: #28a745; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; font-weight: bold; margin-right: 10px;">Check Best Price</a>
-                    <a href="#" style="background: #6c757d; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px;">Full Review</a>
-                </div>
-            </div>
-            
-            <!-- RestRite Wedge Review -->
-            <div style="background: white; border-radius: 12px; padding: 30px; margin-bottom: 30px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-                <div style="display: flex; gap: 20px; margin-bottom: 20px; align-items: center;">
-                    <img src="/assets/img/placeholder-3.jpg" alt="RestRite Wedge" style="width: 120px; height: 120px; object-fit: contain;">
-                    <div>
-                        <h3 style="margin: 0 0 10px 0; color: #2c5aa0;">RestRite Wedge - <span style="background: #ff6b35; color: white; padding: 4px 8px; border-radius: 4px; font-size: 12px; font-weight: 700;">COMFORT PICK</span></h3>
-                        <div style="margin-bottom: 10px;">★★★★☆ 4.3/5 (1,200+ reviews)</div>
+                <!-- Eight Sleep Pod 5 Review -->
+                <div style="background: white; border-radius: 12px; padding: 30px; margin-bottom: 30px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                    <div style="display: flex; gap: 20px; margin-bottom: 20px; align-items: center;">
+                        <img src="/assets/img/non-pill/eight-sleep-pod-5.jpg" alt="Eight Sleep Pod 5 bed cooling system mattress cover" style="width: 120px; height: 120px; object-fit: contain;">
+                        <div>
+                            <h3 style="margin: 0 0 10px 0; color: #2c5aa0;">Eight Sleep Pod 5 (Bed Cooling System) - <span style="background: #6f42c1; color: white; padding: 4px 8px; border-radius: 4px; font-size: 12px; font-weight: 700;">TECH LEADER</span></h3>
+                            <div style="margin-bottom: 10px;">★★★★☆ 4.2/5 (3,200+ reviews)</div>
+                        </div>
+                    </div>
+                    
+                    <p><strong>Eight Sleep Pod 5 offers advanced thermoregulation for optimal sleep temperature</strong> with active cooling and heating technology. The system provides dual-zone temperature control for couples and smart app integration for personalized climate settings.</p>
+                    
+                    <p>The Pod 5 uses water-based temperature regulation to maintain precise thermal control throughout the night, addressing one of the most common causes of sleep disruption—overheating or being too cold.</p>
+                    
+                    <div style="background: #f8f9fa; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                        <h4 style="margin: 0 0 10px 0;">What We Like:</h4>
+                        <ul style="margin: 0; padding-left: 20px;">
+                            <li>Active cooling and heating technology</li>
+                            <li>Dual-zone temperature control</li>
+                            <li>Smart app integration and tracking</li>
+                            <li>Precise thermal regulation throughout night</li>
+                        </ul>
+                    </div>
+                    
+                    <div style="text-align: center; margin-top: 20px;">
+                        <a href="https://www.eightsleep.com/product/pod5ultra/" rel="nofollow sponsored" target="_blank" data-gtm="ssg_product_cta" data-product-name="Eight Sleep Pod 5 (Bed Cooling System)" class="cta" style="background: #28a745; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; font-weight: bold; margin-right: 10px;">Check Best Price</a>
+                        <a href="https://www.eightsleep.com/product/pod5ultra/" rel="nofollow sponsored" target="_blank" data-gtm="ssg_product_cta" data-product-name="Eight Sleep Pod 5 (Bed Cooling System)" style="background: #6c757d; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px;">Full Review</a>
                     </div>
                 </div>
                 
-                <p><strong>RestRite Wedge offers a sleep positioning solution</strong> that elevates the upper body to reduce airway collapse and acid reflux. The gradual 7-inch elevation provides optimal positioning without discomfort.</p>
-                
-                <p>The memory foam construction contours to your body while maintaining proper alignment. Particularly effective for back sleepers and those with GERD or sleep apnea symptoms.</p>
-                
-                <div style="background: #f8f9fa; padding: 15px; border-radius: 8px; margin: 15px 0;">
-                    <h4 style="margin: 0 0 10px 0;">What We Like:</h4>
-                    <ul style="margin: 0; padding-left: 20px;">
-                        <li>7-inch therapeutic elevation</li>
-                        <li>Memory foam comfort</li>
-                        <li>Helps with acid reflux</li>
-                        <li>Gradual positioning change</li>
-                    </ul>
-                </div>
-                
-                <div style="text-align: center; margin-top: 20px;">
-                    <a href="#" class="cta" data-offer="restrite" style="background: #28a745; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; font-weight: bold; margin-right: 10px;">Check Best Price</a>
-                    <a href="#" style="background: #6c757d; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px;">Full Review</a>
-                </div>
-            </div>
-            
-            <!-- QuietNight Pro Review -->
-            <div style="background: white; border-radius: 12px; padding: 30px; margin-bottom: 30px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-                <div style="display: flex; gap: 20px; margin-bottom: 20px; align-items: center;">
-                    <img src="/assets/img/placeholder-1.jpg" alt="QuietNight Pro" style="width: 120px; height: 120px; object-fit: contain;">
-                    <div>
-                        <h3 style="margin: 0 0 10px 0; color: #2c5aa0;">QuietNight Pro - <span style="background: #6f42c1; color: white; padding: 4px 8px; border-radius: 4px; font-size: 12px; font-weight: 700;">TECH ADVANCED</span></h3>
-                        <div style="margin-bottom: 10px;">★★★★☆ 4.4/5 (900+ reviews)</div>
+                <!-- Gravity Blanket Review -->
+                <div style="background: white; border-radius: 12px; padding: 30px; margin-bottom: 30px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                    <div style="display: flex; gap: 20px; margin-bottom: 20px; align-items: center;">
+                        <img src="/assets/img/non-pill/gravity-blanket.jpg" alt="Gravity Original weighted blanket for calming sleep" style="width: 120px; height: 120px; object-fit: contain;">
+                        <div>
+                            <h3 style="margin: 0 0 10px 0; color: #2c5aa0;">Gravity Original Weighted Blanket - <span style="background: #fd7e14; color: white; padding: 4px 8px; border-radius: 4px; font-size: 12px; font-weight: 700;">COMFORT CHOICE</span></h3>
+                            <div style="margin-bottom: 10px;">★★★★☆ 4.3/5 (12,000+ reviews)</div>
+                        </div>
+                    </div>
+                    
+                    <p><strong>Gravity Original Weighted Blanket provides deep-pressure stimulation for calming effect</strong> using therapeutic weight distribution. Available in multiple weight and size options with a machine-washable removable cover for easy maintenance.</p>
+                    
+                    <p>The therapeutic weight creates gentle, even pressure across the body, which can help reduce stress and promote relaxation through deep-pressure touch stimulation, similar to a gentle hug.</p>
+                    
+                    <div style="background: #f8f9fa; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                        <h4 style="margin: 0 0 10px 0;">What We Like:</h4>
+                        <ul style="margin: 0; padding-left: 20px;">
+                            <li>Deep-pressure stimulation for calming effect</li>
+                            <li>Multiple weight and size options available</li>
+                            <li>Machine-washable removable cover</li>
+                            <li>Even weight distribution technology</li>
+                        </ul>
+                    </div>
+                    
+                    <div style="text-align: center; margin-top: 20px;">
+                        <a href="https://gravityblankets.com/products/gravity-blanket" rel="nofollow sponsored" target="_blank" data-gtm="ssg_product_cta" data-product-name="Gravity Original Weighted Blanket" class="cta" style="background: #28a745; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; font-weight: bold; margin-right: 10px;">Check Best Price</a>
+                        <a href="https://gravityblankets.com/products/gravity-blanket" rel="nofollow sponsored" target="_blank" data-gtm="ssg_product_cta" data-product-name="Gravity Original Weighted Blanket" style="background: #6c757d; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px;">Full Review</a>
                     </div>
                 </div>
                 
-                <p><strong>QuietNight Pro features advanced white noise technology</strong> with 40+ scientifically-designed sleep sounds and adaptive volume control that responds to environmental noise changes throughout the night.</p>
-                
-                <p>The smart sound masking helps cover snoring, traffic, and other sleep disruptions while promoting deeper sleep cycles. Timer functions and gradual volume adjustments enhance the sleep experience.</p>
-                
-                <div style="background: #f8f9fa; padding: 15px; border-radius: 8px; margin: 15px 0;">
-                    <h4 style="margin: 0 0 10px 0;">What We Like:</h4>
-                    <ul style="margin: 0; padding-left: 20px;">
-                        <li>40+ scientifically-designed sounds</li>
-                        <li>Adaptive volume control</li>
-                        <li>Timer and fade functions</li>
-                        <li>Masks partner snoring</li>
-                    </ul>
-                </div>
-                
-                <div style="text-align: center; margin-top: 20px;">
-                    <a href="#" class="cta" data-offer="quietnight" style="background: #28a745; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; font-weight: bold; margin-right: 10px;">Check Best Price</a>
-                    <a href="#" style="background: #6c757d; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px;">Full Review</a>
-                </div>
-            </div>
-            
-            <!-- DreamShield Max Review -->
-            <div style="background: white; border-radius: 12px; padding: 30px; margin-bottom: 30px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-                <div style="display: flex; gap: 20px; margin-bottom: 20px; align-items: center;">
-                    <img src="/assets/img/placeholder-2.jpg" alt="DreamShield Max" style="width: 120px; height: 120px; object-fit: contain;">
-                    <div>
-                        <h3 style="margin: 0 0 10px 0; color: #2c5aa0;">DreamShield Max - <span style="background: #28a745; color: white; padding: 4px 8px; border-radius: 4px; font-size: 12px; font-weight: 700;">BLACKOUT CHAMPION</span></h3>
-                        <div style="margin-bottom: 10px;">★★★★★ 4.6/5 (1,600+ reviews)</div>
+                <!-- SnoreRx Mouthguard Review -->
+                <div style="background: white; border-radius: 12px; padding: 30px; margin-bottom: 30px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                    <div style="display: flex; gap: 20px; margin-bottom: 20px; align-items: center;">
+                        <img src="/assets/img/non-pill/snorerx-mouthguard.jpg" alt="SnoreRx adjustable anti-snoring mouthguard device" style="width: 120px; height: 120px; object-fit: contain;">
+                        <div>
+                            <h3 style="margin: 0 0 10px 0; color: #2c5aa0;">SnoreRx Adjustable Mouthguard (anti-snoring) - <span style="background: #20c997; color: white; padding: 4px 8px; border-radius: 4px; font-size: 12px; font-weight: 700;">SNORING SOLUTION</span></h3>
+                            <div style="margin-bottom: 10px;">★★★★☆ 4.1/5 (5,800+ reviews)</div>
+                        </div>
+                    </div>
+                    
+                    <p><strong>SnoreRx Adjustable Mouthguard uses mandibular advancement design</strong> to keep airways open during sleep. The boil-and-bite custom fitting process ensures proper fit for nightly use comfort and maximum effectiveness.</p>
+                    
+                    <p>The adjustable design allows for fine-tuning the jaw position to find the optimal setting for each individual's anatomy, providing a more personalized fit than fixed devices.</p>
+                    
+                    <div style="background: #f8f9fa; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                        <h4 style="margin: 0 0 10px 0;">What We Like:</h4>
+                        <ul style="margin: 0; padding-left: 20px;">
+                            <li>Adjustable mandibular advancement design</li>
+                            <li>Boil-and-bite custom fitting process</li>
+                            <li>Designed for nightly use comfort</li>
+                            <li>Fine-tuning options for optimal positioning</li>
+                        </ul>
+                    </div>
+                    
+                    <div style="background: #fff3cd; border: 1px solid #ffeaa7; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                        <p style="margin: 0; color: #856404; font-weight: 500;">
+                            <strong>Note:</strong> For snoring only; not a treatment for sleep apnea. If you suspect apnea, talk to a clinician.
+                        </p>
+                    </div>
+                    
+                    <div style="text-align: center; margin-top: 20px;">
+                        <a href="https://snorerx.com/" rel="nofollow sponsored" target="_blank" data-gtm="ssg_product_cta" data-product-name="SnoreRx Adjustable Mouthguard (anti-snoring)" class="cta" style="background: #28a745; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; font-weight: bold; margin-right: 10px;">Check Best Price</a>
+                        <a href="https://snorerx.com/" rel="nofollow sponsored" target="_blank" data-gtm="ssg_product_cta" data-product-name="SnoreRx Adjustable Mouthguard (anti-snoring)" style="background: #6c757d; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px;">Full Review</a>
                     </div>
                 </div>
-                
-                <p><strong>DreamShield Max provides 100% light blocking</strong> with contoured design that prevents pressure on eyes while maintaining complete darkness. The premium silk exterior and memory foam interior ensure comfort and durability.</p>
-                
-                <p>The adjustable strap system and nose bridge design accommodate different face shapes without light leakage. Particularly effective for shift workers, travelers, and light-sensitive sleepers.</p>
-                
-                <div style="background: #f8f9fa; padding: 15px; border-radius: 8px; margin: 15px 0;">
-                    <h4 style="margin: 0 0 10px 0;">What We Like:</h4>
-                    <ul style="margin: 0; padding-left: 20px;">
-                        <li>100% light blocking guarantee</li>
-                        <li>Contoured, no-pressure design</li>
-                        <li>Premium silk exterior</li>
-                        <li>Perfect for shift workers</li>
-                    </ul>
-                </div>
-                
-                <div style="text-align: center; margin-top: 20px;">
-                    <a href="#" class="cta" data-offer="dreamshield" style="background: #28a745; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; font-weight: bold; margin-right: 10px;">Check Best Price</a>
-                    <a href="#" style="background: #6c757d; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px;">Full Review</a>
+            </div>
+        </section>
+        
+        <!-- Transition to Comparison -->
+        <section style="background: white; padding: 20px 0;">
+            <div class="container">
+                <div style="max-width: 700px; margin: 0 auto; text-align: center;">
+                    <h3 style="color: #2c5aa0; margin-bottom: 15px; font-size: 24px;">Now that you've explored each option...</h3>
+                    <p style="font-size: 18px; line-height: 1.6; color: #5a6b73; margin-bottom: 15px;">You've seen detailed reviews of our top 5 non-pill sleep solutions. Each offers unique benefits—from LectroFan's consistent sound masking to Hatch's circadian rhythm support, Eight Sleep's temperature control, Gravity's calming pressure, and SnoreRx's anti-snoring technology.</p>
+                    <p style="font-size: 18px; line-height: 1.6; color: #2c5aa0; font-weight: 600; margin-bottom: 0;">Ready to compare them side-by-side? Our comparison table below makes it easy to find your perfect match.</p>
                 </div>
             </div>
-            
-        </div>
-    </section>
+        </section>
 
+        <!-- Comparison Table -->
+        <section class="section" id="comparison-table" style="background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%); padding: 50px 0;">
+            <div class="container">
+                <h2 style="color: #2c5aa0; margin-bottom: 30px; text-align: center;">Non-Pill Sleep Solutions Comparison</h2>
+                <div class="table-wrapper" style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
+                    <table id="non-pill-comparison-table" style="margin: 0;">
+                        <thead style="background: linear-gradient(135deg, #2c5aa0 0%, #1e3a5f 100%);">
+                            <tr>
+                                <th style="width: 28%; color: white; font-weight: 600; padding: 18px 16px;">Product</th>
+                                <th style="width: 28%; color: white; font-weight: 600; padding: 18px 16px;">Key Points</th>
+                                <th style="width: 12%; color: white; font-weight: 600; padding: 18px 16px;">Type</th>
+                                <th style="width: 20%; color: white; font-weight: 600; padding: 18px 16px;">Notes</th>
+                                <th style="width: 12%; color: white; font-weight: 600; padding: 18px 16px;">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="non-pill-table-body">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Summary Wrap-up Section -->
+        <section style="background: #f8f9fa; padding: 40px 0; margin: 40px 0;">
+            <div class="container">
+                <div style="max-width: 700px; margin: 0 auto; text-align: center;">
+                    <h3 style="color: #2c5aa0; margin-bottom: 20px; font-size: 24px;">Your journey to better sleep starts here</h3>
+                    <p style="font-size: 18px; line-height: 1.6; color: #5a6b73; margin-bottom: 25px;">You've learned about the science behind non-pill sleep solutions, discovered how different devices work, and explored our top-rated products from trusted brands. Whether you're drawn to LectroFan's sound masking, Hatch's light therapy, Eight Sleep's temperature control, Gravity's calming pressure, or SnoreRx's anti-snoring technology—you now have the knowledge to make an informed choice.</p>
+                    <p style="font-size: 18px; line-height: 1.6; color: #2c5aa0; font-weight: 600; margin-bottom: 0;">Take the next step toward the restful nights you deserve.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Essential Sleep Device Guide -->
+        <section class="section section-alt">
+            <div class="container">
+                <h2>Your Sleep Device Questions Answered</h2>
+                <div style="max-width: 800px; margin: 30px auto 0;">
+                    <div style="background: white; border-radius: 8px; padding: 40px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                        
+                        <div style="display: flex; gap: 20px; margin-bottom: 30px; padding-bottom: 25px; border-bottom: 1px solid #e9ecef;">
+                            <div style="background: #2c5aa0; color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: bold; flex-shrink: 0;">1</div>
+                            <div>
+                                <h3 style="color: #2c5aa0; margin: 0 0 10px 0; font-size: 18px;">What We Look For</h3>
+                                <p style="margin: 0; line-height: 1.6;">We prioritize devices with <strong>proven effectiveness</strong> and quality construction. Trusted manufacturers show confidence in their products through warranties, customer support, and transparent specifications.</p>
+                            </div>
+                        </div>
+                        
+                        <div style="display: flex; gap: 20px; margin-bottom: 30px; padding-bottom: 25px; border-bottom: 1px solid #e9ecef;">
+                            <div style="background: #2c5aa0; color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: bold; flex-shrink: 0;">2</div>
+                            <div>
+                                <h3 style="color: #2c5aa0; margin: 0 0 10px 0; font-size: 18px;">Device Selection Process</h3>
+                                <p style="margin: 0; line-height: 1.6;">Our experts test devices for <strong>effectiveness, comfort, and durability</strong>. We evaluate real-world performance, user feedback, and long-term reliability to recommend only the most effective solutions.</p>
+                            </div>
+                        </div>
+                        
+                        <div style="display: flex; gap: 20px; margin-bottom: 30px; padding-bottom: 25px; border-bottom: 1px solid #e9ecef;">
+                            <div style="background: #2c5aa0; color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: bold; flex-shrink: 0;">3</div>
+                            <div>
+                                <h3 style="color: #2c5aa0; margin: 0 0 10px 0; font-size: 18px;">Safety & Suitability</h3>
+                                <p style="margin: 0; line-height: 1.6;">We research <strong>safety profiles and contraindications</strong> for each device type. Our reviews include important considerations for proper use and when to consult healthcare providers.</p>
+                            </div>
+                        </div>
+                        
+                        <div style="display: flex; gap: 20px; margin-bottom: 0;">
+                            <div style="background: #2c5aa0; color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: bold; flex-shrink: 0;">4</div>
+                            <div>
+                                <h3 style="color: #2c5aa0; margin: 0 0 10px 0; font-size: 18px;">Real-World Testing</h3>
+                                <p style="margin: 0; line-height: 1.6;">Our recommendations are based on <strong>actual performance data</strong> and user experiences. We update our reviews regularly based on new research and long-term user feedback.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Final Call-to-Action Section -->
+        <section class="section" style="background: #f0f8ff; padding: 25px 0;">
+            <div class="container">
+                <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+                    <h2 style="color: #2c5aa0; margin-bottom: 15px;">Ready to start sleeping better?</h2>
+                    <p style="margin-bottom: 20px; line-height: 1.6; font-size: 18px;">We've compiled a curated list of our top-reviewed devices to help you find the right solution for your sleep needs.</p>
+                    <a href="#comparison-table" onclick="scrollToComparison(event)" style="background: #2c5aa0; color: white; padding: 15px 30px; text-decoration: none; border-radius: 6px; font-weight: 600; font-size: 18px;">Compare Devices</a>
+                </div>
+            </div>
+        </section>
     </main>
     
     <footer>
@@ -794,38 +919,96 @@
                     <p>&copy; 2025 Sleep Support Guide. All rights reserved.</p>
                 </div>
                 <div class="footer-legal-right">
-                    <p class="footer-links">
-                        <a href="/privacy">Privacy</a> • 
-                        <a href="/terms">Terms</a> • 
-                        <a href="/editorial-policy">Editorial Policy</a> • 
-                        <a href="/affiliate-disclosure">Affiliate Disclosure</a>
-                    </p>
-                    <p class="footer-disclosure">We may earn commissions from qualifying purchases. Content is independent. See Affiliate Disclosure.</p>
+                    <a href="/privacy-policy/">Privacy Policy</a>
+                    <a href="/terms-of-service/">Terms</a>
+                    <a href="/editorial-policy/">Editorial Policy</a>
+                    <a href="/affiliate-disclosure/">Affiliate Disclosure</a>
                 </div>
             </div>
         </div>
     </footer>
     
-    <script src="/assets/js/main.js?v=1757020400"></script>
-    <script src="/affiliate_click_listener.js"></script>
+    <!-- JavaScript -->
     <script>
+        // Smooth scroll to comparison table
         function scrollToComparison(event) {
             event.preventDefault();
             document.getElementById('comparison-table').scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
+                behavior: 'smooth'
             });
         }
-    </script>
-    <script>
-(function(){
-  var qs = window.location.search;
-  if(!qs) return;
-  document.querySelectorAll('a[href^="/go/"]').forEach(function(a){
-    var href = a.getAttribute('href')||'';
-    a.setAttribute('href', href + (href.includes('?') ? '&' + qs.slice(1) : qs));
-  });
-})();
+        
+        // Load and render non-pill comparison table
+        async function loadNonPillComparisonTable() {
+            try {
+                const response = await fetch('/data/offers.json');
+                const data = await response.json();
+                const nonPillProducts = data.non_pill.sort((a, b) => a.rank_priority - b.rank_priority);
+                
+                const tableBody = document.getElementById('non-pill-table-body');
+                if (!tableBody) return;
+                
+                tableBody.innerHTML = nonPillProducts.map(product => `
+                    <tr>
+                        <td style="padding: 18px 16px;">
+                            <div style="display: flex; align-items: center; gap: 12px;">
+                                <img src="${product.img}" alt="${product.name}" style="width: 60px; height: 60px; object-fit: contain; border-radius: 8px;">
+                                <div>
+                                    <div style="font-weight: 600; color: #2c5aa0; margin-bottom: 4px;">${product.name}</div>
+                                    <div style="font-size: 14px; color: #6c757d;">${product.brand}</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td style="padding: 18px 16px;">
+                            <ul style="margin: 0; padding-left: 16px; list-style: none;">
+                                ${product.key_points.map(point => `<li style="margin-bottom: 4px; position: relative; padding-left: 12px;">
+                                    <span style="position: absolute; left: 0; color: #28a745;">•</span>
+                                    ${point}
+                                </li>`).join('')}
+                            </ul>
+                        </td>
+                        <td style="padding: 18px 16px;">
+                            <span style="background: #e9ecef; color: #495057; padding: 4px 8px; border-radius: 4px; font-size: 12px; font-weight: 500;">
+                                ${product.type}
+                            </span>
+                        </td>
+                        <td style="padding: 18px 16px; font-size: 14px; color: #6c757d;">
+                            ${product.notes}
+                        </td>
+                        <td style="padding: 18px 16px;">
+                            <div style="display: flex; flex-direction: column; gap: 8px;">
+                                <a href="${product.cta_url}" rel="nofollow sponsored" target="_blank" data-gtm="ssg_product_cta" data-product-name="${product.name}" style="background: #28a745; color: white; padding: 8px 12px; text-decoration: none; border-radius: 4px; font-size: 12px; font-weight: 600; text-align: center;">Check Price</a>
+                                <a href="${product.cta_url}" rel="nofollow sponsored" target="_blank" data-gtm="ssg_product_cta" data-product-name="${product.name}" style="background: #6c757d; color: white; padding: 8px 12px; text-decoration: none; border-radius: 4px; font-size: 12px; text-align: center;">Read Review</a>
+                            </div>
+                        </td>
+                    </tr>
+                `).join('');
+                
+            } catch (error) {
+                console.error('Error loading non-pill comparison table:', error);
+                const tableBody = document.getElementById('non-pill-table-body');
+                if (tableBody) {
+                    tableBody.innerHTML = '<tr><td colspan="5" style="text-align: center; padding: 20px;">Unable to load product data</td></tr>';
+                }
+            }
+        }
+        
+        // Initialize when page loads
+        document.addEventListener('DOMContentLoaded', loadNonPillComparisonTable);
+        
+        // GTM tracking for CTA clicks
+        document.addEventListener('click', function(e) {
+            if (e.target.hasAttribute('data-gtm') && e.target.getAttribute('data-gtm') === 'ssg_product_cta') {
+                const productName = e.target.getAttribute('data-product-name');
+                if (window.gtag) {
+                    window.gtag('event', 'product_cta_click', {
+                        event_category: 'non_pill_solutions',
+                        event_label: productName,
+                        product_name: productName
+                    });
+                }
+            }
+        });
     </script>
 </body>
 </html>

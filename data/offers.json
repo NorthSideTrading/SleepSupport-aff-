@@ -78,34 +78,84 @@
   ],
   "non_pill": [
     {
-      "slug": "mouthpiece-generic",
-      "name": "Adjustable Mouthpiece (MAD)",
-      "type": "Non-pill • Mouth/Jaw",
-      "comfort": "Breathing port; adjustable",
-      "care": "Rinse daily; periodic re-fit",
-      "trial": "Trial window varies",
-      "img": "/assets/img/placeholder-1.jpg",
-      "cta_url": "#"
+      "slug": "lectrofan-classic",
+      "name": "LectroFan Classic White Noise Machine",
+      "brand": "Sound of Sleep",
+      "type": "Sound Machine",
+      "key_points": [
+        "Consistent digital white noise generation",
+        "No looping or repetitive patterns",
+        "Wide volume range for customization"
+      ],
+      "notes": "Professional-grade sound masking technology.",
+      "guarantee": "Manufacturer warranty",
+      "rank_priority": 1,
+      "img": "/assets/img/non-pill/lectrofan-classic.jpg",
+      "cta_url": "https://www.soundofsleep.com/product/lectrofan-classic/"
     },
     {
-      "slug": "nasal-strips",
-      "name": "Nasal Dilator Strips",
-      "type": "Non-pill • Nasal",
-      "comfort": "Low profile; single-use",
-      "care": "Dispose after use",
-      "trial": "—",
-      "img": "/assets/img/placeholder-2.jpg",
-      "cta_url": "#"
+      "slug": "hatch-restore-3",
+      "name": "Hatch Restore 3 (Sunrise Alarm & Sound Machine)",
+      "brand": "Hatch",
+      "type": "Sunrise Alarm",
+      "key_points": [
+        "Sunrise wake simulation technology",
+        "Wind-down sounds and routines",
+        "Phone-free bedside operation"
+      ],
+      "notes": "Clinically proven light therapy for natural wake cycles.",
+      "guarantee": "Manufacturer warranty",
+      "rank_priority": 2,
+      "img": "/assets/img/non-pill/hatch-restore-3.jpg",
+      "cta_url": "https://www.hatch.co/restore"
     },
     {
-      "slug": "wedge-pillow",
-      "name": "Wedge Pillow (Head Elevation)",
-      "type": "Non-pill • Positional",
-      "comfort": "Elevates head to open airway",
-      "care": "Washable cover",
-      "trial": "Typical home-goods returns",
-      "img": "/assets/img/placeholder-3.jpg",
-      "cta_url": "#"
+      "slug": "eight-sleep-pod-5",
+      "name": "Eight Sleep Pod 5 (Bed Cooling System)",
+      "brand": "Eight Sleep",
+      "type": "Temperature Control",
+      "key_points": [
+        "Active cooling and heating technology",
+        "Dual-zone temperature control",
+        "Smart app integration and tracking"
+      ],
+      "notes": "Advanced thermoregulation for optimal sleep temperature.",
+      "guarantee": "Manufacturer warranty",
+      "rank_priority": 3,
+      "img": "/assets/img/non-pill/eight-sleep-pod-5.jpg",
+      "cta_url": "https://www.eightsleep.com/product/pod5ultra/"
+    },
+    {
+      "slug": "gravity-blanket",
+      "name": "Gravity Original Weighted Blanket",
+      "brand": "Gravity Blankets",
+      "type": "Weighted Blanket",
+      "key_points": [
+        "Deep-pressure stimulation for calming effect",
+        "Multiple weight and size options available",
+        "Machine-washable removable cover"
+      ],
+      "notes": "Therapeutic weight distribution for relaxation.",
+      "guarantee": "Manufacturer warranty",
+      "rank_priority": 4,
+      "img": "/assets/img/non-pill/gravity-blanket.jpg",
+      "cta_url": "https://gravityblankets.com/products/gravity-blanket"
+    },
+    {
+      "slug": "snorerx-mouthguard",
+      "name": "SnoreRx Adjustable Mouthguard (anti-snoring)",
+      "brand": "SnoreRx",
+      "type": "Anti-Snoring Device",
+      "key_points": [
+        "Adjustable mandibular advancement design",
+        "Boil-and-bite custom fitting process",
+        "Designed for nightly use comfort"
+      ],
+      "notes": "For snoring only; not a treatment for sleep apnea. If you suspect apnea, talk to a clinician.",
+      "guarantee": "Manufacturer warranty",
+      "rank_priority": 5,
+      "img": "/assets/img/non-pill/snorerx-mouthguard.jpg",
+      "cta_url": "https://snorerx.com/"
     }
   ]
 }
