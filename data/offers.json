@@ -61,8 +61,8 @@
       "cta_url": "/go/pitch-black"
     },
     {
-      "slug": "andrew-lessman-night-time",
-      "name": "Andrew Lessman Night-Time",
+      "slug": "andrew-lessman-procap",
+      "name": "Andrew Lessman Procap",
       "form": "Capsules",
       "key_points": [
         "Complete night-time wellness formula",
@@ -72,7 +72,7 @@
       "notes": "Established brand with long track record of quality.",
       "guarantee": "Amazon return policy",
       "rank_priority": 5,
-      "img": "/assets/img/andrew-lessman-night-time.jpg",
+      "img": "/assets/img/andrew-lessman-procap.jpg",
       "cta_url": "https://www.amazon.com/Andrew-Lessman-Night-Time-Capsules/dp/B00CH3ULCU?th=1"
     }
   ],
