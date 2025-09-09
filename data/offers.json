@@ -110,20 +110,20 @@
       "cta_url": "https://www.hatch.co/restore"
     },
     {
-      "slug": "eight-sleep-pod-5",
-      "name": "Eight Sleep Pod 5 (Bed Cooling System)",
-      "brand": "Eight Sleep",
-      "type": "Temperature Control",
+      "slug": "somnofit-s-mouthguard",
+      "name": "Somnofit-S Anti-Snore Mouthguard",
+      "brand": "SnoreLessNow",
+      "type": "Anti-Snoring Device",
       "key_points": [
-        "Active cooling and heating technology",
-        "Dual-zone temperature control",
-        "Smart app integration and tracking"
+        "Swiss-made biomedical polymer construction",
+        "FDA-cleared mandibular advancement device",
+        "8 adjustable tension levels for precision fit"
       ],
-      "notes": "Advanced thermoregulation for optimal sleep temperature.",
-      "guarantee": "Manufacturer warranty",
+      "notes": "Premium anti-snoring mouthpiece with clinical backing.",
+      "guarantee": "60-day return policy",
       "rank_priority": 3,
-      "img": "/assets/img/non-pill/eight-sleep-pod-5.jpg",
-      "cta_url": "https://www.eightsleep.com/product/pod5ultra/"
+      "img": "/assets/img/non-pill/somnofit-s-mouthguard.jpg",
+      "cta_url": "https://www.amazon.com/Somnofit-S-Anti-Snore-SnoreLessNow-FDA-Cleared-Anti-Snoring/dp/B0D47W3PGH"
     },
     {
       "slug": "gravity-blanket",
