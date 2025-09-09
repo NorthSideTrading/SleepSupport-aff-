@@ -1,0 +1,101 @@
+You are editing the SleepSupportGuide site that deploys to Netlify.
+Goal: for each offer below, (1) add a Netlify /go/<alias> redirect to its HopLink, (2) point all CTAs for that product to /go/<alias> with tracking attributes, and (3) ensure query-param forwarding + GA4 affiliate click event are live. Then commit, push, and verify.
+
+Offers to wire (append more as needed):
+
+offers:
+  - alias: sleeplean
+    display: "SleepLean"
+    hoplink: "https://cf5ebf3dm3ebet5fu7lly4ni33.hop.clickbank.net/?tid=ssgsleeplean"
+  - alias: yu-sleep
+    display: "YU SLEEP"
+    hoplink: "https://1472fk1mi-gfcr5uzm-7iobsf8.hop.clickbank.net/?tid=ssgyusleep"
+  - alias: pitch-black
+    display: "Pitch Black"
+    hoplink: "https://9009080lm5n6fm9iqp6nyo5zaz.hop.clickbank.net/?tid=ssgpitchblack"
+# Add more like:
+#   - alias: resurge
+#     display: "Resurge"
+#     hoplink: "https://XXXX.hop.clickbank.net/?tid=ssgresurge"
+
+1) Netlify redirects
+
+Open netlify.toml at the repo root.
+
+For each offer, ensure a top-ordered [[redirects]] block exists exactly like:
+
+[[redirects]]
+  from = "/go/<alias>"
+  to   = "<hoplink>"
+  status = 302
+  force  = true
+
+
+Remove or comment out any generic /go/* or /go/:alias rule pointing to tracker.example or other placeholders above these entries. First match wins.
+
+2) Update ALL CTAs for each product
+
+Search the codebase for each display name (and related IDs/anchors).
+
+Set CTA href to /go/<alias> and ensure attributes (add if missing, don’t duplicate):
+
+rel="nofollow sponsored"
+data-aff="true"
+data-merchant="<display>"
+data-offer="<display>"
+data-position="Top#1"
+
+
+Example final button:
+
+<a href="/go/<alias>" rel="nofollow sponsored"
+   data-aff="true" data-merchant="<display>" data-offer="<display>" data-position="Top#1">
+  Check Best Price
+</a>
+
+3) Query-string forwarder (keep gclid/extclid/UTMs)
+
+In the global layout (rendered on every page), before </body>, ensure this exists once. If absent, add it:
+
+<script>
+(function(){
+  var qs = window.location.search;
+  if(!qs) return;
+  document.querySelectorAll('a[href^="/go/"]').forEach(function(a){
+    var href = a.getAttribute('href')||'';
+    a.setAttribute('href', href + (href.includes('?') ? '&' + qs.slice(1) : qs));
+  });
+})();
+</script>
+
+4) GA4 affiliate click event (once sitewide)
+
+Ensure /affiliate_click_listener.js exists with the standard listener below; if missing, create it and include it before </body> with <script src="/affiliate_click_listener.js" defer></script>.
+
+(function(){
+  function onClick(e){
+    var a = e.target.closest && e.target.closest('a');
+    if(!a) return;
+    var href = a.getAttribute('href') || '';
+    var isAff = (a.dataset && a.dataset.aff === 'true') || /\/go\//i.test(href);
+    if(!isAff) return;
+    var outHost = ''; try { outHost = new URL(a.href, location.href).hostname; } catch(err){}
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      event: 'affiliate_click',
+      merchant: (a.dataset && a.dataset.merchant) || '',
+      offer: (a.dataset && a.dataset.offer) || '',
+      position: (a.dataset && a.dataset.position) || '',
+      price: (a.dataset && a.dataset.price) || '',
+      out_url_domain: outHost,
+      link_url: a.href || href
+    });
+  }
+  document.addEventListener('click', onClick, {capture:true});
+})();
+
+5) Commit & push
+
+Commit message: wire offers: <alias list>; add/verify CTA attrs, query forwarder, click listener
+
+Push to the branch Netlify builds (usually main).
