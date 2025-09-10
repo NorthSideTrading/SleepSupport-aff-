@@ -1074,47 +1074,59 @@ img { max-width: 100%; display: block; }
   }
   
   #supplements-comparison-table {
-    min-width: 1400px;
-    font-size: 16px;
+    min-width: 1000px;
+    font-size: 15px;
+    width: 100%;
   }
   
   #supplements-comparison-table th,
   #supplements-comparison-table td {
-    padding: 20px 16px !important;
-    line-height: 1.4;
+    padding: 16px 14px !important;
+    line-height: 1.5;
+    vertical-align: top;
   }
   
-  /* Give each column generous width */
-  #supplements-comparison-table th:nth-child(1),
-  #supplements-comparison-table td:nth-child(1) {
-    min-width: 220px; /* Product column */
+  /* Product column needs most space */
+  #supplements-comparison-table th:first-child,
+  #supplements-comparison-table td:first-child {
+    width: 25%;
+    min-width: 200px;
   }
   
+  /* Key points column */
   #supplements-comparison-table th:nth-child(2),
   #supplements-comparison-table td:nth-child(2) {
-    min-width: 280px; /* Key Points column */
+    width: 30%;
+    min-width: 240px;
   }
   
+  /* Form column - smallest */
   #supplements-comparison-table th:nth-child(3),
   #supplements-comparison-table td:nth-child(3) {
-    min-width: 140px; /* Form column */
+    width: 12%;
+    min-width: 100px;
   }
   
+  /* Notes column */
   #supplements-comparison-table th:nth-child(4),
   #supplements-comparison-table td:nth-child(4) {
-    min-width: 320px; /* Notes column */
+    width: 25%;
+    min-width: 200px;
   }
   
+  /* Action column */
   #supplements-comparison-table th:nth-child(5),
   #supplements-comparison-table td:nth-child(5) {
-    min-width: 200px; /* Action column */
+    width: 18%;
+    min-width: 160px;
   }
   
   .product-cell {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 12px;
+    gap: 10px;
+    width: 100%;
   }
   
   .product-image {
