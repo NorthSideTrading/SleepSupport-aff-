@@ -1074,23 +1074,47 @@ img { max-width: 100%; display: block; }
   }
   
   #supplements-comparison-table {
-    min-width: 800px;
+    min-width: 1400px;
     font-size: 16px;
   }
   
   #supplements-comparison-table th,
   #supplements-comparison-table td {
-    padding: 16px 12px !important;
-    min-width: 150px;
+    padding: 20px 16px !important;
     line-height: 1.4;
+  }
+  
+  /* Give each column generous width */
+  #supplements-comparison-table th:nth-child(1),
+  #supplements-comparison-table td:nth-child(1) {
+    min-width: 220px; /* Product column */
+  }
+  
+  #supplements-comparison-table th:nth-child(2),
+  #supplements-comparison-table td:nth-child(2) {
+    min-width: 280px; /* Key Points column */
+  }
+  
+  #supplements-comparison-table th:nth-child(3),
+  #supplements-comparison-table td:nth-child(3) {
+    min-width: 140px; /* Form column */
+  }
+  
+  #supplements-comparison-table th:nth-child(4),
+  #supplements-comparison-table td:nth-child(4) {
+    min-width: 320px; /* Notes column */
+  }
+  
+  #supplements-comparison-table th:nth-child(5),
+  #supplements-comparison-table td:nth-child(5) {
+    min-width: 200px; /* Action column */
   }
   
   .product-cell {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    min-width: 160px;
-    gap: 10px;
+    gap: 12px;
   }
   
   .product-image {
