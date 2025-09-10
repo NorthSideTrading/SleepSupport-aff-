@@ -426,6 +426,44 @@
                 margin-right: 0 !important;
                 width: fit-content !important;
             }
+            
+            /* Mobile table sliding controls */
+            .slide-arrow {
+                display: block !important;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                background: rgba(44, 90, 160, 0.9);
+                color: white;
+                border: none;
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                font-size: 18px;
+                font-weight: bold;
+                cursor: pointer;
+                z-index: 10;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+                transition: all 0.2s ease;
+            }
+            
+            .slide-arrow:hover {
+                background: rgba(44, 90, 160, 1);
+                transform: translateY(-50%) scale(1.1);
+            }
+            
+            .slide-left {
+                left: -15px;
+            }
+            
+            .slide-right {
+                right: -15px;
+            }
+            
+            .table-wrapper {
+                overflow-x: auto !important;
+                scroll-behavior: smooth;
+            }
         }
     </style>
     
@@ -888,8 +926,20 @@
         <section class="section" id="comparison-table" style="background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%); padding: 50px 0;">
             <div class="container">
                 <h2 style="color: #2c5aa0; margin-bottom: 30px; text-align: center;">Sleep-Support Supplements Comparison</h2>
-                <div class="table-wrapper" style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
-                    <table id="supplements-comparison-table" style="margin: 0;">
+                <!-- Mobile Slide Container -->
+                <div class="table-slide-container" style="position: relative;">
+                    <!-- Left Arrow -->
+                    <button class="slide-arrow slide-left" onclick="slideTable('left')" style="display: none;">
+                        <span>←</span>
+                    </button>
+                    
+                    <!-- Right Arrow -->  
+                    <button class="slide-arrow slide-right" onclick="slideTable('right')" style="display: none;">
+                        <span>→</span>
+                    </button>
+                    
+                    <div class="table-wrapper" style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
+                        <table id="supplements-comparison-table" style="margin: 0;">
                         <thead style="background: linear-gradient(135deg, #2c5aa0 0%, #1e3a5f 100%);">
                             <tr>
                                 <th style="width: 28%; color: white; font-weight: 600; padding: 18px 16px;">Product</th>
@@ -1039,6 +1089,62 @@
         
         // Re-apply on resize
         window.addEventListener('resize', forceMobileLayout);
+    });
+    </script>
+    
+    <!-- Mobile Table Sliding JavaScript -->
+    <script>
+    function slideTable(direction) {
+        const tableWrapper = document.querySelector('#comparison-table .table-wrapper');
+        const scrollAmount = 200; // pixels to scroll
+        
+        if (direction === 'left') {
+            tableWrapper.scrollBy({
+                left: -scrollAmount,
+                behavior: 'smooth'
+            });
+        } else if (direction === 'right') {
+            tableWrapper.scrollBy({
+                left: scrollAmount,
+                behavior: 'smooth'
+            });
+        }
+    }
+    
+    // Show/hide slide arrows based on scroll position and screen size
+    function updateSlideArrows() {
+        if (window.innerWidth > 768) {
+            // Hide arrows on desktop
+            document.querySelectorAll('.slide-arrow').forEach(arrow => {
+                arrow.style.display = 'none';
+            });
+            return;
+        }
+        
+        const tableWrapper = document.querySelector('#comparison-table .table-wrapper');
+        const leftArrow = document.querySelector('.slide-left');
+        const rightArrow = document.querySelector('.slide-right');
+        
+        if (!tableWrapper || !leftArrow || !rightArrow) return;
+        
+        const canScrollLeft = tableWrapper.scrollLeft > 0;
+        const canScrollRight = tableWrapper.scrollLeft < (tableWrapper.scrollWidth - tableWrapper.clientWidth);
+        
+        // Show arrows if there's content to scroll
+        leftArrow.style.display = canScrollLeft ? 'block' : 'none';
+        rightArrow.style.display = canScrollRight ? 'block' : 'none';
+    }
+    
+    // Initialize slide arrows on page load and resize
+    document.addEventListener('DOMContentLoaded', function() {
+        setTimeout(updateSlideArrows, 1000); // Wait for table to load
+        
+        const tableWrapper = document.querySelector('#comparison-table .table-wrapper');
+        if (tableWrapper) {
+            tableWrapper.addEventListener('scroll', updateSlideArrows);
+        }
+        
+        window.addEventListener('resize', updateSlideArrows);
     });
     </script>
     <script>
