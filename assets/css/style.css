@@ -1074,22 +1074,23 @@ img { max-width: 100%; display: block; }
   }
   
   #supplements-comparison-table {
-    min-width: 600px;
-    font-size: 14px;
+    min-width: 800px;
+    font-size: 16px;
   }
   
   #supplements-comparison-table th,
   #supplements-comparison-table td {
-    padding: 12px 8px !important;
-    min-width: 120px;
+    padding: 16px 12px !important;
+    min-width: 150px;
+    line-height: 1.4;
   }
   
   .product-cell {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    min-width: 140px;
-    gap: 8px;
+    min-width: 160px;
+    gap: 10px;
   }
   
   .product-image {
