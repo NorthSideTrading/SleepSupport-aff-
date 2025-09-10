@@ -236,6 +236,19 @@
                 gap: 1rem;
             }
         }
+        
+        /* Professional symbols with purple glow */
+        :root {
+            --symbol-purple: hsl(266, 70%, 58%);
+            --symbol-glow: rgba(140, 90, 220, 0.35);
+        }
+        
+        .symbol-text {
+            color: var(--symbol-purple);
+            text-shadow: 0 0 6px var(--symbol-glow);
+            margin-right: 0.5rem;
+            font-weight: 600;
+        }
     </style>
     
     <!-- Load external CSS -->
@@ -281,14 +294,14 @@
                     <div class="tiles">
                         <div class="tile">
                             <div class="txt">
-                                <h3 class="m0">⚡ Devices & Tools</h3>
+                                <h3 class="m0"><span class="symbol-text" aria-hidden="true">▸</span>Devices & Tools</h3>
                                 <p class="mt8">White noise machines, anti-snoring devices, and sleep-enhancing gadgets for immediate results.</p>
                             </div>
                             <a class="btn btn-primary cta" href="/sleep/non-pill-solutions/">Explore Devices</a>
                         </div>
                         <div class="tile">
                             <div class="txt">
-                                <h3 class="m0">🌿 Natural Supplements</h3>
+                                <h3 class="m0"><span class="symbol-text" aria-hidden="true">◆</span>Natural Supplements</h3>
                                 <p class="mt8">Carefully reviewed sleep supplements with clear ingredients and trusted sources.</p>
                             </div>
                             <a class="btn btn-primary cta" href="/sleep/supplements/">View Supplements</a>
@@ -305,17 +318,17 @@
                 <h2 class="text-center mb24">How We Compare Sleep Solutions</h2>
                 <div class="grid grid-2">
                     <div class="card animate-in">
-                        <h3>🔧 Device-Based Solutions</h3>
+                        <h3><span class="symbol-text" aria-hidden="true">▸</span>Device-Based Solutions</h3>
                         <p>We test comfort, effectiveness, and real-world usability. Focus on FDA-cleared devices and proven technologies for sleep improvement.</p>
                     </div>
                     <div class="card animate-in">
-                        <h3>🌱 Natural Supplements</h3>
+                        <h3><span class="symbol-text" aria-hidden="true">◆</span>Natural Supplements</h3>
                         <p>We analyze ingredient quality, third-party testing, and transparent labeling. Priority on research-backed formulations from trusted brands.</p>
                     </div>
                 </div>
                 
                 <div class="social-proof mt24">
-                    ✓ Expert-reviewed • Data-driven comparisons • Updated regularly
+                    <span class="symbol-text" aria-hidden="true">✓</span>Expert-reviewed • Data-driven comparisons • Updated regularly
                 </div>
             </div>
         </section>
