@@ -1,0 +1,82 @@
+TASK: Implement favicon set (desktop + mobile) for SleepSupportGuide
+Files (put in site root)
+
+favicon-simple-48x48.png ← primary
+
+favicon-simple.ico
+
+apple-touch-icon.png
+
+android-chrome-192x192.png
+
+android-chrome-512x512.png
+
+site.webmanifest
+
+Ensure these are copied to the build output root (e.g., /dist).
+
+1) Update <head> in all HTML templates
+
+Insert the block at the top of <head> (before other icons), exactly in this order:
+
+<!-- Favicons -->
+<link rel="icon" type="image/png" sizes="48x48" href="/favicon-simple-48x48.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-simple-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-simple-16x16.png">
+<link rel="shortcut icon" href="/favicon-simple.ico">
+
+<!-- Mobile / PWA -->
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#0ea5a8">
+
+
+Keep the 48×48 PNG first so Google uses it for SERP favicons.
+
+2) Ensure site.webmanifest exists and is valid
+
+If missing, create/update with:
+
+{
+  "name": "SleepSupportGuide",
+  "short_name": "SleepGuide",
+  "icons": [
+    { "src": "/android-chrome-192x192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/android-chrome-512x512.png", "sizes": "512x512", "type": "image/png" }
+  ],
+  "theme_color": "#0ea5a8",
+  "background_color": "#ffffff",
+  "display": "standalone"
+}
+
+3) Remove conflicts
+
+Delete or comment out any old <link rel="icon">, apple-touch-icon, or other favicon tags.
+
+4) Headers (if server supports it)
+
+Set long cache on icons: Cache-Control: public, max-age=31536000, immutable.
+
+5) Verify
+
+Start dev server; visit:
+
+/favicon-simple-48x48.png → 200
+
+/favicon-simple.ico → 200
+
+/apple-touch-icon.png → 200
+
+/site.webmanifest → JSON loads
+
+Validate the <head> appears on /, /sleep/non-pill-solutions/, /sleep/supplements/.
+
+Acceptance criteria
+
+SERP-sized icon renders as teal circle with white crescent/bed.
+
+All icons resolve from site root in production build.
+
+No duplicate/legacy favicon tags remain.
