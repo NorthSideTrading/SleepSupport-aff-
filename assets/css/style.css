@@ -1073,52 +1073,50 @@ img { max-width: 100%; display: block; }
     margin: 1rem 0;
   }
   
+  /* MOBILE-ONLY TABLE FORMATTING - Complete Override */
   #supplements-comparison-table {
-    min-width: 1000px;
-    font-size: 15px;
-    width: 100%;
+    width: 1800px !important;
+    min-width: 1800px !important;
+    font-size: 18px !important;
+    table-layout: fixed !important;
   }
   
   #supplements-comparison-table th,
   #supplements-comparison-table td {
-    padding: 16px 14px !important;
-    line-height: 1.5;
-    vertical-align: top;
+    padding: 24px 20px !important;
+    line-height: 1.6 !important;
+    vertical-align: top !important;
+    word-wrap: break-word !important;
   }
   
-  /* Product column needs most space */
-  #supplements-comparison-table th:first-child,
-  #supplements-comparison-table td:first-child {
-    width: 25%;
-    min-width: 200px;
+  /* Product column - wide space for images and names */
+  #supplements-comparison-table th:nth-child(1),
+  #supplements-comparison-table td:nth-child(1) {
+    width: 350px !important;
   }
   
-  /* Key points column */
+  /* Key Points column - lots of space for bullet points */
   #supplements-comparison-table th:nth-child(2),
   #supplements-comparison-table td:nth-child(2) {
-    width: 30%;
-    min-width: 240px;
+    width: 450px !important;
   }
   
-  /* Form column - smallest */
+  /* Form column */
   #supplements-comparison-table th:nth-child(3),
   #supplements-comparison-table td:nth-child(3) {
-    width: 12%;
-    min-width: 100px;
+    width: 200px !important;
   }
   
-  /* Notes column */
+  /* Notes column - space for descriptions */
   #supplements-comparison-table th:nth-child(4),
   #supplements-comparison-table td:nth-child(4) {
-    width: 25%;
-    min-width: 200px;
+    width: 500px !important;
   }
   
-  /* Action column */
+  /* Action column - space for buttons */
   #supplements-comparison-table th:nth-child(5),
   #supplements-comparison-table td:nth-child(5) {
-    width: 18%;
-    min-width: 160px;
+    width: 300px !important;
   }
   
   .product-cell {
