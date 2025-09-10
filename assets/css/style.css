@@ -1097,6 +1097,10 @@ img { max-width: 100%; display: block; }
     height: 50px;
   }
   
+  .product-info {
+    text-align: center !important;
+  }
+  
   .product-info .k {
     font-size: 14px !important;
   }
