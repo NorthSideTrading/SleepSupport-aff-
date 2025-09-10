@@ -1237,3 +1237,24 @@ img { max-width: 100%; display: block; }
     gap: 2rem;
   }
 }
+
+/* Mobile Product Layout Override - Force stacked centered layout */
+@media (max-width: 768px) {
+  /* Force stacked + centered within the product column */
+  #supplements-comparison-table .product-cell,
+  .table tbody td:first-child .product-cell {
+    display: block !important;
+    text-align: center !important;
+  }
+  #supplements-comparison-table .product-image,
+  .table tbody td:first-child .product-image {
+    width: 70px !important; 
+    height: 70px !important; 
+    display: block !important; 
+    margin: 0 auto 8px !important;
+  }
+  #supplements-comparison-table .product-info,
+  .table tbody td:first-child .product-info {
+    text-align: center !important;
+  }
+}
