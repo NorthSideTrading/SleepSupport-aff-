@@ -1066,11 +1066,13 @@ img { max-width: 100%; display: block; }
   
   /* Table responsiveness */
   .table-wrapper {
-    overflow-x: auto;
+    overflow-x: auto !important;
+    overflow-y: visible !important;
     -webkit-overflow-scrolling: touch;
     background: white;
     border-radius: 8px;
     margin: 1rem 0;
+    width: 100%;
   }
   
   #supplements-comparison-table {
@@ -1204,15 +1206,25 @@ img { max-width: 100%; display: block; }
   }
   
   /* More aggressive table scrolling */
+  .table-wrapper {
+    overflow-x: scroll !important;
+    overflow-y: visible !important;
+    -webkit-overflow-scrolling: touch;
+    margin: 0 -1rem;
+    padding: 0 1rem;
+  }
+  
   #supplements-comparison-table {
-    min-width: 500px;
+    min-width: 700px;
     font-size: 12px;
+    table-layout: auto !important;
   }
   
   #supplements-comparison-table th,
   #supplements-comparison-table td {
     padding: 8px 6px !important;
-    min-width: 100px;
+    min-width: 120px;
+    white-space: nowrap;
   }
   
   .product-image {
