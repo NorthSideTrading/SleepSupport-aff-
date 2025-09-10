@@ -1240,21 +1240,45 @@ img { max-width: 100%; display: block; }
 
 /* Mobile Product Layout Override - Force stacked centered layout */
 @media (max-width: 768px) {
-  /* Force stacked + centered within the product column */
-  #supplements-comparison-table .product-cell,
-  .table tbody td:first-child .product-cell {
+  /* Completely override product cell layout on mobile */
+  .product-cell {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    gap: 12px !important;
+  }
+  
+  .product-image {
+    width: 80px !important; 
+    height: 80px !important; 
+    margin: 0 auto !important;
+    flex-shrink: 0 !important;
+    align-self: center !important;
+  }
+  
+  .product-info {
+    text-align: center !important;
+    width: 100% !important;
+  }
+  
+  .product-info .k {
+    text-align: center !important;
+    margin-bottom: 8px !important;
+  }
+  
+  .product-info .rating {
+    text-align: center !important;
+    justify-content: center !important;
+  }
+  
+  .product-info .small {
+    text-align: center !important;
+  }
+  
+  .product-info .badge {
+    text-align: center !important;
     display: block !important;
-    text-align: center !important;
-  }
-  #supplements-comparison-table .product-image,
-  .table tbody td:first-child .product-image {
-    width: 70px !important; 
-    height: 70px !important; 
-    display: block !important; 
-    margin: 0 auto 8px !important;
-  }
-  #supplements-comparison-table .product-info,
-  .table tbody td:first-child .product-info {
-    text-align: center !important;
+    margin: 8px auto 0 !important;
   }
 }

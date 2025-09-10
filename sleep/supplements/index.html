@@ -323,7 +323,7 @@
     </style>
     
     <!-- Load external CSS -->
-    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/style.css?v=mobile-fix-5">
     
     <!-- Enhanced Product Review Styling -->
     <style>
@@ -966,6 +966,53 @@
     
     <script src="/assets/js/main.js?v=1757020400"></script>
     <script src="/affiliate_click_listener.js"></script>
+    
+    <!-- Force Mobile Product Layout -->
+    <script>
+    // Force mobile product cell layout
+    function forceMobileLayout() {
+        if (window.innerWidth <= 768) {
+            const productCells = document.querySelectorAll('.product-cell');
+            productCells.forEach(cell => {
+                cell.style.cssText = 'display: flex !important; flex-direction: column !important; align-items: center !important; text-align: center !important; gap: 12px !important;';
+                
+                const image = cell.querySelector('.product-image');
+                if (image) {
+                    image.style.cssText = 'width: 80px !important; height: 80px !important; margin: 0 auto !important; flex-shrink: 0 !important; align-self: center !important;';
+                }
+                
+                const info = cell.querySelector('.product-info');
+                if (info) {
+                    info.style.cssText = 'text-align: center !important; width: 100% !important;';
+                    
+                    const title = info.querySelector('.k');
+                    if (title) title.style.cssText = 'text-align: center !important; margin-bottom: 8px !important;';
+                    
+                    const rating = info.querySelector('.rating');
+                    if (rating) rating.style.cssText = 'text-align: center !important; justify-content: center !important;';
+                    
+                    const small = info.querySelector('.small');
+                    if (small) small.style.cssText = 'text-align: center !important;';
+                    
+                    const badge = info.querySelector('.badge');
+                    if (badge) badge.style.cssText = 'text-align: center !important; display: block !important; margin: 8px auto 0 !important;';
+                }
+            });
+        }
+    }
+    
+    // Run after DOM loads and after supplements are rendered
+    document.addEventListener('DOMContentLoaded', function() {
+        // Initial check
+        setTimeout(forceMobileLayout, 100);
+        
+        // Check again after supplements load
+        setTimeout(forceMobileLayout, 1000);
+        
+        // Re-apply on resize
+        window.addEventListener('resize', forceMobileLayout);
+    });
+    </script>
     <script>
         function scrollToComparison(event) {
             event.preventDefault();
