@@ -111,18 +111,26 @@
 <!-- FAQ -->
 <section class="mt-16" x-data="{open:null}">
  <h2 class="text-2xl font-semibold mb-4">Frequently Asked Questions</h2>
- <template x-for="(q,i) in [
-   ['Will Sleeplean keep me awake?','No, it\'s stimulant-free and formulated for overnight use.'],
-   ['Is it habit-forming?','All ingredients are non-habit-forming botanicals or amino acids.'],
-   ['How fast will I see results?','Most testers noticed sleep improvements within one week, fat-loss trends by week 4.'],
-   ['Can I take it with melatonin?','We don\'t recommend stacking sleep aids; consult your doctor.'],
-   ['What\'s the guarantee?','Every bottle carries a 180-day money-back promise.']
- ]" :key="i">
-   <div class="border-b py-3">
-     <button class="w-full text-left font-medium" @click="open===i?open=null:open=i" x-text="q[0]"></button>
-     <p class="mt-2 text-sm text-slate-600" x-show="open===i" x-collapse x-text="q[1]"></p>
-   </div>
- </template>
+ <div class="border-b py-3">
+   <button class="w-full text-left font-medium" @click="open===0?open=null:open=0">Will Sleeplean keep me awake?</button>
+   <p class="mt-2 text-sm text-slate-600" x-show="open===0">No, it's stimulant-free and formulated for overnight use.</p>
+ </div>
+ <div class="border-b py-3">
+   <button class="w-full text-left font-medium" @click="open===1?open=null:open=1">Is it habit-forming?</button>
+   <p class="mt-2 text-sm text-slate-600" x-show="open===1">All ingredients are non-habit-forming botanicals or amino acids.</p>
+ </div>
+ <div class="border-b py-3">
+   <button class="w-full text-left font-medium" @click="open===2?open=null:open=2">How fast will I see results?</button>
+   <p class="mt-2 text-sm text-slate-600" x-show="open===2">Most testers noticed sleep improvements within one week, fat-loss trends by week 4.</p>
+ </div>
+ <div class="border-b py-3">
+   <button class="w-full text-left font-medium" @click="open===3?open=null:open=3">Can I take it with melatonin?</button>
+   <p class="mt-2 text-sm text-slate-600" x-show="open===3">We don't recommend stacking sleep aids; consult your doctor.</p>
+ </div>
+ <div class="border-b py-3">
+   <button class="w-full text-left font-medium" @click="open===4?open=null:open=4">What's the guarantee?</button>
+   <p class="mt-2 text-sm text-slate-600" x-show="open===4">Every bottle carries a 180-day money-back promise.</p>
+ </div>
 </section>
 </main>
 
