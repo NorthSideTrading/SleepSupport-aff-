@@ -108,6 +108,10 @@ app.use((req, res, next) => {
     res.sendFile(path.join(rootDir, 'yu-sleep', 'index.html'));
   });
 
+  app.get('/pitch-black/', (req, res) => {
+    res.sendFile(path.join(rootDir, 'pitch-black', 'index.html'));
+  });
+
   // Fallback to home page for unmatched routes
   app.get('*', (req, res) => {
     res.sendFile(path.join(rootDir, 'index.html'));

@@ -55,11 +55,21 @@ document.addEventListener('click', e=>{
  */
 async function loadProductData() {
     try {
-        const response = await fetch('/data/offers.json');
+        const response = await fetch('/data/offers.json?v=' + Date.now());
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
         productData = await response.json();
+        
+        // Debug logging for PITCH BLACK data
+        const pitchBlackItem = productData.supplements?.find(item => item.slug === 'pitch-black');
+        if (pitchBlackItem) {
+            console.log('PITCH BLACK data loaded:', {
+                slug: pitchBlackItem.slug,
+                cta_url: pitchBlackItem.cta_url,
+                name: pitchBlackItem.name
+            });
+        }
         
         // Populate tables if we're on comparison pages
         const currentPage = getCurrentPage();

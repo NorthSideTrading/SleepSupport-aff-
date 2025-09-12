@@ -37,6 +37,16 @@
   to = "/sleep/supplements/index.html"
   status = 200
 
+[[redirects]]
+  from = "/pitch-black"
+  to = "/pitch-black/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/pitch-black/"
+  to = "/pitch-black/index.html"
+  status = 200
+
 [[headers]]
   for = "/go/*"
   [headers.values]
