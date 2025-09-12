@@ -73,7 +73,7 @@ app.use((req, res, next) => {
 
   app.get('/go/yu-sleep', (req, res) => {
     const queryString = req.url.includes('?') ? req.url.split('?')[1] : '';
-    const targetUrl = `https://1472fk1mi-gfcr5uzm-7iobsf8.hop.clickbank.net/?tid=ssgyusleep${queryString ? '&' + queryString : ''}`;
+    const targetUrl = `https://60f8ab2glyhh7x6i-ln9oc6zep.hop.clickbank.net/?&tid=tid${queryString ? '&' + queryString : ''}`;
     res.redirect(302, targetUrl);
   });
 
