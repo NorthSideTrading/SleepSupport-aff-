@@ -100,6 +100,10 @@ app.use((req, res, next) => {
     res.sendFile(path.join(rootDir, 'sleep', 'non-pill-solutions', 'index.html'));
   });
 
+  app.get('/sleep-weight-support/', (req, res) => {
+    res.sendFile(path.join(rootDir, 'sleep-weight-support', 'index.html'));
+  });
+
   // Fallback to home page for unmatched routes
   app.get('*', (req, res) => {
     res.sendFile(path.join(rootDir, 'index.html'));
