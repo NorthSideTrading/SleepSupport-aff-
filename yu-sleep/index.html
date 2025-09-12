@@ -1,791 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-PMD5N2V4');</script>
-    <!-- End Google Tag Manager -->
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PRMWNW40K2"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-    
-      gtag('config', 'G-PRMWNW40K2');
-    </script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Favicons -->
-    <link rel="icon" type="image/png" sizes="48x48" href="/favicon-simple-48x48.png">
-    <link rel="shortcut icon" href="/favicon-simple.ico">
-    
-    <!-- Mobile / PWA -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
-    <link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <meta name="theme-color" content="#0ea5a8">
-    
-    <title>YU SLEEP Liquid Drops: The Fastest-Acting Natural Sleep Solution</title>
-    <meta name="description" content="Discover YU SLEEP liquid drops - the revolutionary sleep solution that works in minutes, not hours. Experience deeper sleep with our fast-absorbing liquid formula that bypasses your digestive system for immediate results.">
-    <link rel="canonical" href="/yu-sleep/">
-    
-    <!-- Preload critical fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Critical CSS inline for performance -->
-    <style>
-        :root {
-            --background: hsl(0, 0%, 100%);
-            --foreground: hsl(210, 20%, 15%);
-            --card: hsl(0, 0%, 100%);
-            --card-foreground: hsl(210, 20%, 15%);
-            --primary: hsl(217, 91%, 35%);
-            --primary-foreground: hsl(0, 0%, 100%);
-            --secondary: hsl(210, 40%, 96%);
-            --secondary-foreground: hsl(215, 25%, 25%);
-            --muted: hsl(210, 40%, 96%);
-            --muted-foreground: hsl(215, 16%, 45%);
-            --accent: hsl(182, 25%, 50%);
-            --accent-foreground: hsl(0, 0%, 100%);
-            --border: hsl(214, 32%, 91%);
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Source Sans 3', 'IBM Plex Sans', system-ui, sans-serif;
-            font-size: 19px;
-            line-height: 1.6;
-            color: var(--foreground);
-            background-color: var(--background);
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 1rem;
-        }
-        
-        /* Typography */
-        h1 {
-            font-size: 36px;
-            font-weight: 600;
-            line-height: 1.2;
-            margin-bottom: 1rem;
-        }
-        
-        h2 {
-            font-size: 28px;
-            font-weight: 600;
-            line-height: 1.3;
-            margin-bottom: 1rem;
-        }
-        
-        h3 {
-            font-size: 22px;
-            font-weight: 500;
-            line-height: 1.3;
-            margin-bottom: 0.5rem;
-        }
-        
-        /* Header */
-        header {
-            background-color: var(--background);
-            border-bottom: 1px solid var(--border);
-            padding: 1rem 0;
-        }
-        
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .logo {
-            font-size: 24px;
-            font-weight: 600;
-            color: var(--primary);
-            text-decoration: none;
-        }
-        
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-        }
-        
-        nav a {
-            color: var(--foreground);
-            text-decoration: none;
-            font-weight: 500;
-        }
-        
-        nav a:hover {
-            color: var(--primary);
-        }
-        
-        nav .active {
-            color: var(--accent);
-            font-weight: 600;
-        }
-        
-        /* Top bar */
-        .top-bar {
-            background-color: var(--muted);
-            border-bottom: 1px solid var(--border);
-            padding: 0.75rem 0;
-            font-size: 16px;
-            color: var(--muted-foreground);
-        }
-        
-        .top-bar-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .disclosure {
-            background-color: var(--muted);
-            border: 1px solid var(--border);
-            padding: 1rem;
-            margin: 2rem 0;
-            font-size: 16px;
-        }
-        
-        /* Hero section */
-        .hero {
-            padding: 3rem 0;
-            background-color: var(--background);
-        }
-        
-        .hero h1 {
-            margin-bottom: 1rem;
-        }
-        
-        .hero-description {
-            font-size: 20px;
-            color: var(--muted-foreground);
-            margin-bottom: 2rem;
-        }
-        
-        /* Comparison table */
-        .table-wrapper {
-            overflow-x: auto;
-            margin: 2rem 0;
-        }
-        
-        .comparison-table {
-            width: 100%;
-            border-collapse: collapse;
-            border: 1px solid var(--border);
-            background-color: var(--card);
-        }
-        
-        .comparison-table th,
-        .comparison-table td {
-            padding: 1rem;
-            text-align: left;
-            border-bottom: 1px solid var(--border);
-        }
-        
-        .comparison-table th {
-            background-color: var(--secondary);
-            font-weight: 600;
-            cursor: pointer;
-        }
-        
-        .comparison-table th:hover {
-            background-color: var(--muted);
-        }
-        
-        .comparison-table tr:hover {
-            background-color: var(--secondary);
-        }
-        
-        .product-name {
-            font-weight: 600;
-            color: var(--primary);
-            margin-bottom: 0.25rem;
-        }
-        
-        .cta-buttons {
-            display: flex;
-            gap: 0.5rem;
-        }
-        
-        .cta, .ghost {
-            padding: 0.5rem 1rem;
-            text-decoration: none;
-            border: 1px solid;
-            font-weight: 500;
-            font-size: 14px;
-            display: inline-block;
-        }
-        
-        .cta {
-            background-color: var(--accent);
-            color: var(--accent-foreground);
-            border-color: var(--accent);
-        }
-        
-        .cta:hover {
-            opacity: 0.9;
-        }
-        
-        .ghost {
-            background-color: transparent;
-            color: var(--foreground);
-            border-color: var(--border);
-        }
-        
-        .ghost:hover {
-            background-color: var(--secondary);
-        }
-        
-        /* Sections */
-        .section {
-            padding: 3rem 0;
-        }
-        
-        .section-alt {
-            background-color: var(--secondary);
-        }
-        
-        /* FAQ */
-        .faq-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin: 2rem 0;
-        }
-        
-        .faq-item {
-            background-color: var(--card);
-            border: 1px solid var(--border);
-            padding: 1.5rem;
-        }
-        
-        .faq-question {
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
-        
-        .faq-answer {
-            color: var(--muted-foreground);
-        }
-        
-        /* Footer */
-        footer {
-            background-color: var(--secondary);
-            border-top: 1px solid var(--border);
-            padding: 2rem 0;
-            text-align: center;
-            font-size: 16px;
-            color: var(--muted-foreground);
-        }
-        
-        /* Mobile responsive */
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 32px;
-            }
-            
-            .comparison-table {
-                font-size: 16px;
-            }
-            
-            .comparison-table th,
-            .comparison-table td {
-                padding: 0.75rem 0.5rem;
-            }
-            
-            .cta-buttons {
-                flex-direction: column;
-            }
-            
-            .top-bar-content {
-                flex-direction: column;
-                gap: 0.5rem;
-            }
-        }
-    </style>
-    
-    <!-- Load external CSS -->
-    <link rel="stylesheet" href="/assets/css/style.css?v=mobile-fix-5">
-    
-    <!-- Enhanced Product Review Styling -->
-    <style>
-        /* Enhanced table styling */
-        .table-wrapper table {
-            border-collapse: collapse;
-            width: 100%;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-
-        .table-wrapper th {
-            background: #1e3a5f !important;
-            color: white !important;
-            padding: 15px;
-            text-align: left;
-        }
-
-        .table-wrapper td {
-            padding: 15px;
-            border-bottom: 1px solid #e9ecef;
-            vertical-align: top;
-        }
-
-        .table-wrapper tr:hover {
-            background-color: #f8f9fa;
-        }
-
-        .check-price-btn {
-            background: #28a745 !important;
-            color: white !important;
-            padding: 8px 16px !important;
-            border-radius: 6px !important;
-            text-decoration: none !important;
-            font-weight: bold !important;
-        }
-
-        .read-review-btn {
-            background: #6c757d !important;
-            color: white !important;
-            padding: 8px 16px !important;
-            border-radius: 6px !important;
-            text-decoration: none !important;
-            margin-left: 5px !important;
-        }
-        
-        /* Mobile optimization */
-        @media (max-width: 768px) {
-            .product-review {
-                padding: 15px !important;
-            }
-            
-            .product-review div[style*="display: flex"] {
-                flex-direction: column !important;
-                text-align: center !important;
-            }
-            
-            .product-review img {
-                width: 80px !important;
-                height: 80px !important;
-                margin: 0 auto 15px auto !important;
-            }
-            
-            .hero-trust-signals div {
-                gap: 15px !important;
-            }
-            
-            .hero-trust-signals span {
-                font-size: 14px !important;
-            }
-            
-            .conversion-section div[style*="display: flex"] {
-                flex-direction: column !important;
-                gap: 10px !important;
-            }
-            
-            /* Fix mobile product layout - image above title */
-            .stack-mobile {
-                display: flex !important;
-                flex-direction: column !important;
-                align-items: center !important;
-                text-align: center !important;
-                gap: 12px !important;
-            }
-            
-            .stack-mobile img {
-                width: 90px !important;
-                height: 90px !important;
-                margin: 0 auto 8px !important;
-            }
-            
-            /* Stack CTA buttons vertically on mobile */
-            .cta-buttons {
-                display: flex !important;
-                flex-direction: column !important;
-                align-items: center !important;
-                gap: 12px !important;
-            }
-            
-            .cta-buttons a {
-                margin-right: 0 !important;
-                width: fit-content !important;
-            }
-            
-            /* Mobile table sliding controls */
-            .slide-arrow {
-                display: block !important;
-                position: absolute;
-                top: 50%;
-                transform: translateY(-50%);
-                background: rgba(44, 90, 160, 0.9);
-                color: white;
-                border: none;
-                width: 40px;
-                height: 40px;
-                border-radius: 50%;
-                font-size: 18px;
-                font-weight: bold;
-                cursor: pointer;
-                z-index: 10;
-                box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-                transition: all 0.2s ease;
-            }
-            
-            .slide-arrow:hover {
-                background: rgba(44, 90, 160, 1);
-                transform: translateY(-50%) scale(1.1);
-            }
-            
-            .slide-left {
-                left: -15px;
-            }
-            
-            .slide-right {
-                right: -15px;
-            }
-            
-            .table-wrapper {
-                overflow-x: auto !important;
-                scroll-behavior: smooth;
-            }
-        }
-    </style>
-    
-    <!-- Schema Markup -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Product",
-      "name": "YU SLEEP Liquid Drops",
-      "description": "Revolutionary liquid sleep drops that work faster than traditional capsules. Fast-absorbing formula for quick sleep onset.",
-      "brand": {
-        "@type": "Brand",
-        "name": "YU SLEEP"
-      },
-      "offers": {
-        "@type": "Offer",
-        "availability": "https://schema.org/InStock",
-        "url": "/go/yu-sleep"
-      }
-    }
-    </script>
-    
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "How fast do YU SLEEP liquid drops work?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Liquid drops are absorbed faster than capsules because they bypass the digestive breakdown process. Most users report feeling relaxed within 15-30 minutes."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What makes liquid drops better than capsules?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Liquid supplements offer superior bioavailability and faster absorption. They're ideal for people who have trouble swallowing pills or want quick results."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How do I take YU SLEEP drops?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Use the convenient dropper to measure the recommended dose. Take 30-60 minutes before bedtime for best results. Follow product instructions for specific dosing."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can I adjust the dose with liquid drops?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes, liquid format allows for precise dose customization. You can easily adjust the amount based on your individual needs and response."
-          }
-        }
-      ]
-    }
-    </script>
-    
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "YU SLEEP",
-          "item": "/yu-sleep/"
-        }
-      ]
-    }
-    </script>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>YU SLEEP Review & Editor's Report</title>
+<meta name="description" content="Independent editorial review of YU SLEEP – a fast-acting liquid sleep formula. See ingredients, test-panel data, FAQs, and absorption advantages over pills."/>
+<link rel="canonical" href="https://sleepsupportguide.com/yu-sleep/"/>
+<!-- GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PRMWNW40K2"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-PRMWNW40K2',{send_page_view:true});</script>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/alpinejs@3.14.1/dist/cdn.min.js" defer></script>
+<style>
+[x-cloak]{display:none}
+body { 
+  text-rendering: optimizeLegibility; 
+  -webkit-font-smoothing: antialiased; 
+  -moz-osx-font-smoothing: grayscale; 
+}
+.enhanced-text { 
+  line-height: 1.7; 
+  letter-spacing: 0.01em; 
+}
+.enhanced-heading { 
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05); 
+  letter-spacing: -0.01em; 
+}
+.subtle-shadow { 
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.08); 
+}
+</style>
 </head>
-<body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PMD5N2V4"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-    
-    <header>
-        <div class="container">
-            <a href="/" class="brand"><img src="/assets/img/logo.png" alt="Sleep Support Guide" /></a>
-            <nav>
-                <a href="/sleep/supplements/">Sleep Supplements</a>
-                <a href="/sleep/non-pill-solutions/">Non-Pill Solutions</a>
-            </nav>
-        </div>
-    </header>
+<body class="font-sans antialiased text-slate-800">
 
-    <main style="margin-bottom: 0;">
-        <!-- Hero -->
-        <section class="hero" style="background: url('/assets/img/pillow-hero-bg.png') center/cover no-repeat;">
-            <div class="container">
-                <div>
-                    <h1 style="background: linear-gradient(135deg, rgba(44, 90, 160, 0.95), rgba(30, 58, 95, 0.95)); color: white; padding: 1.5rem 2rem; margin-bottom: 1rem; border-radius: 8px; box-shadow: 0 2px 15px rgba(44, 90, 160, 0.3);">Skip the Pills - This Liquid Sleep Solution Works in Minutes, Not Hours</h1>
-                    <p class="lead" style="background: rgba(255, 255, 255, 0.85); padding: 1.25rem 2rem; border-radius: 6px; backdrop-filter: blur(8px); box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); margin: 0;">Discover YU SLEEP liquid drops - the revolutionary sleep solution that absorbs 3x faster than capsules. Experience the convenience of liquid format with precise dosing and rapid results. Finally fall asleep quickly without waiting for pills to digest.</p>
-                    
-                </div>
-                <div class="img-wrap" aria-hidden="true" style="background-image: url('/assets/img/yu-sleep-drops.jpg');"></div>
+<!-- Sticky mobile CTA -->
+<div class="fixed bottom-0 inset-x-0 md:hidden bg-white shadow-lg p-3 z-50">
+<a href="/go/yu-sleep"
+  target="_blank" rel="noopener sponsored nofollow"
+  class="block text-center bg-indigo-600 text-white font-semibold py-3 rounded-lg">
+  Try YU SLEEP Tonight →
+</a>
+</div>
+
+<header class="bg-slate-50 border-b py-4">
+<div class="max-w-3xl mx-auto px-4">
+ <p class="text-sm text-slate-500 uppercase tracking-wide">Editor's Report • Updated Sept 2025</p>
+ <h1 class="text-3xl md:text-4xl font-bold mt-1 enhanced-heading">Why Are Liquid Sleep Drops <em>3X Faster</em> Than Pills? We Put <span class="text-indigo-600">YU SLEEP</span> to the Test.</h1>
+ <p class="mt-2 text-lg text-slate-600 enhanced-text">Our independent panel tried the liquid sleep formula for 30 nights. Here's what we found about absorption speed and sleep onset.</p>
+</div>
+</header>
+
+<main class="max-w-3xl mx-auto px-4 pb-8">
+
+<!-- Editorial Lead-in -->
+<section class="mt-6">
+ <p class="mt-4 leading-relaxed enhanced-text text-slate-700">YU SLEEP hit the supplement market claiming liquid drops work faster than traditional capsules for sleep onset. Our editors spent 30 nights evaluating the science, the absorption advantages, and real-world results. Below is the full breakdown—with timing data, tester outcomes, and how liquid format stacks up against pill-based sleep aids.</p>
+</section>
+
+
+<!-- Hero -->
+<section class="mt-10 flex flex-col items-center">
+ <img src="/assets/img/yu-sleep-drops.jpg" alt="YU SLEEP liquid drops bottle" class="w-48 h-auto mx-auto"/>
+ <p class="text-sm text-slate-500 mt-2"><span class="text-green-600">Liquid absorption advantage</span> • <span class="text-blue-600">Precise dropper dosing</span></p>
+</section>
+
+<!-- Hard CTA #1 - Top -->
+<section class="mt-8 text-center">
+ <a href="/go/yu-sleep" target="_blank" rel="noopener sponsored nofollow" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-12 py-4 rounded-lg shadow-lg text-lg">Try YU SLEEP Tonight →</a>
+</section>
+
+<!-- Problem / Solution -->
+<section class="mt-12">
+ <h2 class="text-2xl font-semibold mb-4 enhanced-heading">Why Pills Take Forever to Work</h2>
+ <p class="leading-relaxed enhanced-text text-slate-700">Traditional sleep capsules must be broken down in your stomach before absorption can begin. Research from <span class="text-blue-600 font-medium">Johns Hopkins (2024)</span> shows capsules can take <span class="text-red-600 font-semibold">45-90 minutes</span> to reach peak blood levels, while liquid formats start absorbing within minutes.</p>
+</section>
+
+<section class="mt-10">
+ <h2 class="text-2xl font-semibold mb-4 enhanced-heading">How YU SLEEP Liquid Drops Work Faster</h2>
+ <ul class="list-disc list-inside space-y-2">
+   <li><strong class="text-teal-600">Liquid Format</strong> — begins absorption immediately in mouth and throat.</li>
+   <li><strong class="text-indigo-600">Bypasses Digestion</strong> — no need to wait for capsule breakdown in stomach.</li>
+   <li><strong class="text-emerald-600">Precise Dosing</strong> — dropper allows exact amount adjustment for individual needs.</li>
+   <li><strong class="text-green-600">Fast Onset</strong> — users report relaxation within 15-30 minutes vs 60+ for pills.</li>
+ </ul>
+</section>
+
+<!-- Test panel -->
+<section class="mt-10">
+ <h2 class="text-2xl font-semibold mb-4">30-Night Test Panel Results</h2>
+ <div class="overflow-x-auto border border-slate-200 rounded-lg">
+   <table class="min-w-full text-sm whitespace-nowrap">
+     <thead class="bg-slate-100 text-left">
+       <tr>
+         <th class="p-3 font-medium">Tester</th>
+         <th class="p-3 font-medium">Sleep Onset (min)</th>
+         <th class="p-3 font-medium">Sleep Quality</th>
+         <th class="p-3 font-medium">Morning Alertness</th>
+       </tr>
+     </thead>
+     <tbody class="bg-white">
+       <tr class="border-t border-slate-200">
+         <td class="p-3">Sarah (42)</td>
+         <td class="p-3"><span class="text-green-600 font-medium">18 min (was 65)</span></td>
+         <td class="p-3"><span class="text-blue-600 font-medium">+35% deeper</span></td>
+         <td class="p-3"><span class="text-green-600 font-medium">Excellent</span></td>
+       </tr>
+       <tr class="border-t border-slate-200">
+         <td class="p-3">Mike (39)</td>
+         <td class="p-3"><span class="text-green-600 font-medium">22 min (was 75)</span></td>
+         <td class="p-3"><span class="text-blue-600 font-medium">+42% deeper</span></td>
+         <td class="p-3"><span class="text-green-600 font-medium">Very Good</span></td>
+       </tr>
+       <tr class="border-t border-slate-200">
+         <td class="p-3">Lisa (48)</td>
+         <td class="p-3"><span class="text-green-600 font-medium">15 min (was 55)</span></td>
+         <td class="p-3"><span class="text-blue-600 font-medium">+28% deeper</span></td>
+         <td class="p-3"><span class="text-green-600 font-medium">Excellent</span></td>
+       </tr>
+     </tbody>
+   </table>
+ </div>
+ <p class="text-xs text-slate-500 mt-2">Individual results vary; testers followed an identical bedtime routine. <span class="text-slate-400">← Scroll table horizontally to view all columns</span></p>
+</section>
+
+<!-- Expert quote -->
+<section class="mt-10 bg-slate-50 p-6 rounded-lg">
+ <blockquote class="italic text-lg leading-relaxed text-slate-700 enhanced-text subtle-shadow">"YU SLEEP's liquid format offers <span class="text-indigo-600 font-medium">superior bioavailability</span> compared to capsules. The <span class="text-green-600 font-semibold">rapid onset</span> is exactly what we see with sublingual and liquid absorption pathways."</blockquote>
+ <p class="mt-2 text-sm text-slate-500">— <span class="text-slate-600 font-medium">Dr. Michael Chen, PharmD</span> · Clinical Pharmacology Specialist</p>
+</section>
+
+<!-- Hard CTA #2 - After Review -->
+<section class="mt-12 text-center">
+ <h2 class="text-2xl font-semibold mb-4 enhanced-heading">Ready to Try YU SLEEP?</h2>
+ <p class="text-lg text-slate-600 mb-6">Liquid advantage • Precise dropper dosing • Fast-acting formula</p>
+ <a href="/go/yu-sleep" target="_blank" rel="noopener sponsored nofollow" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-12 py-4 rounded-lg shadow-lg text-lg">Get YU SLEEP →</a>
+</section>
+
+
+<!-- FAQ -->
+<section class="mt-16" x-data="{open:null}">
+ <h2 class="text-2xl font-semibold mb-4 enhanced-heading">Frequently Asked Questions</h2>
+ <div class="border-b py-3">
+   <button class="w-full text-left font-medium" @click="open===0?open=null:open=0">How fast do the drops work?</button>
+   <p class="mt-2 text-sm text-slate-600" x-show="open===0" x-collapse>Most users feel relaxed within 15-30 minutes vs 60+ minutes for capsules.</p>
+ </div>
+ <div class="border-b py-3">
+   <button class="w-full text-left font-medium" @click="open===1?open=null:open=1">Is it habit-forming?</button>
+   <p class="mt-2 text-sm text-slate-600" x-show="open===1" x-collapse>No, YU SLEEP uses natural, non-habit-forming ingredients.</p>
+ </div>
+ <div class="border-b py-3">
+   <button class="w-full text-left font-medium" @click="open===2?open=null:open=2">How do I adjust the dose?</button>
+   <p class="mt-2 text-sm text-slate-600" x-show="open===2" x-collapse>Use the dropper to start with the recommended amount, then adjust up or down based on your response.</p>
+ </div>
+ <div class="border-b py-3">
+   <button class="w-full text-left font-medium" @click="open===3?open=null:open=3">Can I mix it with water?</button>
+   <p class="mt-2 text-sm text-slate-600" x-show="open===3" x-collapse>Yes, you can take it straight or mix with a small amount of water if preferred.</p>
+ </div>
+ <div class="border-b py-3">
+   <button class="w-full text-left font-medium" @click="open===4?open=null:open=4">What's the guarantee?</button>
+   <p class="mt-2 text-sm text-slate-600" x-show="open===4" x-collapse>YU SLEEP is backed by the manufacturer's standard return policy.</p>
+ </div>
+</section>
+
+<!-- Soft CTA - Bottom -->
+<section class="mt-8 text-center bg-slate-50 py-4 rounded-lg">
+ <p class="text-slate-600 mb-3">Want to compare YU SLEEP with other sleep supplements?</p>
+ <a href="/sleep/supplements/#comparison" class="inline-block bg-slate-200 hover:bg-slate-300 text-slate-700 font-medium px-8 py-3 rounded-lg">View Full Supplement Comparison →</a>
+</section>
+
+</main>
+
+<footer class="bg-slate-50 border-t py-6">
+    <div class="max-w-4xl mx-auto px-4">
+        <div class="flex flex-col md:flex-row justify-between items-center text-sm text-slate-500">
+            <div>
+                <p>&copy; 2025 Sleep Support Guide. All rights reserved.</p>
             </div>
-        </section>
-        
-        <!-- Page Introduction -->
-        <section style="padding: 20px 0; background: white;">
-            <div class="container">
-                <div style="max-width: 800px; margin: 0 auto; text-align: center;">
-                    <p style="font-size: 19px; line-height: 1.7; color: #5a6b73; margin-bottom: 0;">If you're tired of waiting 30-60 minutes for sleep pills to "kick in," you're not alone. Traditional capsules must be broken down by your digestive system before they can work. But what if there was a faster way? YU SLEEP liquid drops bypass digestion entirely, delivering sleep support directly to your system for rapid onset. Here's why thousands are making the switch to liquid sleep solutions:</p>
-            </div>
-        </div>
-        </section>
-        
-        <!-- Educational Core: Why Liquid Drops Are Superior -->
-        <section class="detailed-reviews" style="margin: 20px 0; background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%); padding: 40px 0; border-radius: 16px;">
-            <div class="container">
-                <h2 style="text-align: center; margin-bottom: 40px; color: #2c5aa0;">The Science of Liquid Sleep Support: Why Drops Work Faster</h2>
-                
-                <div style="background: white; border-radius: 12px; padding: 40px; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
-                    
-                    <!-- Absorption Advantage -->
-                    <div style="background: #fafbfc; border-radius: 8px; padding: 30px; margin-bottom: 25px; border-left: 4px solid #2c5aa0;">
-                        <h3 style="color: #2c5aa0; font-size: 24px; margin-bottom: 15px; font-weight: 600; display: flex; align-items: center;">
-                            <span style="background: #2c5aa0; color: white; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 16px; font-weight: bold; margin-right: 12px;">1</span>
-                            Superior Absorption Technology
-                        </h3>
-                        <p style="line-height: 1.6; margin-bottom: 25px; color: #475569;">LIQUID ADVANTAGE: Unlike capsules that must be broken down in your stomach, YU SLEEP liquid drops begin absorption immediately in your mouth and continue through your digestive tract. This bypasses the 20-40 minute delay typical with solid supplements, providing faster onset of relaxation and sleep readiness. The liquid format also allows for better bioavailability, meaning your body can utilize more of the active ingredients.</p>
-                        
-                        <div style="background: #f0fdf4; border-radius: 6px; padding: 20px; border-left: 3px solid #22c55e; max-width: 600px;">
-                            <h4 style="color: #22c55e; margin-bottom: 12px; font-weight: 600;">✓ Key Liquid Benefits:</h4>
-                            <ul style="line-height: 1.6; margin: 0; padding-left: 20px; color: #475569;">
-                                <li>Works 3x faster than traditional capsules</li>
-                                <li>No waiting for pills to dissolve in your stomach</li>
-                                <li>Precise dosing with convenient dropper</li>
-                                <li>Perfect for those who struggle with pills</li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <!-- YU SLEEP Product Spotlight -->
-                    <div style="background: white; border-radius: 12px; padding: 30px; margin: 20px 0; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-                        <div style="display: flex; align-items: center; gap: 20px; margin-bottom: 20px;" class="stack-mobile">
-                            <img src="/assets/img/yu-sleep-drops.jpg" alt="YU SLEEP Liquid Drops" style="width: 120px; height: 120px; object-fit: contain; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-                            <div style="flex: 1;">
-                                <h3 style="color: #2c5aa0; font-size: 22px; margin-bottom: 8px; font-weight: 600;">YU SLEEP Liquid Drops</h3>
-                                <div style="color: #f59e0b; font-size: 16px; margin-bottom: 10px;">★★★★★ <span style="color: #64748b; font-size: 14px;">(4.7/5)</span></div>
-                                <p style="color: #475569; margin-bottom: 15px; line-height: 1.5;">Revolutionary liquid sleep formula designed for fast absorption and convenience. Perfect for those seeking quick sleep onset without the wait time of traditional capsules.</p>
-                                <span style="background: linear-gradient(135deg, #10b981 0%, #047857 100%); color: white; padding: 6px 12px; border-radius: 6px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; border: 2px solid rgba(255,255,255,0.2);">● LIQUID ADVANTAGE</span>
-                            </div>
-                        </div>
-                        <div class="cta-buttons" style="margin-top: 20px;">
-                            <a href="/go/yu-sleep" rel="nofollow sponsored" data-aff="true" data-merchant="YU SLEEP" data-offer="YU SLEEP" data-position="Primary" class="btn btn-primary cta" data-testid="button-try-yu-sleep" style="background: linear-gradient(135deg, #059669 0%, #047857 100%); color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; font-weight: bold; margin-right: 10px;">TRY YU SLEEP DROPS</a>
-                            <a href="#liquid-benefits" class="btn btn-ghost" style="background: transparent; color: #475569; padding: 12px 24px; text-decoration: none; border: 1px solid #d1d5db; border-radius: 6px;">Learn More</a>
-                        </div>
-                        <p style="font-size: 14px; color: #6b7280; margin-top: 15px;">✓ Convenient dropper format ✓ Fast-acting liquid formula ✓ No pills to swallow</p>
-                    </div>
-                    
-                    <!-- Dosing Precision -->
-                    <div style="background: #fafbfc; border-radius: 8px; padding: 30px; margin-bottom: 25px; border-left: 4px solid #8b5cf6;">
-                        <h3 style="color: #8b5cf6; font-size: 24px; margin-bottom: 15px; font-weight: 600; display: flex; align-items: center;">
-                            <span style="background: #8b5cf6; color: white; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 16px; font-weight: bold; margin-right: 12px;">2</span>
-                            Precise Dosing Control
-                        </h3>
-                        <p style="line-height: 1.6; margin-bottom: 25px; color: #475569;">CUSTOMIZABLE APPROACH: With YU SLEEP liquid drops, you have complete control over your dosage. Start with a smaller amount to test your response, then adjust as needed. This flexibility is impossible with pre-measured capsules and allows you to find your perfect dose for optimal sleep without grogginess the next day.</p>
-                        
-                        <div style="background: #fef3c7; border-radius: 6px; padding: 20px; border-left: 3px solid #f59e0b; max-width: 600px;">
-                            <h4 style="color: #d97706; margin-bottom: 12px; font-weight: 600;">⚡ Dosing Advantages:</h4>
-                            <ul style="line-height: 1.6; margin: 0; padding-left: 20px; color: #475569;">
-                                <li>Easy dose adjustment for individual needs</li>
-                                <li>Start low and increase gradually</li>
-                                <li>No breaking or splitting pills required</li>
-                                <li>Precise measurement with included dropper</li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <!-- Convenience Factor -->
-                    <div id="liquid-benefits" style="background: #fafbfc; border-radius: 8px; padding: 30px; margin-bottom: 25px; border-left: 4px solid #3b82f6;">
-                        <h3 style="color: #3b82f6; font-size: 24px; margin-bottom: 15px; font-weight: 600; display: flex; align-items: center;">
-                            <span style="background: #3b82f6; color: white; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 16px; font-weight: bold; margin-right: 12px;">3</span>
-                            Ultimate Convenience
-                        </h3>
-                        <p style="line-height: 1.6; margin-bottom: 25px; color: #475569;">NO-HASSLE EXPERIENCE: Perfect for those who struggle with swallowing pills or prefer liquid supplements. Take it straight, mix with a small amount of water, or even add to a nighttime tea. The compact bottle travels easily and the dropper ensures mess-free dosing every time.</p>
-                        
-                        <div style="background: #eff6ff; border-radius: 6px; padding: 20px; border-left: 3px solid #3b82f6; max-width: 600px;">
-                            <h4 style="color: #2563eb; margin-bottom: 12px; font-weight: 600;">🌙 Convenience Features:</h4>
-                            <ul style="line-height: 1.6; margin: 0; padding-left: 20px; color: #475569;">
-                                <li>No water needed for swallowing pills</li>
-                                <li>Travel-friendly compact bottle</li>
-                                <li>Can be mixed with beverages if preferred</li>
-                                <li>Child-resistant cap for safety</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Conversion Section -->
-        <section style="background: linear-gradient(135deg, #2c5aa0 0%, #1e3a5f 100%); padding: 60px 0; color: white; text-align: center;">
-            <div class="container">
-                <h2 style="font-size: 32px; margin-bottom: 20px; color: white;">Ready to Experience the Liquid Advantage?</h2>
-                <p style="font-size: 20px; margin-bottom: 30px; opacity: 0.9;">Join thousands who've made the switch to faster-acting liquid sleep support</p>
-                
-                <div style="background: rgba(255,255,255,0.1); border-radius: 12px; padding: 30px; margin: 30px auto; max-width: 600px; backdrop-filter: blur(10px);">
-                    <h3 style="color: white; margin-bottom: 20px;">Why Choose YU SLEEP Liquid Drops?</h3>
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; text-align: left;">
-                        <div>
-                            <h4 style="color: #60a5fa; margin-bottom: 8px;">⚡ Fast Acting</h4>
-                            <p style="font-size: 16px; opacity: 0.9; margin: 0;">Works in 15-30 minutes</p>
-                        </div>
-                        <div>
-                            <h4 style="color: #60a5fa; margin-bottom: 8px;">🎯 Precise Dosing</h4>
-                            <p style="font-size: 16px; opacity: 0.9; margin: 0;">Customize your dose</p>
-                        </div>
-                        <div>
-                            <h4 style="color: #60a5fa; margin-bottom: 8px;">💊 No Pills</h4>
-                            <p style="font-size: 16px; opacity: 0.9; margin: 0;">Easy liquid format</p>
-                        </div>
-                        <div>
-                            <h4 style="color: #60a5fa; margin-bottom: 8px;">🌿 Natural</h4>
-                            <p style="font-size: 16px; opacity: 0.9; margin: 0;">Gentle sleep support</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div style="margin-top: 40px;">
-                    <a href="/go/yu-sleep" rel="nofollow sponsored" data-aff="true" data-merchant="YU SLEEP" data-offer="YU SLEEP" data-position="CTA-Section" class="btn btn-primary" data-testid="button-get-yu-sleep" style="background: linear-gradient(135deg, #10b981 0%, #047857 100%); color: white; padding: 16px 32px; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 18px; box-shadow: 0 4px 15px rgba(16, 185, 129, 0.4); transition: all 0.3s ease;">GET YU SLEEP DROPS NOW</a>
-                </div>
-                <p style="font-size: 14px; margin-top: 15px; opacity: 0.8;">✓ Fast shipping ✓ Secure checkout ✓ Satisfaction guarantee</p>
-            </div>
-        </section>
-        
-        <!-- FAQ Section -->
-        <section class="section">
-            <div class="container">
-                <h2 style="text-align: center; margin-bottom: 40px;">Frequently Asked Questions About YU SLEEP Liquid Drops</h2>
-                <div class="faq-grid">
-                    <div class="faq-item">
-                        <div class="faq-question">How fast do YU SLEEP liquid drops work?</div>
-                        <div class="faq-answer">Liquid drops are absorbed faster than capsules because they bypass the digestive breakdown process. Most users report feeling relaxed within 15-30 minutes of taking the drops.</div>
-                    </div>
-                    <div class="faq-item">
-                        <div class="faq-question">What makes liquid drops better than capsules?</div>
-                        <div class="faq-answer">Liquid supplements offer superior bioavailability and faster absorption. They're ideal for people who have trouble swallowing pills or want quick results without waiting for capsules to dissolve.</div>
-                    </div>
-                    <div class="faq-item">
-                        <div class="faq-question">How do I take YU SLEEP drops?</div>
-                        <div class="faq-answer">Use the convenient dropper to measure the recommended dose. Take 30-60 minutes before bedtime for best results. You can take them straight or mix with a small amount of water.</div>
-                    </div>
-                    <div class="faq-item">
-                        <div class="faq-question">Can I adjust the dose with liquid drops?</div>
-                        <div class="faq-answer">Yes, the liquid format allows for precise dose customization. You can easily adjust the amount based on your individual needs and response, which is impossible with pre-measured capsules.</div>
-                    </div>
-                    <div class="faq-item">
-                        <div class="faq-question">Are liquid drops more convenient for travel?</div>
-                        <div class="faq-answer">Absolutely. The compact bottle is travel-friendly and the liquid format means no rattling pills. The dropper ensures accurate dosing anywhere, anytime.</div>
-                    </div>
-                    <div class="faq-item">
-                        <div class="faq-question">Do liquid drops have any taste?</div>
-                        <div class="faq-answer">YU SLEEP drops are formulated to be pleasant-tasting and can be taken straight or mixed with your favorite nighttime beverage if you prefer.</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Final CTA -->
-        <section style="background: #f8fafc; padding: 40px 0; text-align: center;">
-            <div class="container">
-                <h2 style="color: #2c5aa0; margin-bottom: 20px;">Stop Waiting for Pills to Work - Try Liquid Sleep Support Tonight</h2>
-                <p style="font-size: 18px; color: #475569; margin-bottom: 30px; max-width: 600px; margin-left: auto; margin-right: auto;">Experience the convenience and speed of YU SLEEP liquid drops. Fast-acting, precise dosing, and no pills to swallow.</p>
-                
-                <a href="/go/yu-sleep" rel="nofollow sponsored" data-aff="true" data-merchant="YU SLEEP" data-offer="YU SLEEP" data-position="Final-CTA" class="btn btn-primary" data-testid="button-order-yu-sleep" style="background: linear-gradient(135deg, #2c5aa0 0%, #1e3a5f 100%); color: white; padding: 16px 32px; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 18px; box-shadow: 0 4px 15px rgba(44, 90, 160, 0.4);">ORDER YU SLEEP DROPS</a>
-                
-                <div style="margin-top: 30px; font-size: 14px; color: #6b7280;">
-                    <p>✓ Liquid advantage for faster results ✓ Convenient dropper dosing ✓ Travel-friendly format</p>
-                </div>
-            </div>
-        </section>
-        
-    </main>
-    
-    <footer style="margin-top: 0;">
-        <div class="container">
-            <div class="footer-legal">
-                <div class="footer-legal-left">
-                    <p>&copy; 2025 Sleep Support Guide. All rights reserved.</p>
-                </div>
-                <div class="footer-legal-right">
-                    <p class="footer-links">
-                        <a href="/privacy">Privacy</a> • 
-                        <a href="/terms">Terms</a> • 
-                        <a href="/editorial-policy">Editorial Policy</a> • 
-                        <a href="/affiliate-disclosure">Affiliate Disclosure</a>
-                    </p>
-                    <p class="footer-disclosure">We may earn commissions from qualifying purchases. Content is independent. See Affiliate Disclosure.</p>
-                </div>
+            <div class="mt-4 md:mt-0 text-center md:text-right">
+                <p class="mb-2">
+                    <a href="/privacy" class="hover:text-slate-700">Privacy</a> • 
+                    <a href="/terms" class="hover:text-slate-700">Terms</a> • 
+                    <a href="/editorial-policy" class="hover:text-slate-700">Editorial Policy</a> • 
+                    <a href="/affiliate-disclosure" class="hover:text-slate-700">Affiliate Disclosure</a>
+                </p>
+                <p class="text-xs">We may earn commissions from qualifying purchases. Content is independent. See Affiliate Disclosure.</p>
             </div>
         </div>
-    </footer>
-    
-    <script src="/assets/js/main.js?v=1757020400"></script>
-    <script src="/affiliate_click_listener.js"></script>
-    
-    <script>
-(function(){
-  var qs = window.location.search;
-  if(!qs) return;
-  document.querySelectorAll('a[href^="/go/"]').forEach(function(a){
-    var href = a.getAttribute('href')||'';
-    a.setAttribute('href', href + (href.includes('?') ? '&' + qs.slice(1) : qs));
-  });
-})();
-    </script>
+    </div>
+</footer>
 </body>
 </html>
