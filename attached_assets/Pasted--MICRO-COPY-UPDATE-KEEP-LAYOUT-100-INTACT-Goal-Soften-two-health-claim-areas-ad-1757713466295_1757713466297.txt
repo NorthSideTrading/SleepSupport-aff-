@@ -1,0 +1,43 @@
+### MICRO COPY UPDATE – KEEP LAYOUT 100 % INTACT ###
+
+Goal  
+— Soften two health-claim areas + add standard FDA disclaimer.  
+— Text should render subtle: Tailwind classes `text-xs text-slate-500`.  
+— **Do not modify CTA buttons, images, GA4, HopLinks, or page spacing.**
+
+––––– EDIT DETAILS –––––
+
+1. **/sleep-weight-support/index.html**  
+   a) **Headline tweak**  
+      Replace current H1 text **“Can Your Body Burn Fat While You Sleep? We Put Sleeplean to the Test.”** with:  
+      ```
+      Supports Night-Time Metabolic Rate While You Sleep — Sleeplean Under the Microscope
+      ```  
+   b) **Panel table caption**  
+      After the results table `<p class="text-xs ...">` line, append:  
+      ```
+      <span class="text-xs text-slate-500">Small internal pilot; individual outcomes are not guaranteed.</span>
+      ```
+
+2. **/pitch-black/index.html**  
+   a) **Ingredient claim**  
+      Find the line that reads **“support natural testosterone production”** and change to:  
+      ```
+      help maintain normal testosterone levels*
+      ```  
+      Add an asterisk.  
+   b) **Footnote citation block** (right below that section, same paragraph):  
+      ```
+      <p class="text-xs text-slate-500 mt-2">
+        *Supported by a placebo-controlled zinc study – <a href="https://pubmed.ncbi.nlm.nih.gov/8875519/" target="_blank" rel="noopener">Beydoun 1996</a>.
+      </p>
+      ```
+
+3. **FDA / medical disclaimer** (all three LPs: sleep-weight-support, yu-sleep, pitch-black)  
+   — Insert just **above the FAQ section** on each page:  
+<p class="text-xs text-slate-500 mt-10"> These statements have not been evaluated by the Food & Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease. </p> ```
+Styling / structure notes
+• Use existing Tailwind utility classes; no new CSS files.
+• Do not add or remove div wrappers—just text nodes.
+• Ensure headline font size class stays unchanged (text-3xl md:text-4xl). Only swap the inner text.
+• All new links must include target="_blank" & rel="noopener".
