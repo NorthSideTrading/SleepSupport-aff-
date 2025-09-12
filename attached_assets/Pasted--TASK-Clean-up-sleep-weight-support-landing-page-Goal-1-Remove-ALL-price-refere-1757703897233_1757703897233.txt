@@ -1,0 +1,54 @@
+### TASK – Clean up /sleep-weight-support/ landing page ###
+
+🔑 Goal  
+1. Remove ALL price references (“Retail $149”, “Save 54 %”, etc.).  
+2. Strengthen the page as an *editorial review* funnel: • story-driven copy • soft CTA to comparison table • exactly TWO hard CTAs to Sleeplean HopLink.  
+3. Keep styling consistent with current site (Tailwind).  
+4. Page must render correctly on mobile + desktop (no collapsed headline / no huge whitespace at top).
+
+––––––––––––––––––––––––––––––––
+STEP-BY-STEP CHANGES
+––––––––––––––––––––––––––––––––
+
+1. **Delete pricing / “Launch Offer” block**  
+   - Remove the entire `<section>` that starts with `<h2>Launch Offer — Save` and the sticky bar line that says “Save 54 %” (if present).  
+   - Keep the hard CTA button but move it into a neutral “Ready to try Sleeplean?” section.
+
+2. **Add lead-in editorial paragraphs** immediately below the headline:  
+<p class="mt-4 leading-relaxed"> Sleeplean hit the supplement market claiming to boost resting metabolic rate while improving deep-sleep quality. Our editors spent 30 nights evaluating the science, the ingredient panel, and real-world results. Below is the full breakdown—with lab notes, tester outcomes, and how the formula stacks up against other night-time metabolism aids. </p> ```
+Soft CTA (comparison link)
+
+Already exists (/sleep/supplements#comparison) – move it to just before the FAQs and style as a grey button (bg-slate-200).
+
+Hard CTAs
+
+One button under the hero (“Try Sleeplean Tonight →”)
+
+One button just above the FAQ (“Get Sleeplean →”)
+
+Both use the direct HopLink:
+
+perl
+Copy code
+https://65fb7etsh2jf9saen3tlv6lc78.hop.clickbank.net/?tid=ssg-sleep-weight
+No other purchase links on page.
+
+Fix top-of-page margin & missing headline spacing
+
+Add class="mt-10" to the hero <section> so bottle image doesn’t stick to the nav.
+
+Ensure the first <p> doesn’t butt against the top—should be 1 rem below header copy.
+
+Validate content flow
+
+Order of sections: Hero → Editorial intro → Why nighttime fat storage → Ingredient Deep Dive → Test Panel Results → Expert Quote → Hard CTA #1 is already in hero, Hard CTA #2 before FAQs → Soft CTA to comparison → FAQ → Footer.
+
+Page should scroll smoothly with no duplicate “Buy” text.
+
+Compliance check
+
+All affiliate links: target="_blank" and rel="noopener sponsored nofollow".
+
+No pricing, no discounts, no urgency language.
+
+No scripts beyond GA4 + Alpine.js.
