@@ -13,7 +13,7 @@
       "guarantee": "Vendor guarantee",
       "rank_priority": 1,
       "img": "/assets/img/placeholder-1.jpg",
-      "cta_url": "/go/sleeplean"
+      "cta_url": "#sleeplean-direct-url-needed"
     },
     {
       "slug": "cortisol-calm",
@@ -43,7 +43,7 @@
       "guarantee": "Vendor guarantee",
       "rank_priority": 3,
       "img": "/assets/img/placeholder-3.jpg",
-      "cta_url": "/go/yu-sleep"
+      "cta_url": "#yu-sleep-direct-url-needed"
     },
     {
       "slug": "pitch-black",
@@ -58,7 +58,7 @@
       "guarantee": "Vendor guarantee",
       "rank_priority": 2,
       "img": "/assets/img/pitch-black.jpg",
-      "cta_url": "/go/pitch-black"
+      "cta_url": "#pitch-black-direct-url-needed"
     },
     {
       "slug": "andrew-lessman-procap",

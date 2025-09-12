@@ -46,7 +46,7 @@ function initializeApp() {
 document.addEventListener('click', e=>{
     const a=e.target.closest('a.cta'); if(!a) return;
     const payload={event:'outbound_click',offer:a.dataset.offer||a.textContent.trim(),page_path:location.pathname,event_id:uuid(),...params()};
-    navigator.sendBeacon?.('https://REPLACE-KEITARO-ENDPOINT', new Blob([JSON.stringify(payload)],{type:'application/json'}));
+    // Track via GA4 only - removed external tracking endpoint
     window.gtag && gtag('event','outbound_click', payload);
 }, true);
 
