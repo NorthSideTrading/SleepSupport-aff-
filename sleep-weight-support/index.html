@@ -11,7 +11,25 @@
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-PRMWNW40K2',{send_page_view:true});</script>
 <script src="https://cdn.tailwindcss.com"></script>
 <script src="https://unpkg.com/alpinejs@3.14.1/dist/cdn.min.js" defer></script>
-<style>[x-cloak]{display:none}</style>
+<style>
+[x-cloak]{display:none}
+body { 
+  text-rendering: optimizeLegibility; 
+  -webkit-font-smoothing: antialiased; 
+  -moz-osx-font-smoothing: grayscale; 
+}
+.enhanced-text { 
+  line-height: 1.7; 
+  letter-spacing: 0.01em; 
+}
+.enhanced-heading { 
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05); 
+  letter-spacing: -0.01em; 
+}
+.subtle-shadow { 
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.08); 
+}
+</style>
 </head>
 <body class="font-sans antialiased text-slate-800">
 
@@ -27,8 +45,8 @@
 <header class="bg-slate-50 border-b py-4">
 <div class="max-w-3xl mx-auto px-4">
  <p class="text-sm text-slate-500 uppercase tracking-wide">Editor's Report • Updated Sept 2025</p>
- <h1 class="text-3xl md:text-4xl font-bold mt-1">Can Your Body Really Burn Fat <em>While You Sleep?</em> We Put <span class="text-indigo-600">Sleeplean</span> to the Test.</h1>
- <p class="mt-2 text-lg text-slate-600">Our independent panel tried the nighttime metabolism formula for 30 nights. Here's what we found.</p>
+ <h1 class="text-3xl md:text-4xl font-bold mt-1 enhanced-heading">Can Your Body Really Burn Fat <em>While You Sleep?</em> We Put <span class="text-indigo-600">Sleeplean</span> to the Test.</h1>
+ <p class="mt-2 text-lg text-slate-600 enhanced-text">Our independent panel tried the nighttime metabolism formula for 30 nights. Here's what we found.</p>
 </div>
 </header>
 
@@ -36,7 +54,7 @@
 
 <!-- Editorial Lead-in -->
 <section class="mt-6">
- <p class="mt-4 leading-relaxed">Sleeplean hit the supplement market claiming to boost resting metabolic rate while improving deep-sleep quality. Our editors spent 30 nights evaluating the science, the ingredient panel, and real-world results. Below is the full breakdown—with lab notes, tester outcomes, and how the formula stacks up against other night-time metabolism aids.</p>
+ <p class="mt-4 leading-relaxed enhanced-text text-slate-700">Sleeplean hit the supplement market claiming to boost resting metabolic rate while improving deep-sleep quality. Our editors spent 30 nights evaluating the science, the ingredient panel, and real-world results. Below is the full breakdown—with lab notes, tester outcomes, and how the formula stacks up against other night-time metabolism aids.</p>
 </section>
 
 
@@ -53,12 +71,12 @@
 
 <!-- Problem / Solution -->
 <section class="mt-12">
- <h2 class="text-2xl font-semibold mb-4">Why Nighttime Is Prime Time for Fat Storage</h2>
- <p class="leading-relaxed">Late-evening cortisol spikes and reduced metabolic rate make it easy for the body to store calories while you sleep. Peer-reviewed data from Stanford (2023) shows resting metabolism can drop by up to 15% overnight.</p>
+ <h2 class="text-2xl font-semibold mb-4 enhanced-heading">Why Nighttime Is Prime Time for Fat Storage</h2>
+ <p class="leading-relaxed enhanced-text text-slate-700">Late-evening cortisol spikes and reduced metabolic rate make it easy for the body to store calories while you sleep. Peer-reviewed data from Stanford (2023) shows resting metabolism can drop by up to 15% overnight.</p>
 </section>
 
 <section class="mt-10">
- <h2 class="text-2xl font-semibold mb-4">How Sleeplean Targets Nighttime Metabolism</h2>
+ <h2 class="text-2xl font-semibold mb-4 enhanced-heading">How Sleeplean Targets Nighttime Metabolism</h2>
  <ul class="list-disc list-inside space-y-2">
    <li><strong>Glycine + L-Theanine</strong> — help transition into slow-wave sleep faster.</li>
    <li><strong>Ashwagandha KSM-66®</strong> — clinically shown to lower evening cortisol.</li>
@@ -107,13 +125,13 @@
 
 <!-- Expert quote -->
 <section class="mt-10 bg-slate-50 p-6 rounded-lg">
- <blockquote class="italic text-lg leading-relaxed text-slate-700">"Sleeplean's ingredient profile aligns with current data on late-night thermogenesis. It's stimulant-free, which is critical for preserving deep sleep."</blockquote>
+ <blockquote class="italic text-lg leading-relaxed text-slate-700 enhanced-text subtle-shadow">"Sleeplean's ingredient profile aligns with current data on late-night thermogenesis. It's stimulant-free, which is critical for preserving deep sleep."</blockquote>
  <p class="mt-2 text-sm text-slate-500">— Jane Taylor, RDN · Independent Nutrition Researcher</p>
 </section>
 
 <!-- Hard CTA #2 - After Review -->
 <section class="mt-12 text-center">
- <h2 class="text-2xl font-semibold mb-4">Ready to Try Sleeplean?</h2>
+ <h2 class="text-2xl font-semibold mb-4 enhanced-heading">Ready to Try Sleeplean?</h2>
  <p class="text-lg text-slate-600 mb-6">cGMP-certified facility • Non-habit-forming formula</p>
  <a href="https://65fb7etsh2jf9saen3tlv6lc78.hop.clickbank.net/?tid=ssg-sleep-weight" target="_blank" rel="noopener sponsored nofollow" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-12 py-4 rounded-lg shadow-lg text-lg">Get Sleeplean →</a>
 </section>
@@ -121,7 +139,7 @@
 
 <!-- FAQ -->
 <section class="mt-16" x-data="{open:null}">
- <h2 class="text-2xl font-semibold mb-4">Frequently Asked Questions</h2>
+ <h2 class="text-2xl font-semibold mb-4 enhanced-heading">Frequently Asked Questions</h2>
  <div class="border-b py-3">
    <button class="w-full text-left font-medium" @click="open===0?open=null:open=0">Will Sleeplean keep me awake?</button>
    <p class="mt-2 text-sm text-slate-600" x-show="open===0">No, it's stimulant-free and formulated for overnight use.</p>
