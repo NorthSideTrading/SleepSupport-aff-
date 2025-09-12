@@ -374,15 +374,4 @@ function initializeFAQ() {
     });
 }
 
-// Service Worker registration - per specification
-if ('serviceWorker' in navigator && location.protocol === 'https:') {
-    window.addEventListener('load', function() {
-        navigator.serviceWorker.register('/sw.js')
-            .then(registration => {
-                console.log('SW registered: ', registration);
-            })
-            .catch(registrationError => {
-                console.log('SW registration failed: ', registrationError);
-            });
-    });
-}
+// Service Worker registration removed - no sw.js file present

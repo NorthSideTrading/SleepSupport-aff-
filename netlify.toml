@@ -2,22 +2,6 @@
   publish = "."
 
 [[redirects]]
-  from = "/go/sleeplean"
-  to   = "https://cf5ebf3dm3ebet5fu7lly4ni33.hop.clickbank.net/?tid=ssgsleeplean"
-  status = 302
-  force  = true
-[[redirects]]
-  from = "/go/yu-sleep"
-  to   = "https://1472fk1mi-gfcr5uzm-7iobsf8.hop.clickbank.net/?tid=ssgyusleep"
-  status = 302
-  force  = true
-[[redirects]]
-  from = "/go/pitch-black"
-  to   = "https://c7a28g0oc5he6wed0o1lsqcr4b.hop.clickbank.net/?&tid=ssgpitchblack"
-  status = 302
-  force  = true
-
-[[redirects]]
   from = "/sleep/non-pill-solutions"
   to = "/sleep/non-pill-solutions/index.html"
   status = 200
@@ -46,11 +30,6 @@
   from = "/pitch-black/"
   to = "/pitch-black/index.html"
   status = 200
-
-[[headers]]
-  for = "/go/*"
-  [headers.values]
-    X-Robots-Tag = "noindex, nofollow, noarchive"
 
 [[redirects]]
   from = "/*"

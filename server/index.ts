@@ -64,25 +64,6 @@ app.use((req, res, next) => {
     res.sendFile(path.join(rootDir, 'sitemap.xml'));
   });
 
-  // Development affiliate redirects (mirrors netlify.toml)
-  app.get('/go/sleeplean', (req, res) => {
-    const queryString = req.url.includes('?') ? req.url.split('?')[1] : '';
-    const targetUrl = `https://cf5ebf3dm3ebet5fu7lly4ni33.hop.clickbank.net/?tid=ssgsleeplean${queryString ? '&' + queryString : ''}`;
-    res.redirect(302, targetUrl);
-  });
-
-  app.get('/go/yu-sleep', (req, res) => {
-    const queryString = req.url.includes('?') ? req.url.split('?')[1] : '';
-    const targetUrl = `https://60f8ab2glyhh7x6i-ln9oc6zep.hop.clickbank.net/?&tid=tid${queryString ? '&' + queryString : ''}`;
-    res.redirect(302, targetUrl);
-  });
-
-  app.get('/go/pitch-black', (req, res) => {
-    const queryString = req.url.includes('?') ? req.url.split('?')[1] : '';
-    const targetUrl = `https://9009080lm5n6fm9iqp6nyo5zaz.hop.clickbank.net/?tid=ssgpitchblack${queryString ? '&' + queryString : ''}`;
-    res.redirect(302, targetUrl);
-  });
-
   // Serve specific page routes
   app.get('/', (req, res) => {
     res.sendFile(path.join(rootDir, 'index.html'));

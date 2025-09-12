@@ -1,3 +1,2 @@
 User-agent: *
-Disallow: /go/
 Sitemap: https://www.sleepsupportguide.com/sitemap.xml
