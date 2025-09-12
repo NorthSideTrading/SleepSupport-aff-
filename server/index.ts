@@ -104,6 +104,10 @@ app.use((req, res, next) => {
     res.sendFile(path.join(rootDir, 'sleep-weight-support', 'index.html'));
   });
 
+  app.get('/yu-sleep/', (req, res) => {
+    res.sendFile(path.join(rootDir, 'yu-sleep', 'index.html'));
+  });
+
   // Fallback to home page for unmatched routes
   app.get('*', (req, res) => {
     res.sendFile(path.join(rootDir, 'index.html'));
