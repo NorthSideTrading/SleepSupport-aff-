@@ -180,10 +180,7 @@
 (function(){
   var qs = window.location.search;
   if(!qs) return;
-  document.querySelectorAll('a[href^="/go/"]').forEach(function(a){
-    var href = a.getAttribute('href')||'';
-    a.setAttribute('href', href + (href.includes('?') ? '&' + qs.slice(1) : qs));
-  });
+  // Orphaned tracking code removed
 })();
     </script>
 </body>
